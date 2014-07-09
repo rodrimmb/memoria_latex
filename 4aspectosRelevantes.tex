@@ -1,0 +1,53 @@
+Inicialmente las características del proyecto no estaban totalmente definidas, es decir, existía una idea de cual era el objetivo general (mostrar de una forma visual cómo se comportan los algoritmos de búsqueda en espacio de estados), pero no se había indicado la forma en la que llevar a cabo el proyecto, más allá de que deseábamos que el proyecto fuera llevado a cabo con tecnología web.
+
+\section{Conocimientos adquiridos}
+Para la realización del proyecto tenía total libertad para elegir las técnicas y herramientas que quisiera. Gracias a esta libertad que tenía por parte de mi tutor decidí elegir para la realización del proyecto técnicas de las que ya había oído hablar, pero no había sido posible poner en práctica en su totalidad durante el máster, y las herramientas más modernas y que más activas parecían en los diferentes círculos de desarrolladores que conocía y que más se comentaban en internet.
+
+\subsection{Desarrollo web}
+He adquirido una notable destreza en el uso de lenguajes dinámicos como son Ruby y JavaScript, además de profundizar más en el desarrollo de aplicaciones web. No solo he mejorado mis conocimientos de HTML y CSS sino que he aprendido a usar frameworks de estilos como Bootstrap.
+
+Haber usado Sinatra como framework de desarrollo de aplicaciones web me ha facilitado todo el proceso de puesta en marcha de la aplicación y me ha ayudado a aprender como funcionen otros frameworks diferentes a los que hemos usado en el máster.
+
+\subsection{Testing}
+He mejorado mis conocimientos sobre como testear aplicaciones con el uso de una de las herramientas de testing como RSpec, que ahora mismo parece ser el paradigma del testing ya que todos los frameworks de testing parecen seguir sus preceptos.
+
+También el uso, aunque no haya sido muy profundo por falta de tiempo, de la herramienta de testing Cucumber ha hecho que quiera aprender más sobre esta herramienta y el concepto de BDD.
+
+\subsection{Bases de datos NoSQL}
+Me he introducido en este nuevo paradigma de bases de datos que están ganando una importante notoriedad últimamente, sobre todo entre los desarrollos más modernos y actuales \citeotras{mongodb_users} (github, mailbox, linkedin, idealista, etc). 
+
+\subsection{Técnicas de desarrollo}
+Gracias a haber podido utilizar técnicas de desarrollo ágil como Scrum y TDD, e introducirme en otras técnicas como BDD, considero que he mejorado notablemente mis destrezas como desarrollador.
+
+\section{Dificultades encontradas}
+En esta sección detallo las mayores dificultades que han aparecido durante el desarrollo del proyecto.
+
+\subsection{Elección del lenguaje de programación principal}
+El primer problema que se planteó al empezar el proyecto fue el de elegir en que lenguaje de programación se realizaría este. Dado que se deseaba usar un lenguaje dinámico que fuera popular en internet, los dos primeros lenguajes en los que pensaron fueron Python y Ruby.
+
+Al final se decidió elegir Ruby dado que ya había una experiencia previa con él y su sintaxis resultaba más atractiva, además de disponer de una comunidad muy activa con cientos de librerías que podrían ayudar a la realización del proyecto (la lista de librerías usadas se puede ver en el fichero Gemfile del proyecto).
+
+\subsection{Elección de framework web}
+En principio se pensó usar uno de los framework más populares en el mundo de Ruby, Ruby on Rails. Pero, después de realizar algunas pruebas preliminares, la complejidad de éste (autogenera mucho código) y a su rigidez (hay que seguir un esquema de ficheros y carpetas), nos hicieron decantar por otro framework mucho más sencillo y liviano: Sinatra.
+
+\subsection{Elección de la base de datos}
+En principio, pensamos usar una base de datos relacional clásica, como MySQL o MariaDB, pero viendo que últimamente están siendo muy usadas las bases de datos no relacionales decidimos usar finalmente MongoDB que es una base de datos NoSQL basada en documentos.
+
+Al principio tuvimos algún problema para entender su funcionamiento y como se hacían consultas. Pero gracias a la documentación que hay en su página web, casi todas las dudas que han surgido, como por ejemplo como hacer consultas, se han podido resolver rápidamente.
+
+\subsection{Estructura de los datos}
+Elegir el modo en que los datos serían guardados en la base de datos nos planteó un gran problema, ya que la información con la que trabajamos era compleja de tratar y se tuvo que cambiar un par de veces la estructura de datos.
+
+\subsection{Mostrar notación matemática en la web}
+Para la mejor comprensión del algoritmo se necesitaba mostrar de una determinada manera la información de los nodos, por ello se necesitaba usar una notación científica. 
+
+HTML deja poner índices y subíndices pero no los dos a la vez y para poder hacer esto usamos una librería de notación matemática: MathML, que sí nos permite poner la información como se deseaba.
+
+\subsection{Dibujar grafos}
+Dentro de los objetivos del proyecto estaba el de ser capaces de dibujar un grafo que se pudiera editar para modificar su aspecto, encontrar la manera de dibujar este grafo y poder editarlo de una forma dinámica fue el mayor obstáculo en la realización del proyecto.
+
+Después de desechar varias librerías, nos decantamos por GraphViz que es una herramienta sencilla y genera grafos en formato SVG con los que JavaScript puede interaccionar para modificar sus características.
+
+Algunas de las librerías que probamos y descartamos por ser excesivamente complejas de aprender en el tiempo que teníamos para el desarrollo del proyecto son:
+
+
