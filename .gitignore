@@ -1,0 +1,12 @@
+*.pdf
+*.png
+*.jpg
+*.blg
+*.bbl
+*.aux
+*.bak
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gz

@@ -1,0 +1,123 @@
+%
+% Incluir el estilo de la Universidad de Deusto.
+\documentclass{memoriaPFC}
+
+%
+% Incluir el estilo definido para la Universidad de Burgos por Álvar Arnáiz 2009/12/20.
+\include{estiloUBU}
+
+%
+% Incluir los comandos para las palabras técnicas.
+\include{comandosIS}
+
+%
+% DATOS DEL DOCUMENTO
+\title{Web para mostrar el funcionamiento del algoritmo A estrella}
+
+%\autores{Nombre1 Apellidos1}{Nombre2 Apellidos2}
+\autores{Rodrigo Manjón Martín}{}
+
+\director{César I. García Osorio}
+
+\date{julio de 2014}
+
+\titulacion{Máster en Ingeniería Informática}
+
+\resumen{%
+El proyecto consiste en mostrar de una forma visual y sencilla como funciona el algoritmo de búsqueda en espacio de estados A estrella. Para ello hemos creado una página web en la que podemos introducir los distintos nodos que conforman el grafo del espacio de estados, y automáticamente mostraremos el árbol de búsqueda de forma visual y una tabla con todos los pasos que ha ido siguiendo el algoritmo para resolver el problema.
+
+Además, para facilitar la comprensión del algoritmo y cómo éste se resuelve, podremos ir viendo paso a paso que se ha ido haciendo para obtener el resultado, en una tabla, y mostrando en el diagrama que nodos se están analizando de una manera más visual y fácil de comprender.
+
+Esta herramienta pretende ser útil para todos aquellos estudiantes que pretendan comprender el funcionamiento de este algoritmo y poder comprobar que los ejercicios que realizan de forma manual están correctamente resueltos y en caso de no ser así poder ver en que punto se encuentra el error, mejorar la compresión que tienen del algoritmo y el proceso de aprendizaje.
+
+Con la realización de este proyecto se pretende también poner en práctica las técnicas más populares del desarrollo de software (Scrum, los principios SOLID \footnote{SOLID (Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion) es un acrónimo mnemónico introducido por Robert C. Martin}, TDD \footnote{Siglas de test driven development, desarrollo dirigido por pruebas}, BDD \footnote{Siglas de behaviour driven development, desarrollo dirigido por comportamiento}, etc), además de los conocimientos adquiridos durante la realización del máster y aprender a usar las herramientas de desarrollo web más en boga (JavaScript, Ruby, HTML, CSS).
+
+En esta memoria se explicará el proceso de desarrollo que se ha llevado a cabo para la realización de este proyecto. En primer lugar se detallan los objetivos del proyecto, después se explicarán los conceptos teóricos más importantes para la comprensión de la memoria. Se comentarán las distintas técnicas y herramientas utilizadas para su desarrollo. Los aspectos más relevantes del proyecto, así como las dificultades encontradas. También se expondrán las conclusiones obtenidas y las lineas de trabajo que se podrían abordar en un futuro.
+
+Se incluyen una serie de anexos que explicarán diversos aspectos del desarrollo, el primero abordará los aspectos relativos a la planificación del proyecto y su viabilidad, en el segundo se especificarán los requisitos del proyecto a realizar, el tercero contendrá las especificación de diseño para la implementación, el cuarto incluirá la documentación técnica de programación y por último se mostrará la ayuda de usuario
+
+}
+\descriptores{Algoritmo, A estrella, web, búsqueda en espacio de estados}
+
+\abstract{%
+Resumen en ingles
+}
+\keywords{descriptores en ingles}
+
+
+%
+% COMIENZO DEL DOCUMENTO
+\begin{document}
+
+%
+% Portada, resumen, indices
+\frontmatter
+\ubuportada
+\hacerresumen
+\tableofcontents
+\listoffigures % Opcional
+\listoftables % Opcional
+%\lstlistoflistings % Opcional
+
+%
+% Contenidos
+\mainmatter
+\subsection*{Agradecimientos}
+%\input{0agradecimientos}
+
+\chapter{Objetivos del proyecto}
+\input{1objetivosDelProyecto}
+
+%\chapter{Conceptos teóricos}
+%\input{2conceptosTeoricos}
+
+%\chapter{Técnicas y herramientas}
+%\input{3tecnicasYherramientas}
+
+%\chapter{Aspectos relevantes del desarrollo del proyecto}
+%\input{4aspectosRelevantes}
+
+%\chapter{Trabajos relacionados}
+%\input{5trabajosRelacionados}
+
+
+%
+% ANEXOS
+% Redefinir el nombre de capítulo por Anexo y que sean números romanos
+\renewcommand\chaptername{Anexo}
+\renewcommand\thechapter{\Roman{chapter}}
+\setcounter{chapter}{0}
+
+% Añadir entrada en el índice: Anexos
+\addcontentsline{toc}{chapter}{Anexos}
+
+\portadasAuxiliares{Anexo I - Plan del proyecto software}
+%\chapter{Plan del proyecto software}
+%\input{anexo1PlanDeProyectoSoftware}
+
+\portadasAuxiliares{Anexo II - Especificación de requisitos}
+%\chapter{Especificación de requisitos}
+%\input{anexo2EspecificacionDeRequisitos}
+
+\portadasAuxiliares{Anexo III - Especificación de diseño}
+%\chapter{Especificación de diseño}
+%\input{anexo3EspecificacionDeDisenno}
+
+\portadasAuxiliares{Anexo IV - Manual del programador}
+%\chapter{Manual del programador}
+%\input{anexo4ManualDelProgramador}
+
+\portadasAuxiliares{Anexo V - Manual del usuario}
+%\chapter{Manual del usuario}
+%\input{anexo5ManualDelUsuario}
+
+
+%
+%Bibliografía
+\bibliografia{referencias}
+
+%
+% Otras referencias
+\bibliografiaOtras{otrasreferencias}
+
+\end{document}
