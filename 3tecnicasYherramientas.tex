@@ -1,0 +1,282 @@
+En este apartado se explicarán las técnicas y herramientas que se han utilizado para el desarrollo del proyecto.
+
+\section{Técnicas}
+Las técnicas utilizadas para la realización del proyecto han sido las siguientes:
+
+\subsection{Programación Orientada a Objetos}
+Para la realización de este proyecto se ha utilizado la programación orientada a objetos \citeotras{orientado_objetos}, debido en gran medida a las características propias del lenguaje de programación principal que hemos elegido, Ruby \citeotras{ruby_web}. Este tipo de programación ayuda a que el código sea más portable y reusable, fácil de modificar y que los ciclos de desarrollo sean mas cortos y las técnicas de codificación mas intuitivas.
+
+Un lenguaje orientado a objetos debe cumplir tres características básicas: 
+
+\begin{enumerate}
+\item Debe estar basado en objetos.
+\item Debe estar basado en clases.
+\item Debe ser capaz de tener herencia de clases.
+\end{enumerate}
+
+
+\subsection{UML}
+El Lenguaje Unificado de Modelado (UML) \cite{fowler1999uml} es el lenguaje de modelado de sistemas de software. Se trata de un lenguaje gráfico que se utiliza para visualizar, especificar, construir y documentar un sistema, describiendo sus métodos o procesos.
+
+UML permite modelar la estructura, comportamiento y arquitectura de las aplicaciones. Además, la programación orientada a objetos, que ha sido la elegida para este proyecto, es un complemento perfecto de UML.
+
+UML cuenta con varios tipos de diagramas, los cuales muestran diferentes aspectos de las entidades representadas. Para la realización del proyecto se han utilizado los siguientes tipos:
+
+\begin{itemize}
+\item \textbf{Diagrama de Casos de Uso}: muestra los casos de uso, actores y sus interrelaciones.
+\item \textbf{Diagrama de Paquetes}: muestra como los elementos de modelado están organizados en paquetes, además de las dependencias entre esos paquetes. 
+\item \textbf{Diagrama de Clases}: representa una colección de elementos de modelado estáticos, tales como clases y tipos, sus contenidos y sus relaciones. 
+\item \textbf{Diagrama de Secuencias}: modela la lógica secuencial, ordenando en el tiempo los diferentes mensajes entre entidades. 
+\end{itemize}
+
+
+\subsection{Scrum}
+Scrum \cite{scrum_garzas} es una metodología ágil que proporciona un marco de trabajo para la gestión de proyectos. El principal objetivo de Scrum es obtener resultados rápidos, adaptándose a los cambios de las necesidades de los clientes. Las características principales de Scrum pueden resumirse en dos:
+
+\begin{itemize}
+\item El desarrollo software mediante iteraciones incrementales.
+\item Las reuniones a lo largo del proyecto.
+\end{itemize}
+
+Scrum se basa en entregas parciales priorizadas por el beneficio que aporta al receptor final del software. Para ello, como metodología ágil que es, Scrum define un ciclo de vida iterativo e incremental, mejorando la gestión de los riesgos y aumentando la comunicación. Hay tres pilares básicos:
+
+\begin{itemize}
+\item \textbf{Transparencia}: Todos los aspectos del proceso son visibles para todos aquellos que administran el proyecto.
+\item \textbf{Inspección}: Se debe controlar con la frecuencia suficiente los diversos aspectos del proceso para que puedan detectarse variaciones inaceptables en el mismo. Por ejemplo, en Scrum se realizan reuniones cortas diarias.
+\item \textbf{Revisión}: El producto debe estar dentro de los límites aceptables por el cliente. Una buena metodología necesita de un mecanismo de mejora continua, es decir, de control, para adaptarse y mejorar.
+\end{itemize}
+
+El funcionamiento es el siguiente: Un miembro del equipo en contacto con el cliente (product owner) recolecta las necesidades del cliente en historias de usuario y las ordena por prioridad (product backlog), de esa lista se cogen una serie de historias de usuario que se implementarán en un determinado tiempo (sprint), una vez que se ha comenzado un sprint no se pueden introducir nuevas tareas, las nuevas tareas irán en el siguiente sprint. Cuando un sprint finaliza se reúne todo el equipo para ver que ha ido bien, que ha ido mal e intentar potenciar las cosas que se han hecho bien y solucionar los problemas.
+
+El encargado de supervisar que todas las reglas de Scrum se cumplen por parte de los miembros del equipo es el Scrum Master y los equipos deben ser multidisciplinares y autogestionados.
+
+
+\subsection{TDD}
+TDD (Test-driven development) \cite{beck_tdd} o desarrollo dirigido por pruebas es un proceso de desarrollo de software que se basa en la repetición de un pequeño ciclo: primero se escribe un test automatizado que describa un caso deseado, este test inicialmente debe fallar; a continuación se debe escribir la mínima cantidad de código que consiga hacer pasar el test; finalmente se debe refactorizar el código para que cumpla con un aceptable estándar de calidad, esto es: evitar código repetido, eliminar el código espagueti con sentencias if anidadas, etc...
+
+Esta técnica nos permite crear programas con el código mínimo necesario para que funcionen, además simplifica la lectura y comprensión del código. Y el hecho de tener una base de test automatizados tan importante, hace que a la hora de realizar cambios podamos hacer estos con la seguridad de que estos no han afectado al resto de las funcionalidades del programa.
+
+A partir de este paradigma de desarrollo han ido apareciendo varios principios que nos ayudan al desarrollo y a mejorar la calidad del código y por tanto del programa. Principios como KISS (Keep It Simple, Stupid) nos recomienda que a la hora de desarrollar el código, éste debe ser simple y fácil de entender, generalmente los códigos simples funcionan mejor y son más fácilmente mantenibles que los códigos complejos y enrevesados con cientos de bucles y sentencias condicionales anidadas. Otro de estos principios seria YAGNI (You ain't gonna need it) simplemente nos dice que no codifiquemos aquello que no vayamos a usar.
+
+\figura{0.5}{imgs/tdd_esquema_en.jpg}{Diagrama TDD}{DiagramaTDD}{}
+
+
+\subsection{BDD}
+En ingeniería del software BDD \cite{bdd_in_action} (behavior-driven development) o desarrollo dirigido por comportamiento, es un proceso de desarrollo basado en TDD. BDD combina las técnicas y principios del TDD con ideas del domain-driven development y el análisis y diseño de la orientación a objetos para proporcionar a los desarrolladores y a los analistas, de herramientas y procesos para colaborar en el diseño del software, con el objetivo de deliberar <<lo que verdaderamente importa del software>>.
+
+El BDD fue desarrollado por Dan North como una respuesta a los problemas encontrados en el TDD:
+
+\begin{itemize}
+\item ¿Por dónde empezar el proceso?
+\item ¿Qué hay que probar y qué no?
+\item ¿Cuánto hay que probar cada vez? 
+\item ¿A qué tiene que llamar cada test?
+\item ¿Cómo entender por qué no pasa una prueba?
+\end{itemize}
+
+Realmente, el BDD es una versión especializada del TDD que se centra en la especificación del comportamiento del software. Esencialmente, se divide el software en unidades (por ejemplo: login, edición del perfil de usuario, subida de imágenes, etc...) y por cada unidad de software, un desarrollador de software debe:
+
+\begin{itemize}
+\item Definir un conjunto de pruebas para la unidad
+\item Implementar la unidad
+\item Verificar que la implementación pasa los test
+\end{itemize}
+
+Esta definición es bastante amplia, ya que permite pruebas tanto en términos de requisitos de software de alto nivel, como los detalles técnicos de bajo nivel o cualquier otra cosa.
+
+BDD establece que los test de cualquier unidad de software deben ser creados en términos del comportamiento deseado por la unidad. Heredado del desarrollo ágil, obtenemos el <<comportamiento deseado>> a partir de los requisitos establecidos previamente para el software. Dentro del BDD esta práctica se conoce como ir desde fuera hacia adentro \cite{cucumber}.
+
+\figura{0.5}{imgs/bdd-cycle-around-tdd-cycles.png}{Diagrama BDD}{DiagramaBDD}{}
+
+
+\subsection{Patrones de diseño}
+Los patrones de diseño \cite{gamma} describen problemas que ocurren una y otra vez en el entorno, así como la solución a ese problema, de tal modo que se puede aplicar esa solución repetidas veces.
+
+En general, un patrón de diseño tiene cuatro elementos fundamentales:
+
+\begin{itemize}
+\item \textbf{Nombre del patrón}: permite describir, en una o dos palabras, un problema de diseño junto con sus soluciones y consecuencias.
+\item \textbf{Problema}: describe cuando aplicar el patrón. Explica el problema y su contexto.
+\item \textbf{Solución}: describe los elementos que constituyen el diseño, sus relaciones, responsabilidades y colaboraciones.
+\item \textbf{Consecuencias}: son los resultados así como las ventajas e inconvenientes de aplicar el patrón.
+\end{itemize}
+
+
+\subsection{Principios SOLID}
+Solid es un acrónimo inventado por Robert C.Martin \citeotras{solid_martin} para establecer los cinco principios básicos de la programación orientada a objetos y diseño. Este acrónimo tiene bastante relación con los patrones de diseño, en especial, con la alta cohesión y el bajo acoplamiento \citeotras{solid_genbeta}.
+
+\begin{itemize}
+\item \textbf{S de Responsabilidad Única (Single responsibility)}: Este principio trata de destinar cada clase a una finalidad sencilla y concreta. En muchas ocasiones estamos tentados a poner un método reutilizable que no tienen nada que ver con la clase simplemente porque lo utiliza y nos pilla más a mano. El problema surge cuando tenemos la necesidad de utilizar ese mismo método desde otra clase. Si no se refactoriza en ese momento y se crea una clase destinada para la finalidad del método, nos toparemos a largo plazo con que las clases realizan tareas que no deberían ser de su responsabilidad.
+
+\item \textbf{O de Abierto/Cerrado (Open/Closed)}: crear clases extensibles sin necesidad de entrar al código fuente a modificarlo. Es decir, el diseño debe ser abierto para poderse extender, pero cerrado para poderse modificar. Lo complicado es predecir por donde se debe extender y que no tengamos que modificarlo.
+
+\item \textbf{L de Sustitución de Liskov (Liskov substitution)}: Este principio fue creado por Barbara Liskov y habla de la importancia de crear todas las clases derivadas para que también puedan ser tratadas como la propia clase base. Cuando creamos clases derivadas debemos asegurarnos de no reimplementar métodos que hagan que los métodos de la clase base no funcionasen si se tratasen como un objeto de esa clase base.
+
+\item \textbf{I de Segregación del Interface (Interface segregation)}: Cuando se definen interfaces estos deben ser específicos a una finalidad concreta. Por ello, si tenemos que definir una serie de métodos abstractos que debe utilizar una clase a través de interfaces, es preferible tener muchos interfaces que definan pocos métodos, que tener un interface con muchos métodos. Para poder reaprovechar las interfaces en otras clases.
+
+\item \textbf{D de Inversión de dependencias (Dependency inversion)}: El objetivo de este principio es el uso de abstracciones para conseguir que una clase interactué con otras clases sin que las conozcan directamente. Es decir, las clases de nivel superior no deben conocer las clases de nivel inferior. Dicho de otro modo, no debe conocer los detalles.
+\end{itemize}
+
+
+\subsection{NoSQL}
+NoSQL \citeotras{nosql} son las siglas de Not Only SQL (no solo SQL) no solo hacen referencia únicamente a un tipo de bases de datos, sino a diferentes soluciones dadas para almacenar datos cuando las bases de datos relacionales nos generan problemas.
+
+Este tipo de bases de datos aparecen debido a que las bases de datos relacionales clásicas plantean problemas de escalabilidad y rendimientos con miles de usuarios concurrentes y con millones de consultas diarias que es lo que suelen tener hoy en día las aplicaciones software.
+
+Las bases de datos NoSQL no cumplen con el esquema entidad-relación, no imponen una estructura de datos en forma de tablas y relaciones entre ellas, en ese sentido son más flexibles, ya que suelen permitir almacenar información en otros formatos como clave-valor (similar a tablas Hash), Mapeo de Columnas, Documentos o Grafos.
+
+Las bases de datos NoSQL parten de la base en la que las <<tablas>> no existen como tal, sino que la información se almacena de forma distinta, generalmente como clave-valor. Si seguimos pensando en términos relacionales, sería como tener tablas a las que le puedo añadir de forma dinámica columnas, pero no todas las tuplas de esa tabla tendrían porque tener valores en cada una se esas columnas. Así puedo tener 'Personas' con más atributos que otras, puedo cambiar la estructura de mi información dinámicamente sin tener que rediseñar todo de nuevo.
+
+
+\section{Herramientas}
+En esta sección se describen brevemente los lenguajes y herramientas utilizadas en la realización del proyecto:
+
+\subsection{Ruby}
+Ruby \cite{ruby_book} es un lenguaje de programación dinámico y de código abierto, una de sus características más potentes es que está enfocado en la simplicidad y la productividad. Su sintaxis elegante hace que leer y escribir código sea una tarea más sencilla y llevadera para el programador.
+
+Su creador, Yukihiro <<Matz>> Matsumoto, mezcló partes de sus lenguajes favoritos (Perl, Smalltalk, Eiffel, Ada, y Lisp) para formar un nuevo lenguaje que incorporara tanto la programación funcional como la programación imperativa. A menudo ha manifestado que está <<tratando de hacer que Ruby sea natural, no simple>>, que se asemeje a la vida real.
+
+En Ruby, todo es un objeto. La orientación a objetos pura de Ruby se suele demostrar con un simple código que aplica una acción a un número.
+
+\begin{verbatim}
+5.times { print "Me encanta Ruby" }
+\end{verbatim}
+
+En muchos lenguajes, los números y otros tipos primitivos no son objetos. Ruby sigue la influencia del lenguaje Smalltalk pudiendo poner métodos y variables de instancia a todos sus tipos de datos. Esto facilita el uso de Ruby, porque las reglas que se aplican a los objetos son aplicables a todo Ruby.
+
+Ruby es considerado un lenguaje flexible, ya que permite a sus usuarios alterarlo libremente. Las partes esenciales de Ruby pueden ser quitadas o redefinidas a placer. Se puede agregar funcionalidad a partes ya existentes. Ruby intenta no restringir al desarrollador.
+
+Por ejemplo, la suma se realiza con el operador suma (+). Pero si prefieres usar la palabra sumar, puedes agregar un método llamado sumar a la clase Numeric que viene incorporada.
+
+\begin{verbatim}
+class Numeric
+  def sumar(x)
+    self.+(x)
+  end
+end
+
+y = 5.sumar 6
+\end{verbatim}
+
+Los bloques de Ruby son también vistos como una fuente de gran flexibilidad. El desarrollador puede anexar una cláusula a cualquier método, describiendo cómo debe actuar. La cláusula es llamada bloque y se ha convertido en una de las más famosas funcionalidades para los recién llegados a Ruby que vienen de otros lenguajes imperativos como PHP o Visual Basic.
+
+A diferencia de otros lenguajes de programación orientada a objetos, Ruby se caracteriza por su intencional herencia simple. Sin embargo, Ruby incorpora el concepto de módulos (llamados categorías en Objective-C), que son colecciones de métodos.
+
+Las clases pueden mezclar (mixin) uno o varios módulos e incorporar todos sus métodos gratuitamente. Por ejemplo, cualquier clase que implemente el método each puede incorporar el módulo Enumerable, que le agrega un conjunto de métodos que usan each para recorrer sus elementos.
+
+
+\subsection{JavaScript}
+JavaScript \citeotras{javascript_wiki} es un lenguaje de script multiplataforma orientado a objetos. Es un lenguaje pequeño y ligero; no es útil como un lenguaje independiente, más bien está diseñado para una fácil incrustación en otros productos y aplicaciones, tales como los navegadores Web. Dentro de un entorno anfitrión, JavaScript puede ser conectado a los objetos de su entorno para proveer un control programable sobre éstos.
+
+Al ser un lenguaje de script tienen capacidades limitadas por razones de seguridad, debido a esto no es posible hacer todo con Javascript, es necesario usarlo conjuntamente con otros lenguajes más evolucionados y seguros. Dicha limitación es aún más evidente si queremos operar en el hardware del ordenador, como, por ejemplo, la fijación en automático de la resolución vídeo o la imposibilidad de escribir automáticamente al disco duro.
+
+Sus principales características, como lenguaje, son:
+
+Es un lenguaje dinámico. No es necesario declarar los tipos de variables que van a utilizarse. El tipo de la variable se asocia según el valor de ésta. Una misma variable puede valer tanto para almacenar números como cadenas o cualquier otro tipo.
+
+Los objetos en JavaScript son arrays asociativos, mejorados con la inclusión de prototipos. Gracias a los prototipos es posible llegar a emular muchas de las características que proporcionan las clases en lenguajes orientados a objetos tradicionales, como por ejemplo la herencia.
+
+Una de las características más importantes de JavaScript son sus funciones, que son objetos en sí mismos por ello una función posee propiedades y métodos. Las funciones se pueden anidar, una función anidada es una función definida dentro de otra. Ésta es creada cada vez que la función externa es invocada. Además, cada función creada forma una clausura; es el resultado de evaluar un ámbito conteniendo en una o más variables dependientes de otro ámbito externo, incluyendo constantes, variables locales y argumentos de la función externa llamante. El resultado de la evaluación de dicha cláusula forma parte del estado interno de cada objeto función, incluso después de que la función exterior concluya su evaluación.
+
+
+\subsection{HTML}
+HTML \citeotras{html_wiki} son las siglas de HyperText Markup Language, HTML es un lenguaje de marcado que se usa para la definición de la estructura del contenido de las páginas web. Es un estándar a cargo de la W3C.
+
+El lenguaje HTML basa su filosofía de desarrollo en la referenciación. En un documento html se hace referencia a la ubicación de los elementos mediante texto y es tarea del navegador web unir todos los elementos y visualizar la página final.
+
+Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma por cualquier navegador web actualizado.
+
+
+\subsection{CSS}
+CSS \citeotras{css_wiki} son las siglas de Cascading Style Sheets, es el lenguaje de hojas de estilo utilizado para describir el aspecto y el formato de un documento escrito en un lenguaje de marcas, esto incluye varios lenguajes basados en XML como son HTML, XHTML o SVG.
+
+
+\subsection{JSON}
+JSON \citeotras{json} son las siglas de JavaScript Object Notation, es un formato ligero de intercambio de datos. JSON es un formato de texto que es completamente independiente del lenguaje pero utiliza convenciones que son ampliamente conocidos por los programadores de la familia de lenguajes C, incluyendo C, C++, C\#, Java, JavaScript, Perl, Python, y muchos otros. Estas propiedades hacen que JSON sea un lenguaje ideal para el intercambio de datos.
+
+JSON está constituido por dos estructuras:
+
+\begin{itemize}
+\item Una colección de pares de nombre/valor. En varios lenguajes esto es conocido como un objeto, registro, estructura, diccionario, tabla hash, lista de claves o un arreglo asociativo.
+\item Una lista ordenada de valores. En la mayoría de los lenguajes, esto se implementa como arreglos, vectores, listas o secuencias
+\end{itemize}
+
+
+\subsection{Atom}
+Atom \citeotras{atom} es un editor de código, de código abierto, desarrollado por la gente de GitHub. Es personalizable, extensible, y fácil de usar. Posee resaltado de sintaxis del código, soporta varios lenguajes de programación y es mucho más ligero que un IDE completo, motivo este por el que se ha decidido usar esta herramienta.
+
+
+\subsection{MongoDB}
+MongoDB \citeotras{mongo} es una base de datos basada en documentos. Sus principales ventajas son que proporciona alto rendimiento, alta disponibilidad y escala fácilmente.
+
+Al ser una base de datos orientada a documentos (objetos) casa muy bien con los tipos de los lenguajes de programación. Incluye, de serie, estructuras de datos como objetos y  arrays, lo que reduce la necesidad de la combinación de registros entre dos o más tablas (operación join). Y su esquema dinámico hace muy sencillo el polimorfismo.
+
+Proporciona un alto rendimiento gracias a la incrustación (embed) de los documentos que hace que las lecturas y escrituras sean más rápidas, los índices pueden incluir claves para los documentos y arrays incrustados que agilizan enormemente las búsquedas.
+
+Una alta disponibilidad debido a la replicación automática del contenido en diferentes servidores que se autogestionan para dar el mando (maestro) al mejor servidor en cada momento. Por ejemplo, si un servidor maestro cae el resto se autogestiona para seguir funcionando y cuando vuelva a estar disponible le pasan los datos que no haya podido almacenar, todo esto automáticamente. También se puede añadir nuevos servidores y automáticamente se les actualizará con la información que tiene el resto de nodos.
+
+
+\subsection{Sinatra}
+Sinatra \citeotras{sinatra} es un DSL (domain-specific language) para crear aplicaciones web rápidamente en Ruby con un mínimo esfuerzo. Es un proyecto libre y de código abierto y fue creado como alternativa a otros frameworks para la creación de aplicaciones web, Ruby on Rails, Merb, Nitro, etc.
+
+Sinatra es pequeño y flexible. No sigue el típico patrón MVC usado en otros frameworks, ya que Sinatra se centra más en la creación rápida de aplicaciones web con un esfuerzo mínimo, aun así para este proyecto nos hemos a Sinatra para usar este patrón y no hemos tenido mayores problemas usandolo.
+
+En Sinatra, una ruta es un método HTTP junto a un patrón de un URL. 
+
+\begin{verbatim}
+get '/' do
+  .. mostrar algo ..
+end
+
+post '/' do
+  .. crear algo ..
+end
+\end{verbatim}
+
+Cada ruta está asociada a un bloque. Las rutas son comparadas en el orden en el que son definidas. La primera ruta que coincide con la petición es escogida.
+
+El valor de retorno de un bloque de ruta que determina al menos el cuerpo de la respuesta que se le pasa al cliente HTTP o al siguiente middleware en la pila de Rack. Lo más común es que sea un string. Sin embargo, otros valores también son aceptados. Se puede devolver cualquier objeto que sea una respuesta Rack válida, un objeto que represente el cuerpo de una respuesta Rack o un código de estado HTTP.
+
+
+\subsection{Git}
+Git \citeotras{git} es un sistema de control de versiones. Un control de versiones es un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante. 
+
+Te permite revertir archivos a un estado anterior, revertir el proyecto entero a un estado anterior, comparar cambios a lo largo del tiempo, ver quién modificó por última vez algo que puede estar causando un problema, quién introdujo un error y cuándo, y mucho más. Usar un control de versiones también significa generalmente que si fastidias o pierdes archivos, puedes recuperarlos fácilmente.
+
+
+\subsection{Rspec}
+RSpec \cite{rspec_book} es una herramienta de testing para Ruby. Al igual que Sinatra, este framework de testing puede ser considerado como un DSL. Nace bajo los principios del BDD, y está diseñada para hacer que la experiencia con TDD sea más productiva y satisfactoria. Para ello incluye características como:
+
+\begin{itemize}
+\item Descripciones textuales de los test o ejemplos (ejemplo es como se conoce a cada test unitario en RSpec) y de los grupos de ejemplos.
+
+\item Los reportes al pasar los test son flexibles y personalizables.
+
+\item Las expectativas (las expectativas serian los asserts de java) son extensibles.
+
+\item RSpec incluye herramientas para hacer mocking y stubbing
+\end{itemize}
+
+
+\subsection{Cucumber}
+Cucumber \cite{rspec_book} es un DSL que nos ayuda al desarrollo usando BDD. Usa lenguaje natural para automatizar una serie de pruebas que prueban una funcionalidad de nuestra aplicación de forma transversal o de punta a punta.
+
+Cucumber \citeotras{cucumber} permite a los desarrolladores describir cómo debería comportarse el software en texto plano. Con este texto plano, escrito en un lenguaje entendible por cualquiera pero aplicando ciertas normas del DSL, podemos usar este texto: como documentación, para automatizar los tests y como ayuda al desarrollo ya que están definidos como historias de usuario.
+
+
+\subsection{Bootstrap}
+Twitter Bootstrap \citeotras{bootstrap} es un framework de software libre para diseño de sitios y aplicaciones web. Contiene plantillas de diseño con tipografía, formularios, botones, cuadros, menús de navegación y otros elementos de diseño basado en HTML y CSS, así como, extensiones de JavaScript opcionales adicionales.
+
+
+\subsection{MathML}
+El MathML o Mathematical Markup Language \citeotras{mathml} es un lenguaje de marcado basado en XML, cuyo objetivo es expresar notación matemática de forma que distintas máquinas puedan entenderla, para su uso en combinación con XHTML en páginas web, y para intercambio de información entre programas de tipo matemático en general.
+
+
+\subsection{GraphViz}
+Graphviz \citeotras{graphviz} (Graph Visualization Software) es un paquete de herramientas de código abierto inicialmente desarrollado por AT\&T para dibujar grafos usando un lenguaje de script llamado DOT. También dispone de una librería para la creación de aplicaciones software. Graphviz es software libre.
+
+
+\subsection{Gimp}
+GIMP \citeotras{gimp} (GNU Image Manipulation Program) es un programa de edición de imágenes digitales en forma de mapa de bits, tanto dibujos como fotografías. Es un programa libre y gratuito. Forma parte del proyecto GNU y está disponible bajo la Licencia pública general de GNU.
+
+GIMP permite el tratado de imágenes en capas, para poder modificar cada objeto de la imagen en forma totalmente independiente a las demás capas en la imagen, también pueden subirse o bajarse de nivel las capas para facilitar el trabajo en la imagen, la imagen final puede guardarse en el formato xcf de GIMP que soporta capas, o en un formato plano sin capas, que puede ser png, bmp, gif, jpg, etc.
