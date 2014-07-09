@@ -1,0 +1,201 @@
+\section{Introducción}
+La planificación temporal del proyecto, o lo que es lo mismo, la elaboración del calendario o programa de tiempos, consiste en una representación gráfica de todas las actividades del proyecto necesarias para producir el resultado final que se desea. 
+
+Este calendario es una de las primeras partes del proyecto a realizar, puesto que es imprescindible para el control de grandes proyectos. Esta planificación se basa en la supervisión periódica del desarrollo del proyecto y en la comparación de los resultados que se van obteniendo con los previstos en el calendario inicial, siendo una referencia para saber si el desarrollo del proyecto software está dentro de los parámetros estimados con anterioridad, lo que supondría que se está cumpliendo con lo esperado. En caso contrario, permite observar que algo está fallando, permitiendo así cambiar los aspectos necesarios para adaptarse a la situación actual y rehacer el calendario de tiempos o redistribuir y optimizar los recursos para mejorar y cumplir con el plan previsto.
+
+En cuanto al estudio de viabilidad legal, principalmente hay que analizar las licencias software. Éstas son un contrato entre el titular del derecho de autor y el usuario del programa informático, para utilizar éste en una forma determinada y de conformidad con unas condiciones convenidas.
+
+\newpage
+
+\section{Planificación temporal}
+El objetivo de la planificación temporal es definir todas las tareas del proyecto para poder distribuir el trabajo a lo largo de la duración prevista del proyecto.
+
+El marco de desarrollo seleccionado para la elaboración del proyecto es Scrum. Este modelo se caracteriza porque todas las actividades no están planificadas a priori, sino que se van definiendo en cada iteración en función de su viabilidad y de los objetivos alcanzados hasta el momento.
+
+A continuación se detalla la línea de trabajo que se ha seguido usando esta metodología de trabajo.
+
+\newcommand{\pesoscasosdeuso}{\operatorname{Peso De Casos De Uso}}
+\newcommand{\pesosactores}{\operatorname{Peso De Actores}}
+
+\subsection{Estimación temporal a partir de los casos de uso}
+Para poder estimar de manera general el tiempo total que va a llevar el desarrollo del proyecto se va a realizar una estimación a partir de los casos de uso definidos en el Anexo II.
+
+Antes de mostrar la tabla de estimación temporal, conviene repasar una serie de fórmulas que se utilizan para calcular algunos valores de la tabla:
+\begin{itemize}
+ \item Puntos de casos de uso no ajustados:
+  \[ UUCP = \pesosactores + \pesoscasosdeuso \]
+ \item Peso de los casos de uso:
+  \[ \pesoscasosdeuso = \sum_{i = 0}^{i} Factor_{i} \]
+ \item Peso de los factores técnicos:
+  \[ TFC = 0,6 + 0,01 \cdot \sum_{i = 0}^{i} Factor_{i} \cdot Peso_{i} \]
+ \item Factores de entorno:
+  \[ EF = 1,4 + (-0,03) \cdot \sum_{i = 0}^{i} Factor_{i} \cdot Peso_{i} \]
+\end{itemize}
+
+A continuación \vertabla{tablaEstimacionTemporalCasosDeUso}, aparece detallada la duración estimada del desarrollo del proyecto a partir de los casos de uso identificados. Se encuentra dividida en:
+\begin{itemize}
+ \item Puntos de casos de uso no ajustados: sirven para conocer la envergadura del proyecto tomando como referencia los casos de uso.
+ \item Factores técnicos: cuantifica la dificultad del proyecto en función de sus características internas.
+ \item Factores del entorno: sirven para valorar lo familiarizado que se encuentra el equipo de desarrollo con proyectos de este tipo.
+\end{itemize}
+
+% Estimación temporal a partir de casos de uso.
+\tablaSmallSinColores{Estimación temporal a partir de casos de uso}{p{8cm} c c c}{tablaEstimacionTemporalCasosDeUso}{
+  \multicolumn{1}{c}{Factor} & \multicolumn{1}{c}{Peso} & \multicolumn{1}{c}{$ F_{i} $} & \multicolumn{1}{c}{Total} \\
+ }
+ {
+  Actores simples                                              & 1  & 1   & 1    \\
+  Actores medios                                               & 0  & 2   & 0    \\
+  Actores complejos                                            & 0  & 3   & 3    \\
+  \rowcolor[gray]{.8} Total peso actores                       &    &     & 1    \\
+  Casos de uso simples                                         & 8  & 5   & 40   \\
+  Casos de uso medios                                          & 1  & 10  & 10   \\
+  Casos de uso complejos                                       & 0  & 15  & 0   \\
+  \rowcolor[gray]{.8} Total peso casos de uso                  &    &     & 50   \\
+  \rowcolor[gray]{.8} UUCP (Puntos de caso de uso no ajustados)&    &     & 51   \\
+  Sistema distribuido                                          & 0  & 2   & 0    \\
+  Tiempos de respuesta críticos                                & 0  & 1   & 0    \\
+  En línea                                                     & 0  & 1   & 0    \\
+  Procesos internos complejos                                  & 1  & 1   & 1    \\
+  El código debe ser reutilizable                              & 3  & 1   & 3    \\
+  Fácil de instalar                                            & 1  & 0,5 & 0,5  \\
+  Fácil de utilizar                                            & 4  & 0,5 & 2,5  \\
+  Portable                                                     & 0  & 2   & 0    \\
+  Fácil de modificar                                           & 3  & 1   & 3    \\
+  Concurrencia                                                 & 0  & 1   & 0    \\
+  Incluye características de seguridad                         & 0  & 1   & 0    \\
+  Acceso a software creado por otras compañías                 & 0  & 1   & 0    \\
+  Incluye facilidades de aprendizaje para usuario              & 0  & 1   & 0    \\
+  \rowcolor[gray]{.8} TF (Factores técnicos)                   &    &     & 0,7 \\
+  Familiarizado con \scrum{}                                   & 4  & 1,5 & 6   \\
+  Experiencia en este tipo de aplicaciones                     & 4  & 1   & 4    \\
+  Experiencia en Orientación a Objetos                         & 5  & 0,5 & 2,5  \\
+  Capacidad de liderazgo del analista                          & 5  & 1   & 5    \\
+  Motivación                                                   & 5  & 1   & 5    \\
+  Requisitos estables                                          & 5  & 2   & 10    \\
+  Trabajadores a tiempo parcial                                & 3  & -1  & -3   \\
+  Lenguaje de programación difícil de utilizar                 & 1  & -1  & -1   \\
+  \rowcolor[gray]{.8} EF (Factores de entorno)                 &    &     & 0,54 \\
+ }
+
+Los puntos de casos de uso se calculan según la siguiente fórmula:
+\[ UCP = UUCP \cdot TF \cdot EF \]
+
+Para calcular los puntos de casos de uso hay que sustituir, en la fórmula anterior, con los valores de la tabla, es decir:
+\[ UCP = 51 \cdot 0,7 \cdot 0,54 = 19,27 \]
+
+Para obtener la duración del proyecto estimado según los casos de uso hay que multiplicar el valor de \textit{UCP} por un factor que depende del número de factores de entorno en este caso se multiplica por 20.
+
+Por lo expuesto anteriormente: $ Nº horas = 20 \cdot 19,27 $, es decir, 385 horas/hombre.
+
+Conviene destacar que los resultados obtenidos son meramente orientativos, ya que se va a utilizar una metodología ágil, por lo que la planificación va a ser a nivel de Sprint (de 7 a 30 días). Al comenzar cada uno de ellos, se definirán una serie de tareas que deberán ser completadas en dicho Sprint.
+
+\newcommand{\tiempo}{\operatorname{Tiempo}}
+\newcommand{\horas}{\operatorname{horas}}
+\newcommand{\persona}{\operatorname{persona}}
+\newcommand{\jornada}{\operatorname{jornada}}
+\newcommand{\jornadas}{\operatorname{jornadas}}
+\newcommand{\mes}{\operatorname{mes}}
+\newcommand{\meses}{\operatorname{meses}}
+\newcommand{\semana}{\operatorname{semana}}
+\newcommand{\hora}{\operatorname{hora}}
+
+\[
+ \tiempo = \dfrac{385 \horas}{1 \persona} \cdot \dfrac{1 \jornada}{5 \horas} \cdot \dfrac{1 \mes}{20 \jornadas} = 3,8 \meses
+\]
+
+\newpage
+
+\section{Desarrollo con Scrum}
+En esta sección se repasa de una manera rápida los principales aspectos del desarrollo de proyectos con Scrum. Al mismo tiempo se analizan los distintos roles que va a asumir cada uno de los participantes en el proyecto.
+
+Conviene aclarar que los términos que define la metodología Scrum se encuentran en inglés,
+han sido mantenidos en el idioma original para no confundir con las traducciones.
+
+Scrum es una metodología ágil que proporciona un marco de trabajo para la gestión de proyectos. Su objetivo es obtener resultados rápidos, adaptándose a los cambios de las necesidades de los clientes. Para ello, como metodología ágil que es, Scrum define un ciclo de vida iterativo e incremental, esto es que en cada iteración se mejora las funcionalidades ya existentes y se añaden las nuevas que se vayan necesitando.
+
+Cada iteración termina con una pieza de software ejecutable que incorpora una nueva funcionalidad o mejora las ya existentes. Estas iteraciones suelen durar de dos a cuatro semanas, aunque nosotros haremos iteraciones de una semana.
+
+Scrum busca priorizar los trabajos que mayor valor aportan al negocio evitando, en la medida
+de lo posible, complejos manuales de documentación que no tengan utilidad en el proceso.
+
+Los requerimientos y prioridades se revisan y ajustan durante el proyecto en intervalos cortos y regulares. De esta forma es sencillo adaptarse a los cambios solicitados por el cliente y responder de una forma rápida a los mismos.
+
+Para la comprensión de Scrum debemos definir las diferentes partes que lo componen:
+
+\subsection{Actores}
+Scrum define un conjunto de roles o actores detallados a continuación:
+
+\begin{itemize}
+ \item \textit{Scrum Master} (o facilitador): coordina el desarrollo del proyecto y trabaja de manera similar al director de proyectos. Una de sus tareas es eliminar los obstáculos que puedan dificultar al equipo de desarrollo o la consecución de sus objetivos. En el proyecto, este rol lo ha tomado el autor del documento Rodrigo Manjón Martín.
+ \item \textit{Scrum Team} (o equipo): incluye a los desarrolladores y son los encargados de realizar las tareas que se definen en cada Sprint. En el proyecto, este rol lo ha tomado el autor del documento Rodrigo Manjón Martín.
+ \item \textit{Product Owner} (o cliente): representa la voz del cliente y aporta la visión del negocio. Representa el destinatario final del proyecto a desarrollar y el que, en última instancia, realiza las pruebas de aceptación. Es también el encargado de mantener al día el listado de las tareas o Product Backlog y sus prioridades. En el proyecto este rol sería tomado por la Universidad de Burgos, en concreto, personalizado el tutor del proyecto César Ignacio García Osorio.
+\end{itemize}
+
+\subsection{Ciclo de desarrollo}
+Al inicio del proyecto se definen una serie de requisitos que serán los objetivos a cumplir. Todos
+ellos quedan reflejados en el Product Backlog. Cada uno de estos objetivos serán subdivididos en tareas pequeñas y atómicas al inicio de cada Sprint.
+
+Al inicio de cada Sprint se extraen una serie de tareas de los elementos del Product Backlog que conforman el Sprint Backlog, las tareas son elegidas por el equipo. Estas tareas deberán ser completadas durante el ciclo y no se podrá añadir tareas nuevas a este Sprint durante la realizacion del mismo.
+
+\begin{itemize}
+ \item \textit{Product Backlog}: consiste en un listado de historias del usuario, obtenidas con el cliente, que se incorporarán al producto software a partir de incrementos sucesivos. A partir del Product Backlog se logra tener una única visión durante todo el proyecto. Y, por lo tanto, los fallos en el Product Backlog repercutirán profundamente en el desarrollo del proyecto. 
+
+El Product Backlog estará ordenado a partir del valor que aporta al negocio la implementación de la historia de usuario. Además las necesidades no están congeladas desde el principio, sino que se descubren y se detallan a lo largo de todo el proyecto.
+
+ \item \textit{Sprint}: una de las bases de los proyectos ágiles es el desarrollo mediante las iteraciones incrementales. En Scrum a cada iteración se le denomina Sprint. Para nosotros los Sprints tiene una duración de una semana y como resultado se creará un producto software potencialmente entregable, un prototipo operativo.
+\end{itemize}
+
+\subsection{Reuniones de Scrum}
+
+\begin{itemize}
+ \item \textit{Daily Meeting}: reunión inicial de cada Sprint en la que se extraen los item backlog. Se numeran las tareas extraídas del Product Backlog para desarrollar durante el Sprint. Esta reunión tiene una gran importancia ya que, durante el desarrollo del Sprint, no se podrá modificar ni añadir nuevas tareas.
+
+
+ \item \textit{Planning meeting}: una de las bases de los proyectos ágiles es el desarrollo mediante las iteraciones incrementales. En Scrum a cada iteración se le denomina Sprint. Para nosotros los Sprints tiene una duración de una semana y como resultado se creará un producto software potencialmente entregable, un prototipo operativo.
+ 
+  \item \textit{Review meeting}: reunión final (4 horas máximo) de cada Sprint donde se detallan los objetivos cumplidos durante el mismo. Se muestra al usuario el producto, en caso de que sea posible. En función de los resultados mostrados y de los cambios que haya habido en el contexto del proyecto, el cliente realiza las adaptaciones necesarias de manera objetiva, ya desde la primera iteración, replanificando el proyecto.
+  
+    \item \textit{Retrospective meeting}: en esta reunión (4 horas máximo), el equipo analiza cómo ha sido su manera de trabajar y cuáles son los problemas que podrían impedirle progresar adecuadamente, mejorando de manera continua su productividad. El Scrum Master, o Facilitador, se encargará de ir eliminando los obstáculos identificados.
+\end{itemize}
+
+En este caso, todas las reuniones requieren de la presencia del tutor y del equipo de desarrollo
+ya que entre ambos, agrupan los roles que se ven implicados en dichas reuniones.
+
+\figura{1}{imgs/Scrum_process.png}{Metodología Scrum}{scrumProcess}{}
+\newpage
+
+\section{Product Backlog del proyecto}
+En esta sección, aparece redactado el Product Backlog o lista de objetivos, con la prioridad de cada una de los Product Item.
+
+Scrum no define un método o herramienta para llevar el día a día del trabajo realizado, por lo
+que el seguimiento se puede realizar con una simple hoja de cálculo, cuaderno o con herramientas de gestión especializadas.
+
+Aunque se estuvo barajando la posibilidad de usar un software para la gestión de Scrum, al final nos decidimos por ir apuntando manualmente en un fichero las diferentes prácticas que realizamos. Al ser este un proyecto con poca gente implicada y relativamente pequeño no vimos necesario complicar más este teniendo que aprender a usar otra herramienta más.
+
+%Tabla que contiene el Product Backlog
+\tabla{Product Backlog}{c p{8.5cm} p{2cm} c}{4}{productBacklog}{
+  \multicolumn{1}{c}{ID} & \multicolumn{1}{c}{Backlog Item} & \multicolumn{1}{c}{Propietario} & \multicolumn{1}{c}{Prioridad} \\
+ }
+ {
+  T01 & Generar algoritmo A estrella                                     & César          & Alta  \\
+  T02 & Resolver paso a paso A estrella                                  & César          & Alta  \\
+  T03 & El usuario puede añadir nodos al algoritmo                       & César          & Alta  \\
+  T04 & Mostrar todo el proceso en una web                               & César          & Alta  \\
+  T05 & Almacenar la información generada para su posterior acceso       & César          & Alta  \\
+  T06 & Reuniones Scrum                                                  & César          & Media \\
+  T07 & Presentación y defensa del proyecto                              & César, Rodrigo & Baja  \\
+  T08 & Documentar el proyecto de final de carrera                       & César          & Baja  \\
+  T09 & Aprender y decidir las herramientas que se usarán en el proyecto & Rodrigo        & Media  \\
+ }
+\newpage
+
+\section{Planificación por Sprint}
+En esta sección aparece el listado de los diversos Sprints del proyecto. La información de cada uno está dividida del siguiente modo:
+\begin{itemize}
+ \item \textit{Planning meeting}: acta de la reunión inicial de cada Sprint en la que se detallan los objetivos a cumplir durante el transcurso del mismo.
+ \item \textit{Sprint planning}: se numeran las tareas extraídas del Product Backlog para desarrollar durante el \sprint{}.
+ \item \textit{Burndown chart}: gráfico que muestra la evolución a lo largo del Sprint en comparación a la línea óptima.
+ \item \textit{Retrospective meeting}: acta de la reunión retrospectiva realizada al final del Sprint y donde se analizan los problemas detectados durante su ejecución y las desviaciones (en caso de haberlas).
+\end{itemize}
+
