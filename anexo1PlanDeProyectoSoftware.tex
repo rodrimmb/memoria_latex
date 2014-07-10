@@ -180,7 +180,7 @@ Aunque se estuvo barajando la posibilidad de usar un software para la gestión de
  {
   T01 & Generar algoritmo A estrella                                     & César          & Alta  \\
   T02 & Resolver paso a paso A estrella                                  & César          & Alta  \\
-  T03 & El usuario puede añadir nodos al algoritmo                       & César          & Alta  \\
+  T03 & El usuario puede modificar la información del algoritmo          & César          & Alta  \\
   T04 & Mostrar todo el proceso en una web                               & César          & Alta  \\
   T05 & Almacenar la información generada para su posterior acceso       & César          & Alta  \\
   T06 & Reuniones Scrum                                                  & César          & Media \\
@@ -198,4 +198,364 @@ En esta sección aparece el listado de los diversos Sprints del proyecto. La info
  \item \textit{Burndown chart}: gráfico que muestra la evolución a lo largo del Sprint en comparación a la línea óptima.
  \item \textit{Retrospective meeting}: acta de la reunión retrospectiva realizada al final del Sprint y donde se analizan los problemas detectados durante su ejecución y las desviaciones (en caso de haberlas).
 \end{itemize}
+
+%SPRINT1
+\subsection{Sprint 1}
+\subsubsection*{Planning meeting}
+En este primer Sprint se pretenden conseguir los objetivos:
+\begin{enumerate}
+ \item Iniciar el proyecto y comenzar a trabajar con el nuevo modelo: Scrum.
+ \item Toma de contacto con el proyecto de final de máster: primeras reuniones con el tutor, toma de requisitos, estudio de algoritmos\dots
+\end{enumerate}
+
+\subsubsection*{Fechas de desarrollo y tiempo estimado}
+El primer Sprint comienza el 17/11/2013 y finalizará el 30/11/2013. El tiempo estimado de dedicación al proyecto es de 20 horas.
+
+\subsubsection*{Sprint planning}
+\begin{itemize}
+ \item T01: Generar el algoritmo A estrella.
+  \begin{itemize}
+   \item TK001: Empezar a estudiar el funcionamiento de este algoritmo.
+  \end{itemize}
+ \item T08: Documentar el proyecto de final de carrera.
+  \begin{itemize}
+   \item TK002: Documentación de seguimiento del Sprint 1.
+  \end{itemize}
+ \item T09: Aprender y decidir las herramientas que se usarán en el proyecto.
+  \begin{itemize}
+   \item TK003: Valorar las ventajas del uso de lenguajes dinámicos como Ruby o Python, comparar ventajas e inconvenientes respecto a la implementación.
+   \item TK004: Empezar a buscar librerías para el dibujo de grafos.
+  \end{itemize}
+ \item T06: Reuniones de Scrum.
+  \begin{itemize}
+   \item TK005: Planning meeting.
+   \item TK006: Retrospective meeting.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection*{Burndown chart}
+
+%Burndown chart del Sprint 1.
+\figura{1}{imgs/sprint1.png}{Burndown Chart del Sprint 1}{burndownChartSprint1}{}
+
+\subsubsection*{Retrospective meeting}
+¿Qué ha ido bien?
+\begin{itemize}
+ \item La investigación y familiarización con los lenguajes de programación.
+ \item Nos decidimos por Ruby como lenguaje principal de programación.
+ \item Descubrimiento de diferentes frameworks que nos pueden ayudar a realizar el proyecto.
+\end{itemize}
+
+¿Qué dificultades ha habido?
+\begin{itemize}
+ \item Conceptos complejos durante la fase de estudio del algoritmo.
+ \item Adaptación a la metodología Scrum.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+%SPRINT2
+\subsection{Sprint 2}
+\subsubsection*{Planning meeting}
+En este Sprint se pretenden conseguir los objetivos:
+\begin{enumerate}
+ \item Decidir como que base de datos vamos a utilizar.
+ \item Investigar los diferentes frameworks que podemos utilizar para el proyecto y hacer las primeras pruebas con ellos.
+\end{enumerate}
+
+\subsubsection*{Fechas de desarrollo y tiempo estimado}
+El Sprint comienza el 01/12/2013 y finalizará el 07/12/2013. El tiempo estimado de dedicación al proyecto es de 20 horas.
+
+\subsubsection*{Sprint planning}
+\begin{itemize}
+ \item T01: Generar el algoritmo A estrella.
+  \begin{itemize}
+   \item TK007: Estudiar el funcionamiento de este algoritmo.
+   \item TK008: Hacer las primeras pruebas en ruby implementando el algoritmo.
+  \end{itemize}
+ \item T08: Documentar el proyecto de final de carrera.
+  \begin{itemize}
+   \item TK009: Documentación de seguimiento del Sprint 2.
+  \end{itemize}
+ \item T09: Aprender y decidir las herramientas que se usarán en el proyecto.
+  \begin{itemize}
+   \item TK010: Comenzar a usar Ruby on Rails como framework web.
+  \end{itemize}
+ \item T06: Reuniones de Scrum.
+  \begin{itemize}
+   \item TK005: Planning meeting.
+   \item TK006: Retrospective meeting.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection*{Burndown chart}
+
+%Burndown chart del Sprint 2.
+%\figura{1}{imgs/sprint2.png}{Burndown Chart del Sprint 2}{burndownChartSprint2}{}
+
+\subsubsection*{Retrospective meeting}
+¿Qué ha ido bien?
+\begin{itemize}
+ \item Implementar en ruby es relativamente sencillo.
+\end{itemize}
+
+¿Qué dificultades ha habido?
+\begin{itemize}
+ \item El framework Ruby on Rails es complejo de aprender y utilizar.
+ \item Tengo que decidirme entre el uso de una base de datos relacional o una NoSQL, pero tengo tiempo para decidirme porque todavía no estamos almacenando información.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+%SPRINT3
+\subsection{Sprint 3}
+\subsubsection*{Planning meeting}
+En este Sprint se pretenden conseguir los objetivos:
+\begin{enumerate}
+ \item Seguir probando Ruby on Rails para obtener una primera web donde pueda ver los datos de los nodos del algoritmo.
+ \item Por ahora los datos del algoritmo estarán en un fichero, mientras probamos el algoritmo.
+
+\subsubsection*{Fechas de desarrollo y tiempo estimado}
+El Sprint comienza el 08/12/2013 y finalizará el 14/12/2013. El tiempo estimado de dedicación al proyecto es de 20 horas.
+
+\subsubsection*{Sprint planning}
+\begin{itemize}
+ \item T04: Mostrar todo el proceso en una web
+  \begin{itemize}
+   \item TK013: Mostrar en una web la tabla los nodos de la búsqueda.
+   \item TK014: Trabajar con HTML y JavaScript para generar la tabla.
+   \item TK015: Leer ficheros desde Ruby
+  \end{itemize}
+ \item T08: Documentar el proyecto de final de carrera.
+  \begin{itemize}
+   \item TK016: Documentación de seguimiento del Sprint 3.
+  \end{itemize}
+ \item T06: Reuniones de Scrum.
+  \begin{itemize}
+   \item TK017: Planning meeting.
+   \item TK018: Retrospective meeting.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection*{Burndown chart}
+
+%Burndown chart del Sprint 3.
+%\figura{1}{imgs/sprint3.png}{Burndown Chart del Sprint 3}{burndownChartSprint3}{}
+
+\subsubsection*{Retrospective meeting}
+¿Qué ha ido bien?
+\begin{itemize}
+ \item Trabajar con HTML y JavaScript para mostrar los datos en la web parece sencillo.
+ \item Trabajar con ficheros en Ruby es bastante sencillo.
+ \item Se ha decidido guardar la información del fichero que contiene los datos del algoritmo en JSON ya que es muy sencillo de trabajar con él en JavaScript.
+\end{itemize}
+
+¿Qué dificultades ha habido?
+\begin{itemize}
+ \item La manera en la que guardaba la información en el JSON no era apropiada y presentaba problemas.
+ \item No se ha terminado de mostrar la información en tablas.
+\end{itemize}
+
+\subsubsection*{A tener en cuenta}
+Después de este Sprint se paro durante bastante tiempo el desarrollo debido a las vacaciones de navidad y poder estar centrado en los exámenes de enero y febrero.
+
+
+
+
+
+
+
+
+
+
+%SPRINT4
+\subsection{Sprint 4}
+\subsubsection*{Planning meeting}
+En este Sprint se pretenden conseguir los objetivos:
+\begin{enumerate}
+ \item Seguir probando Ruby on Rails.
+ \item Mejorar la estructura del JSON para guardar los datos de la búsqueda.
+ \item Estudiar librerías de representación de gráficas sencillas.
+
+\subsubsection*{Fechas de desarrollo y tiempo estimado}
+El Sprint comienza el 02/02/2014 y finalizará el 09/02/2014. El tiempo estimado de dedicación al proyecto es de 20 horas.
+
+\subsubsection*{Sprint planning}
+\begin{itemize}
+ \item T04: Mostrar todo el proceso en una web
+  \begin{itemize}
+   \item TK013: Mostrar en una web la tabla los nodos de la búsqueda.
+   \item TK014: Trabajar con HTML y JavaScript para generar la tabla.
+  \end{itemize}
+ \item T08: Documentar el proyecto de final de carrera.
+  \begin{itemize}
+   \item TK019: Documentación de seguimiento del Sprint 4.
+  \end{itemize}
+ \item T06: Reuniones de Scrum.
+  \begin{itemize}
+   \item TK020: Planning meeting.
+   \item TK021: Retrospective meeting.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection*{Burndown chart}
+
+%Burndown chart del Sprint 4.
+%\figura{1}{imgs/sprint4.png}{Burndown Chart del Sprint 4}{burndownChartSprint4}{}
+
+\subsubsection*{Retrospective meeting}
+¿Qué ha ido bien?
+\begin{itemize}
+ \item Se ha conseguido mostrar en tablas los datos.
+ \item Se ha mejorado la estructura del JSON.
+\end{itemize}
+
+¿Qué dificultades ha habido?
+\begin{itemize}
+ \item JSON redefinido, pero a falta de incluir el coste de los arcos.
+ \item Trabajar con Ruby on Rails es demasiado complejo, igual hay que buscar otras alternativas.
+ \item Por ahora la librerías de dibujo de gráficos parecen muy complejas.
+\end{itemize}
+
+\subsubsection*{A tener en cuenta}
+Por motivos personales las siguientes dos semanas se detiene al avance del proyecto hasta la semana del 23 de Febrero.
+
+
+
+
+
+
+
+
+
+
+
+%SPRINT5
+\subsection{Sprint 5}
+\subsubsection*{Planning meeting}
+En este Sprint se pretenden conseguir los objetivos:
+\begin{enumerate}
+ \item Buscar una alternativa a Ruby on Rails.
+ \item Mejorar la estructura del JSON para guardar los datos de los arcos.
+ \item Seguir la implementación del algoritmo A estrella.
+
+\subsubsection*{Fechas de desarrollo y tiempo estimado}
+El Sprint comienza el 23/02/2014 y finalizará el 02/03/2014. El tiempo estimado de dedicación al proyecto es de 20 horas.
+
+\subsubsection*{Sprint planning}
+\begin{itemize}
+ \item T01 Generar algoritmo A estrella.
+  \begin{itemize}
+   \item TK022: Generar una cola de prioridad.
+  \end{itemize}
+  \item T09 Aprender y decidir las herramientas que se usarán en el proyecto.
+  \begin{itemize}
+   \item TK023: Buscar alternativa a Ruby on Rails.
+  \end{itemize}
+ \item T08: Documentar el proyecto de final de carrera.
+  \begin{itemize}
+   \item TK024: Documentación de seguimiento del Sprint 5.
+  \end{itemize}
+ \item T06: Reuniones de Scrum.
+  \begin{itemize}
+   \item TK025: Planning meeting.
+   \item TK026: Retrospective meeting.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection*{Burndown chart}
+
+%Burndown chart del Sprint 5.
+%\figura{1}{imgs/sprint5.png}{Burndown Chart del Sprint 5}{burndownChartSprint5}{}
+
+\subsubsection*{Retrospective meeting}
+¿Qué ha ido bien?
+\begin{itemize}
+ \item Se ha sustituido Ruby on Rails por Sinatra.
+ \item Se ha mejorado la estructura del JSON.
+\end{itemize}
+
+¿Qué dificultades ha habido?
+\begin{itemize}
+ \item Ciertos problemas al trabajar con ordenación de arrays de objetos en Ruby
+\end{itemize}
+
+\subsubsection*{A tener en cuenta}
+La siguiente semana tampoco se continuo con el proyecto debido a que estuve con catarro.
+
+
+
+
+
+
+
+
+
+
+%SPRINT6
+\subsection{Sprint 6}
+\subsubsection*{Planning meeting}
+En este Sprint se pretenden conseguir los objetivos:
+\begin{enumerate}
+ \item Aprender el funcionamiento de Sinatra.
+ \item Seguir la implementación del algoritmo A estrella.
+ \item Cambiar la estructura del JSON para incluir la información de eliminados.
+ \item Usar una librería de JavaScript para visualizar los datos en tablas
+
+\subsubsection*{Fechas de desarrollo y tiempo estimado}
+El Sprint comienza el 09/03/2014 y finalizará el 15/03/2014. El tiempo estimado de dedicación al proyecto es de 20 horas.
+
+\subsubsection*{Sprint planning}
+\begin{itemize}
+ \item T01 Generar algoritmo A estrella.
+  \begin{itemize}
+   \item TK027: Añadir a los nodos la información de cuales han sido eliminados.
+   \item TK028: Mejorar A estrella para que devuelva la lista de abiertos y cerrados.
+  \end{itemize}
+  \item T04 Mostrar todo el proceso en una web
+  \begin{itemize}
+   \item TK029: Primeras pruebas para obtener los datos desde Sinatra.
+   \item TK030: Uso de una librería JavaScript para mostrar los datos.
+  \end{itemize}
+ \item T08: Documentar el proyecto de final de carrera.
+  \begin{itemize}
+   \item TK031: Documentación de seguimiento del Sprint 6.
+  \end{itemize}
+ \item T06: Reuniones de Scrum.
+  \begin{itemize}
+   \item TK032: Planning meeting.
+   \item TK033: Retrospective meeting.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection*{Burndown chart}
+
+%Burndown chart del Sprint 6.
+%\figura{1}{imgs/sprint6.png}{Burndown Chart del Sprint 6}{burndownChartSprint6}{}
+
+\subsubsection*{Retrospective meeting}
+¿Qué ha ido bien?
+\begin{itemize}
+ \item Se ha podido obtener los datos desde Sinatra.
+ \item Se ha mejorado la estructura del JSON.
+ \item Se usa una librería para mostrar los datos en tablas. 
+\end{itemize}
+
+¿Qué dificultades ha habido?
+\begin{itemize}
+ \item Problemas para pasar lo que ya estaba hecho en Ruby on Rails a Sinatra.
+\end{itemize}
+
 
