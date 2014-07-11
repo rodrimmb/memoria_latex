@@ -132,7 +132,7 @@ En el lado del servidor es necesario que sea capaz de interpretar código Ruby y 
 \end{itemize}
 
 En cuanto al sistema operativo, deberá ser posible la ejecución en todos los que exista una versión de Ruby y de MongoDB. Uno de los beneficios de que el proyecto se implemente en un lenguaje interpretado es que maximiza las posibilidades de uso en distintos entornos.
-
+\newpage
 
 
 
@@ -164,10 +164,21 @@ Se ha elegido el lenguaje de programación Ruby para el desarrollo del proyecto, 
 
 El otro requisito necesario será tener instalada la base de datos MongoDB que es la base de datos usada en el proyecto. Usaremos la version 2.6.0.
 
+\subsection{Especificación de requisitos inherentes a la tecnología utilizada}
+En la siguiente tabla se describen los requisitos de información en forma de plantilla.
 
+\tablaSinCabecera{Requisitos de información}{p{3.5cm} p{10cm}}{2}{tablaRequisitosInformacion}{
+  \rowcolor[gray]{.8}RI - 01       & Información de los nodos del algoritmo \\\hline
+  Descripción                      & Almacena la información de los nodos para la ejecución del algoritmo A estrella \\\hline
+  Datos específicos                & Coste del nodo, coste del camino hasta sus hijos \\\hline
+  Importancia                      & Alta \\\hline
+  Comentarios                      & Al menos hay que dar un nombre y un valor al nodo \\\\
+}
 
+\subsection{Requisitos funcionales}
+La definición de los requisitos funcionales servirá de ayuda para el diseño de la herramienta.
 
-
+En este apartado se describen todos los requisitos identificados para la aplicación:
 
 
 
