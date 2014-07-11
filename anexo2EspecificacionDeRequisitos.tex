@@ -1,0 +1,180 @@
+\section{Introducción}
+Este anexo tiene como objetivo analizar y documentar las necesidades funcionales que deberán ser soportadas por el sistema a desarrollar. Para ello, hay que identificar los requisitos que debe satisfacer el proyecto, estudiar los problemas de las unidades afectadas y sus necesidades actuales.
+
+Estos requisitos son especificados por el tutor del proyecto que asume el rol de cliente, debe especificar la funcionalidad de la aplicación.
+					
+El objetivo de esta fase es describir lo que el sistema deberá ser capaz de hacer pero no como debe hacerlo.
+					
+Otra de las tareas a llevar a cabo en el presente anexo es la de priorizar cada una de las funcionalidades a implementar. Teniendo claras cuales son las tareas más criticas se podrá prestar un especial interés en ellas y asignar una cantidad mayor de recursos.
+
+
+
+
+
+
+
+
+
+\section{Objetivos del proyecto}
+Los objetivos principales que se han establecido son:
+
+\begin{itemize}
+  \item Creación de un servidor al que se le pase información de los nodos de un árbol de búsqueda en espacio de estados y devuelve el resultado de la búsqueda realizada con el algoritmo A estrella, describiendo los pasos que ha dado para encontrar la solución.
+  \item Creación de una web en la que se introduzcan los datos con los que trabaja el servidor y interprete de forma dinámica e intuitiva los datos que nos proporciona el servidor.
+\end{itemize}
+
+Hay que resaltar que en el lado del servidor usaremos un Servicio Web con una API REST, de tal forma que cualquiera que respete el formato de los datos que interpreta el servidor, podrá usar nuestro servicio, ya sea desde una web, un móvil o una aplicación de escritorio.
+
+
+
+
+
+
+
+
+
+
+
+\section{Usuarios participantes}
+En el proyecto han participado dos usuarios ambos han tenido al menos un rol o varios, para establecer los requisitos del proyecto.
+
+César Ignacio García Osorio, tutor del proyecto, ha asumido diversos roles durante el proceso:
+
+\begin{itemize}
+  \item Como cliente, ha participado en la fase de análisis describiendo las funcionalidades y el comportamiento del sistema a desarrollar. Asimismo, ha organizado el calendario y marcado los plazos de entrega.
+
+  \item Como técnico, ofreciendo sus conocimientos. Como experto en la materia ha aportado gran cantidad de documentación y ha ayudado a resolver dudas.
+\end{itemize}
+
+Por último, me incluyo como analista y desarrollador. Encargado de analizar y describir el problema propuesto por el cliente y realizar el diseño de la solución propuesta.
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Factores de riesgo}
+En este apartado describiremos las partes del proyecto que por sus características hacen que la realización del mismo pueda no ser llevada a cabo. Identificar los riesgos nos servirá para estar alerta ante los posibles problemas que puedan surgir y los retrasos que éstos desencadenan.
+
+\begin{itemize}
+ \item \textit{Falta de conocimiento} la primera dificultad encontrada es el desconocimiento de la práctica totalidad de las herramientas que van a ser usadas para realizar el proyecto. El proyecto se inicia como un reto, la posibilidad de poder aprender a usar nuevas y modernas herramientas hasta ahora no usadas durante todo el máster plantea una motivación extra.
+ 
+ \item \textit{Nuevo sistema de composición de texto} para la documentación se va a utilizar Latex lo que provocará una carga extra al desarrollo de la memoria del proyecto. Se utilizará para lograr una apariencia más sólida y profesional.
+ 
+ \item \textit{Desarrollo en solitario} hasta ahora los proyectos realizados se habían implementado en equipo, el enfrentarse en solitario a este desarrollo será una dificultad añadida.
+ 
+ \item \textit{Dedicación parcial} el desarrollo del proyecto deberá compaginarse con mi carrera profesional. Cualquier pico o esfuerzo extra requerido en el trabajo provocará una menor dedicación de tiempo al desarrollo del Proyecto de Final de Carrera.
+
+\end{itemize}
+
+Para la creación de la aplicación sera necesaria una gran labor de investigación de las herramientas y su documentación que esta en su mayoría exclusivamente en inglés. Además se deberán aplicar los conocimientos de inteligencia artificial adquiridos en el máster. Todo esto hará posible superar todos los riesgos identificados y que concluyan con la superación de los objetivos marcados en los plazos establecidos.
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Catálogo de requisitos del sistema}
+El objetivo de este apartado trata de definir de forma clara y verificable todas las funcionalidades y restricciones de la aplicación a construir.
+
+\subsection{Objetivos funcionales}
+Una de las características más importante que debe cumplir la aplicación es la facilidad de uso. Dado que su empleo está, principalmente, orientado a la docencia 	debe ser fácil de usar y posibilitar el seguir los algoritmos paso a paso. Asimismo, tratara de facilitar que el usuario final pueda asimilar, de manera sencilla, los conceptos .
+
+La aplicación permitirá crear y borrar búsquedas desde la página de inicio, una vez dentro de estas búsquedas se podrán añadir los nodos, con las relaciones que existen entre ellos y toda la información necesaria que conforman la búsqueda. En tiempo real se irá viendo cómo se genera el árbol de búsqueda.
+
+Una vez añadida la información de los nodos se podrá ver en una tabla todos los nodos con su información, si pasamos a la pestaña de al lado podremos resolver la búsqueda. En la pestaña de resolución de las búsquedas podemos decidir cómo queremos resolver:
+
+\begin{itemize}
+ \item \textit{Resolver paso a paso} Nos irá mostrando paso a paso las diferentes acciones que realiza el algoritmo hasta el final que nos mostrará la ruta más óptima. En cualquier paso de este tipo de resolución podremos pulsar en resolver y nos mostrará la solución final. También podremos volver a empezar desde el principio en cualquier momento.
+ 
+ \item \textit{Mostrar directamente la solución} En esta opción se nos mostrarán directamente todos los pasos y la solución, pero no veremos cómo ha tomado las decisiones el algoritmo, solo la solución y los pasos.
+
+\end{itemize}
+
+Las soluciones se muestran tanto en una tabla como en un gráfico que representa la búsqueda de forma más visual e intuitiva.
+
+\subsection{Requisitos de usuario}
+El usuario deberá ser capaz de generar y eliminar búsquedas, añadir nodos y toda la información necesaria de los nodos a estas búsquedas, ser capaz de ver la información de los nodos en una tabla y en el gráfico y poder ver la solución de la búsqueda tanto en tabla como en el gráfico.
+
+También debe ser capaz de poder cambiar de búsqueda y visualizar toda la información y la solución de cada una de ellas.
+
+\subsection{Requisitos del sistema}
+Al tratarse de una aplicación web los requisitos del sistema se verán desde dos perspectivas, la del sistema cliente y la del sistema servidor. Estas dos perspectivas serán diferentes. 
+
+Para el funcionamiento de la aplicación en el cliente, será necesario simplemente contar con un dispositivo con navegador web que soporte JavaScript.
+
+En el lado del servidor es necesario que sea capaz de interpretar código Ruby y pueda correr la base de datos MongoDB. MongoDB tiene ciertas limitaciones para máquinas de 32 bits así pues la configuración mínima recomendada será:
+
+\begin{itemize}
+ \item Procesador de doble núcleo de 64 bits
+ 
+ \item 1Gb de RAM
+ 
+ \item Al menos 3Gb de memoria libre en el disco duro
+
+\end{itemize}
+
+En cuanto al sistema operativo, deberá ser posible la ejecución en todos los que exista una versión de Ruby y de MongoDB. Uno de los beneficios de que el proyecto se implemente en un lenguaje interpretado es que maximiza las posibilidades de uso en distintos entornos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Especificación de requisitos}
+Esta sección del anexo se recoge los casos de uso que representan la funcionalidad que debe cubrir la aplicación a desarrollar. Cada caso de uso es una descripción de una secuencia de acciones que se ejecutan en un sistema para producir la salida esperada por un actor.
+
+Se definirán los requisitos inherentes a la tecnología utilizada, los requisitos de información, los requisitos funcionales representados con los casos de uso y los requisito no funcionales.
+					
+Los casos de uso no gozan de muy buena fama entre los defensores de las metodologías ágiles, como Scrum. Aun así son necesarios para este anexo aunque los casos de uso no van a ser demasiado detallados, ni difíciles de entender por el cliente. 
+
+\subsection{Especificación de requisitos inherentes a la tecnología utilizada}
+Son los requisitos dados por la tecnología utilizada en el desarrollo del proyecto.
+Se ha elegido el lenguaje de programación Ruby para el desarrollo del proyecto, concretamente la version 2.0.0p353. El primer requisito necesario para poder ejecutar la aplicación será que el terminal tenga instalada un interprete de Ruby.
+
+El otro requisito necesario será tener instalada la base de datos MongoDB que es la base de datos usada en el proyecto. Usaremos la version 2.6.0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
