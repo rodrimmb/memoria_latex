@@ -1,11 +1,10 @@
 \section{Introducción}
-Este anexo tiene como objetivo analizar y documentar las necesidades funcionales que deberán ser soportadas por el sistema a desarrollar. Para ello, hay que identificar los requisitos que debe satisfacer el proyecto, estudiar los problemas de las unidades afectadas y sus necesidades actuales.
+Este anexo cumple dos funciones. Primero, recoger todos los requisitos del sistema software a construir, de manera que sirve de contrato entre el cliente y los desarrolladores. Segundo, representar los requisitos de forma gráfica y textual, presentando los diferentes enfoques del sistema.
 
 Estos requisitos son especificados por el tutor del proyecto que asume el rol de cliente, debe especificar la funcionalidad de la aplicación.
-					
-El objetivo de esta fase es describir lo que el sistema deberá ser capaz de hacer pero no como debe hacerlo.
-					
-Otra de las tareas a llevar a cabo en el presente anexo es la de priorizar cada una de las funcionalidades a implementar. Teniendo claras cuales son las tareas más criticas se podrá prestar un especial interés en ellas y asignar una cantidad mayor de recursos.
+
+Este documento expone el análisis del sistema que se va a crear, mediante una descripción completa del comportamiento del mismo. Se describirá lo que el sistema debe ser capaz de hacer, pero no como debe hacerlo.
+
 
 
 
@@ -41,9 +40,10 @@ En el proyecto han participado dos usuarios ambos han tenido al menos un rol o v
 César Ignacio García Osorio, tutor del proyecto, ha asumido diversos roles durante el proceso:
 
 \begin{itemize}
-  \item Como cliente, ha participado en la fase de análisis describiendo las funcionalidades y el comportamiento del sistema a desarrollar. Asimismo, ha organizado el calendario y marcado los plazos de entrega.
-
-  \item Como técnico, ofreciendo sus conocimientos. Como experto en la materia ha aportado gran cantidad de documentación y ha ayudado a resolver dudas.
+  \item Como cliente, ha participado en la definición de los objetivos del proyecto. Ha dirigido los resultados del proyecto ya que el crea y mantiene la lista priorizada con los requisitos necesarios para cubrir los objetivos del proyecto, reparte los objetivos/requisitos en iteraciones y establece un calendario de entregas.
+  
+  \item Como técnico, ha aportado sus conocimientos para la resolución de los problemas que han surgido a lo largo del proyecto. También ha recomendado documentación para consultar.
+  
 \end{itemize}
 
 Por último, me incluyo como analista y desarrollador. Encargado de analizar y describir el problema propuesto por el cliente y realizar el diseño de la solución propuesta.
@@ -60,16 +60,16 @@ Por último, me incluyo como analista y desarrollador. Encargado de analizar y de
 
 
 \section{Factores de riesgo}
-En este apartado describiremos las partes del proyecto que por sus características hacen que la realización del mismo pueda no ser llevada a cabo. Identificar los riesgos nos servirá para estar alerta ante los posibles problemas que puedan surgir y los retrasos que éstos desencadenan.
+En este apartado describiremos las partes del proyecto que por sus características hacen que la realización del mismo pueda no ser llevada a cabo. Hay que tener en cuenta los riesgos, para poder anticiparnos a ellos para poder tener un plan cuando nos enfrentemos a ellos y no influyan en el desarrollo del proyecto de una forma significativa.
 
 \begin{itemize}
- \item \textit{Falta de conocimiento} la primera dificultad encontrada es el desconocimiento de la práctica totalidad de las herramientas que van a ser usadas para realizar el proyecto. El proyecto se inicia como un reto, la posibilidad de poder aprender a usar nuevas y modernas herramientas hasta ahora no usadas durante todo el máster plantea una motivación extra.
+ \item \textit{Falta de conocimiento}: la primera dificultad encontrada es el desconocimiento de la práctica totalidad de las herramientas que van a ser usadas para realizar el proyecto. El proyecto se inicia como un reto, la posibilidad de poder aprender a usar nuevas y modernas herramientas hasta ahora no usadas durante todo el máster plantea una motivación extra.
  
- \item \textit{Nuevo sistema de composición de texto} para la documentación se va a utilizar Latex lo que provocará una carga extra al desarrollo de la memoria del proyecto. Se utilizará para lograr una apariencia más sólida y profesional.
+ \item \textit{Nuevo sistema de composición de texto}: gracias a las recomendaciones del tutor para la documentación se va a utilizar \LaTeX{}, debido a la nula experiencia con esta herramienta la carga de trabajo de la parte de documentación se vera incrementada. Pero gracias al uso de esta herramienta se lograr una apariencia más sólida y profesional.
  
- \item \textit{Desarrollo en solitario} hasta ahora los proyectos realizados se habían implementado en equipo, el enfrentarse en solitario a este desarrollo será una dificultad añadida.
+ \item \textit{Desarrollo en solitario}: hasta ahora los proyectos realizados se habían implementado en equipo, el enfrentarse en solitario a este desarrollo será una dificultad añadida.
  
- \item \textit{Dedicación parcial} el desarrollo del proyecto deberá compaginarse con mi carrera profesional. Cualquier pico o esfuerzo extra requerido en el trabajo provocará una menor dedicación de tiempo al desarrollo del Proyecto de Final de Carrera.
+ \item \textit{Dedicación parcial}: debido a mi situación laboral actual la dedicación al proyecto no va a poder ser plena. 
 
 \end{itemize}
 
@@ -92,10 +92,10 @@ Para la creación de la aplicación sera necesaria una gran labor de investigación
 
 
 \section{Catálogo de requisitos del sistema}
-El objetivo de este apartado trata de definir de forma clara y verificable todas las funcionalidades y restricciones de la aplicación a construir.
+En este apartado se especifican todos los requisitos del sistema, definiendo las funcionalidades y restricciones del mismo.
 
 \subsection{Objetivos funcionales}
-Una de las características más importante que debe cumplir la aplicación es la facilidad de uso. Dado que su empleo está, principalmente, orientado a la docencia 	debe ser fácil de usar y posibilitar el seguir los algoritmos paso a paso. Asimismo, tratara de facilitar que el usuario final pueda asimilar, de manera sencilla, los conceptos .
+Una de las características más importante que debe cumplir la aplicación es la facilidad de uso. Dado que su empleo está, principalmente, orientado a la docencia 	debe ser fácil de usar y posibilitar el seguir los algoritmos paso a paso. Asimismo, tratará de facilitar que el usuario final pueda asimilar, de manera sencilla, los conceptos.
 
 La aplicación permitirá crear y borrar búsquedas desde la página de inicio, una vez dentro de estas búsquedas se podrán añadir los nodos, con las relaciones que existen entre ellos y toda la información necesaria que conforman la búsqueda. En tiempo real se irá viendo cómo se genera el árbol de búsqueda.
 
@@ -152,7 +152,7 @@ En cuanto al sistema operativo, deberá ser posible la ejecución en todos los que
 
 
 \section{Especificación de requisitos}
-Esta sección del anexo se recoge los casos de uso que representan la funcionalidad que debe cubrir la aplicación a desarrollar. Cada caso de uso es una descripción de una secuencia de acciones que se ejecutan en un sistema para producir la salida esperada por un actor.
+En este apartado se describen detalladamente todos los requisitos del catalogo. Para realizar esta tarea se emplean diagramas y plantillas de casos de uso. Cada caso de uso es una descripción de una secuencia de acciones que se ejecutan en un sistema para producir la salida esperada por un actor.
 
 Se definirán los requisitos inherentes a la tecnología utilizada, los requisitos de información, los requisitos funcionales representados con los casos de uso y los requisito no funcionales.
 					
@@ -160,11 +160,12 @@ Los casos de uso no gozan de muy buena fama entre los defensores de las metodolo
 
 \subsection{Especificación de requisitos inherentes a la tecnología utilizada}
 Son los requisitos dados por la tecnología utilizada en el desarrollo del proyecto.
-Se ha elegido el lenguaje de programación Ruby para el desarrollo del proyecto, concretamente la version 2.0.0p353. El primer requisito necesario para poder ejecutar la aplicación será que el terminal tenga instalada un interprete de Ruby.
+
+Se ha elegido el lenguaje de programación Ruby para el desarrollo del proyecto, concretamente la version 2.0.0p353. El primer requisito necesario para poder ejecutar la aplicación será que el terminal tenga instalado un interprete de Ruby.
 
 El otro requisito necesario será tener instalada la base de datos MongoDB que es la base de datos usada en el proyecto. Usaremos la version 2.6.0.
 
-\subsection{Especificación de requisitos inherentes a la tecnología utilizada}
+\subsection{Especificación de requisitos de informacion}
 En la siguiente tabla se describen los requisitos de información en forma de plantilla.
 
 \tablaSinCabecera{Requisitos de información}{p{3.5cm} p{10cm}}{2}{tablaRequisitosInformacion}{
@@ -176,7 +177,7 @@ En la siguiente tabla se describen los requisitos de información en forma de pla
 }
 
 \subsection{Requisitos funcionales}
-La definición de los requisitos funcionales servirá de ayuda para el diseño de la herramienta.
+Debido al tamaño del diagrama de casos de uso, y para tener una mejor visualización, se mostraran dos imágenes, mediante una división lógica por pantallas. Ademas la definición de los requisitos funcionales servirá de ayuda para el diseño de la herramienta.
 
 En este apartado se describen todos los requisitos identificados para la aplicación:
 
@@ -210,9 +211,9 @@ En este apartado se describen todos los requisitos identificados para la aplicac
 
 \end{enumerate}
 
-\figura{.9}{imgs/caso_uso_main.png}{Casos de uso de la página inicial}{casosUsoIndex}{}{}
+\figuraConPosicion{.9}{imgs/caso_uso_main.png}{Casos de uso de la página inicial}{casosUsoIndex}{}{H}
 
-\figura{.9}{imgs/caso_uso_work_space.png}{Casos de uso de la página de trabajo}{casosUsoWorkSpace}{}{}
+\figuraConPosicion{.9}{imgs/caso_uso_work_space.png}{Casos de uso de la página de trabajo}{casosUsoWorkSpace}{}{H}
 
 \subsection{Relación entre casos de uso y backlog items}
 Si bien los casos de uso no son una alternativa a las historias de usuario en los métodos ágiles, estos pueden ser beneficiosos para la elaboración del análisis y mejorar la comprensión del funcionamiento de sistemas complejos. Este es el objetivo de los diagramas de casos de uso en este proyecto.

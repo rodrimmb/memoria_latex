@@ -3,7 +3,7 @@
 \documentclass{memoriaPFC}
 \usepackage{float}
 %
-% Incluir el estilo definido para la Universidad de Burgos por Álvar Arnáiz 2009/12/20.
+% Incluir el estilo definido para la Universidad de Burgos.
 \include{estiloUBU}
 
 %
@@ -17,22 +17,22 @@
 %\autores{Nombre1 Apellidos1}{Nombre2 Apellidos2}
 \autores{Rodrigo Manjón Martín}{}
 
-\director{César I. García Osorio}
+\director{Dr. César I. García Osorio}
 
 \date{julio de 2014}
 
 \titulacion{Máster en Ingeniería Informática}
 
 \resumen{%
-El proyecto consiste en mostrar de una forma visual y sencilla como funciona el algoritmo de búsqueda en espacio de estados A estrella. Para ello hemos creado una página web en la que podemos introducir los distintos nodos que conforman el grafo del espacio de estados, y automáticamente mostraremos el árbol de búsqueda de forma visual y una tabla con todos los pasos que ha ido siguiendo el algoritmo para resolver el problema.
+El objetivo del proyecto es mostrar de una forma visual y sencilla como funciona el algoritmo de búsqueda en espacio de estados A estrella. Para ello hemos creado una página web en la que podemos introducir los distintos nodos que conforman el grafo del espacio de estados, y automáticamente mostraremos el árbol de búsqueda de forma visual y una tabla con todos los pasos que ha ido siguiendo el algoritmo para resolver el problema.
 
 Además, para facilitar la comprensión del algoritmo y cómo éste se resuelve, podremos ir viendo paso a paso que se ha ido haciendo para obtener el resultado, en una tabla, y mostrando en el diagrama que nodos se están analizando de una manera más visual y fácil de comprender.
 
 Esta herramienta pretende ser útil para todos aquellos estudiantes que pretendan comprender el funcionamiento de este algoritmo y poder comprobar que los ejercicios que realizan de forma manual están correctamente resueltos y en caso de no ser así poder ver en que punto se encuentra el error, mejorar la compresión que tienen del algoritmo y el proceso de aprendizaje.
 
-Con la realización de este proyecto se pretende también poner en práctica las técnicas más populares del desarrollo de software (Scrum, los principios SOLID \footnote{SOLID (Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion) es un acrónimo mnemónico introducido por Robert C. Martin}, TDD \footnote{Siglas de test driven development, desarrollo dirigido por pruebas}, BDD \footnote{Siglas de behaviour driven development, desarrollo dirigido por comportamiento}, etc), además de los conocimientos adquiridos durante la realización del máster y aprender a usar las herramientas de desarrollo web más en boga (JavaScript, Ruby, HTML, CSS).
+Con la realización de este proyecto se pretende también poner en práctica las técnicas más populares del desarrollo de software (Scrum, los principios SOLID \footnote{SOLID es un acrónimo mnemónico introducido por Robert C. Martin (\en{Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion})}, TDD \footnote{Siglas en inglés de \en{test driven development}, desarrollo dirigido por pruebas}, BDD \footnote{Siglas en inglés de \en{behaviour driven development}, desarrollo dirigido por comportamiento}, etc), además de los conocimientos adquiridos durante la realización del máster y aprender a usar las herramientas de desarrollo web más en boga (JavaScript, Ruby, HTML, CSS).
 
-En esta memoria se explicará el proceso de desarrollo que se ha llevado a cabo para la realización de este proyecto. En primer lugar se detallan los objetivos del proyecto, después se explicarán los conceptos teóricos más importantes para la comprensión de la memoria. Se comentarán las distintas técnicas y herramientas utilizadas para su desarrollo. Los aspectos más relevantes del proyecto, así como las dificultades encontradas. También se expondrán las conclusiones obtenidas y las lineas de trabajo que se podrían abordar en un futuro.
+En esta memoria se explicará el proceso de desarrollo que se ha llevado a cabo para la realización de este proyecto. En primer lugar se detallan los objetivos del proyecto, después se explicarán los conceptos teóricos más importantes para la comprensión de la memoria. Se comentarán las distintas técnicas y herramientas utilizadas para su desarrollo. Los aspectos más relevantes del proyecto, así como las dificultades encontradas. También se expondrán las conclusiones obtenidas y las líneas de trabajo que se podrían abordar en un futuro.
 
 Se incluyen una serie de anexos que explicarán diversos aspectos del desarrollo, el primero abordará los aspectos relativos a la planificación del proyecto y su viabilidad, en el segundo se especificarán los requisitos del proyecto a realizar, el tercero contendrá las especificación de diseño para la implementación, el cuarto incluirá la documentación técnica de programación y por último se mostrará la ayuda de usuario
 
@@ -40,10 +40,17 @@ Se incluyen una serie de anexos que explicarán diversos aspectos del desarrollo,
 \descriptores{Algoritmo, A estrella, web, búsqueda en espacio de estados}
 
 \abstract{%
-Resumen en ingles
+Resumen en inglés
 }
-\keywords{descriptores en ingles}
+\keywords{descriptores en inglés}
 
+
+\lstloadlanguages{Ruby}
+\lstset{%
+basicstyle=\ttfamily\color{black},
+commentstyle = \ttfamily\color{red},
+keywordstyle=\ttfamily\color{blue},
+stringstyle=\color{orange}}
 
 %
 % COMIENZO DEL DOCUMENTO
@@ -77,7 +84,7 @@ Resumen en ingles
 \chapter{Aspectos relevantes del desarrollo del proyecto}
 \input{4aspectosRelevantes}
 
-\chapter{Conclusiones y lineas de trabajo futuras}
+\chapter{Conclusiones y líneas de trabajo futuras}
 \input{5conclusionesYlineasFuturas}
 
 

@@ -26,7 +26,7 @@
 \RequirePackage{fancyvrb}
 \RequirePackage{amssymb}
 \RequirePackage{multibib}
-%\RequirePackage[hypertexnames=false,pdftex=true,colorlinks=true,linkcolor=blue,bookmarks=true]{hyperref}
+\RequirePackage[hypertexnames=false,pdftex=true,colorlinks=true,linkcolor=blue,bookmarks=true]{hyperref}
 %\RequirePackage{fancyhdr} % Tiene que ir después del paquete "geometry"
 %\RequirePackage{amsfonts}
 \RequirePackage{color}
@@ -104,7 +104,7 @@
 \AtBeginDocument{%
 \ifthenelse{\equal{\@autorDos}{}}{\def\@autores{\@autorUno}}{\def\@autores{\@autorUno{} y \@autorDos}}
 %\hypersetup{pdftitle={\@title},pdfauthor={\@autores}}
-%\hypersetup{pdfsubject={Proyecto Fin de Carrera},pdfkeywords={\@descriptores}}
+%\hypersetup{pdfsubject={Proyecto Fin de Máster},pdfkeywords={\@descriptores}}
 \pagestyle{CabeceraPFC}
 }
 \AtEndDocument{%
@@ -133,7 +133,7 @@
 %\begin{textblock*}{14cm}(3.7cm,12.5cm)%
 %\begin{textblock*}{14cm}(3.7cm,12cm)%
     %\renewcommand{\baselinestretch}{2}
-%    {\noindent\sffamily\Huge\bf Proyecto fin de carrera}\vspace{1.5cm}\\%
+%    {\noindent\sffamily\Huge\bf Proyecto fin de máster}\vspace{1.5cm}\\%
 %    {\sffamily\huge\bf\@title{}}%
 %\end{textblock*}%
 % Autores
@@ -308,7 +308,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Esta es la tabla que aparece en la cabecera
 \newcommand{\cabeceraimpar}{\textit{\headmark}}
-\newcommand{\cabecerapar}{\textit{PROYECTO FIN DE CARRERA}}
+\newcommand{\cabecerapar}{\textit{PROYECTO FIN DE MÁSTER}}
 
 % Creamos un estilo de página corporativo - UD
 \newpagestyle{CabeceraPFC}
@@ -363,7 +363,7 @@
 \cleardoublepage
 \pagestyle{CabeceraPFC}
 %\newcommand{\cabeceraimpar}{\textit{\headmark}}
-\renewcommand{\cabecerapar}{\textit{PROYECTO FIN DE CARRERA}}
+\renewcommand{\cabecerapar}{\textit{PROYECTO FIN DE MÁSTER}}
 \pagenumbering{arabic}
 
 % Redefinimos el formato de \chapter

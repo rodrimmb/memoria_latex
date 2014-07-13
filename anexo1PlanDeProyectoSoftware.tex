@@ -107,10 +107,9 @@ Conviene destacar que los resultados obtenidos son meramente orientativos, ya qu
 \newpage
 
 \section{Desarrollo con Scrum}
-En esta sección se repasa de una manera rápida los principales aspectos del desarrollo de proyectos con Scrum. Al mismo tiempo se analizan los distintos roles que va a asumir cada uno de los participantes en el proyecto.
+En este apartado tratere de dejar claros los principales conceptos de Scrum que es la metodología de desarrollo que hemos seguido en este proyecto. También se describirán los distintos roles que va a asumir cada uno de los participantes del proyecto.
 
-Conviene aclarar que los términos que define la metodología Scrum se encuentran en inglés,
-han sido mantenidos en el idioma original para no confundir con las traducciones.
+Muchos de los términos que se usan en la metodología Scrum se encuentran en inglés, para no liarse con sus traducciones han sido mantenidos en el idioma original, ya que la mayoría de gente que usa esta metodología se entiende usando los términos en inglés.
 
 Scrum es una metodología ágil que proporciona un marco de trabajo para la gestión de proyectos. Su objetivo es obtener resultados rápidos, adaptándose a los cambios de las necesidades de los clientes. Para ello, como metodología ágil que es, Scrum define un ciclo de vida iterativo e incremental, esto es que en cada iteración se mejora las funcionalidades ya existentes y se añaden las nuevas que se vayan necesitando.
 
@@ -124,19 +123,20 @@ Los requerimientos y prioridades se revisan y ajustan durante el proyecto en int
 Para la comprensión de Scrum debemos definir las diferentes partes que lo componen:
 
 \subsection{Actores}
-Scrum define un conjunto de roles o actores detallados a continuación:
+Scrum existen una serie de roles con características y objetivos propios que definimos a continuación:
 
 \begin{itemize}
- \item \textit{Scrum Master} (o facilitador): coordina el desarrollo del proyecto y trabaja de manera similar al director de proyectos. Una de sus tareas es eliminar los obstáculos que puedan dificultar al equipo de desarrollo o la consecución de sus objetivos. En el proyecto, este rol lo ha tomado el autor del documento Rodrigo Manjón Martín.
- \item \textit{Scrum Team} (o equipo): incluye a los desarrolladores y son los encargados de realizar las tareas que se definen en cada Sprint. En el proyecto, este rol lo ha tomado el autor del documento Rodrigo Manjón Martín.
- \item \textit{Product Owner} (o cliente): representa la voz del cliente y aporta la visión del negocio. Representa el destinatario final del proyecto a desarrollar y el que, en última instancia, realiza las pruebas de aceptación. Es también el encargado de mantener al día el listado de las tareas o Product Backlog y sus prioridades. En el proyecto este rol sería tomado por la Universidad de Burgos, en concreto, personalizado el tutor del proyecto César Ignacio García Osorio.
+ \item \textit{Scrum Master} (o facilitador): su trabajo primario es eliminar los obstáculos que impiden que el equipo alcance el objetivo del \en{sprint}. El \en{Scrum Master} no es el líder del equipo (porque ellos se auto-organizan), sino que actúa como una protección entre el equipo y cualquier influencia que le distraiga. El se asegura de que el proceso Scrum se utiliza como es debido. En definitiva hace que las reglas se cumplan. En el proyecto, este rol lo ha tomado el autor del documento Rodrigo Manjón Martín.
+ 
+ \item \textit{Scrum Team} (o equipo): tiene la responsabilidad de entregar el producto. Los equipos suelen ser pequeños, con las habilidades transversales necesarias para realizar el trabajo (análisis, diseño, desarrollo, pruebas, documentación, etc). En el proyecto, este rol lo ha tomado el autor del documento Rodrigo Manjón Martín.
+ 
+ \item \textit{Product Owner} (o cliente): se asegura de que el equipo trabaje de forma adecuada desde la perspectiva del negocio. El escribe historias de usuario, las prioriza, y las coloca en el \en{Product Backlog}. En el proyecto este rol sería tomado por la Universidad de Burgos, en concreto, personalizado el tutor del proyecto César Ignacio García Osorio.
 \end{itemize}
 
 \subsection{Ciclo de desarrollo}
-Al inicio del proyecto se definen una serie de requisitos que serán los objetivos a cumplir. Todos
-ellos quedan reflejados en el Product Backlog. Cada uno de estos objetivos serán subdivididos en tareas pequeñas y atómicas al inicio de cada Sprint.
+Al inicio del proyecto el \en{Product Owner} debe definir los requisitos que serán los objetivos a cumplir. Estos quedan reflejados y ordenados por orden de importancia en el Product Backlog. Durante los \en{sprints} cada uno de estos objetivos serán subdivididos en tareas más pequeñas y atómicas.
 
-Al inicio de cada Sprint se extraen una serie de tareas de los elementos del Product Backlog que conforman el Sprint Backlog, las tareas son elegidas por el equipo. Estas tareas deberán ser completadas durante el ciclo y no se podrá añadir tareas nuevas a este Sprint durante la realizacion del mismo.
+Al inicio de cada \en{Sprint} se extraen una serie de tareas de los elementos del Product Backlog que conforman el Sprint Backlog, las tareas son elegidas por el equipo. Estas tareas deberán ser completadas durante el ciclo y no se podrá añadir tareas nuevas a este Sprint durante la realizacion del mismo.
 
 \begin{itemize}
  \item \textit{Product Backlog}: consiste en un listado de historias del usuario, obtenidas con el cliente, que se incorporarán al producto software a partir de incrementos sucesivos. A partir del Product Backlog se logra tener una única visión durante todo el proyecto. Y, por lo tanto, los fallos en el Product Backlog repercutirán profundamente en el desarrollo del proyecto. 
@@ -149,29 +149,28 @@ El Product Backlog estará ordenado a partir del valor que aporta al negocio la i
 \subsection{Reuniones de Scrum}
 
 \begin{itemize}
- \item \textit{Daily Meeting}: reunión inicial de cada Sprint en la que se extraen los item backlog. Se numeran las tareas extraídas del Product Backlog para desarrollar durante el Sprint. Esta reunión tiene una gran importancia ya que, durante el desarrollo del Sprint, no se podrá modificar ni añadir nuevas tareas.
+ \item \textit{Daily Meeting}: Cada día de un sprint, se realiza la reunión sobre el estado de un proyecto. Al haber un solo miembro esta reunión será más bien una refelexión interna.
 
 
- \item \textit{Planning meeting}: una de las bases de los proyectos ágiles es el desarrollo mediante las iteraciones incrementales. En Scrum a cada iteración se le denomina Sprint. Para nosotros los Sprints tiene una duración de una semana y como resultado se creará un producto software potencialmente entregable, un prototipo operativo.
+ \item \textit{Planning meeting}: al inicio de cada \en{Sprint} se llevara acabo una <<Reunión de Planificación del \en{Sprint}>>. En ella se seleccionara el trabajo que se hará.
  
-  \item \textit{Review meeting}: reunión final (4 horas máximo) de cada Sprint donde se detallan los objetivos cumplidos durante el mismo. Se muestra al usuario el producto, en caso de que sea posible. En función de los resultados mostrados y de los cambios que haya habido en el contexto del proyecto, el cliente realiza las adaptaciones necesarias de manera objetiva, ya desde la primera iteración, replanificando el proyecto.
+  \item \textit{Review meeting}: reunión final (4 horas máximo) de cada \en{Sprint}, se revisar el trabajo que fue completado y no completado y se presentar el trabajo completado a los interesados.
   
-    \item \textit{Retrospective meeting}: en esta reunión (4 horas máximo), el equipo analiza cómo ha sido su manera de trabajar y cuáles son los problemas que podrían impedirle progresar adecuadamente, mejorando de manera continua su productividad. El Scrum Master, o Facilitador, se encargará de ir eliminando los obstáculos identificados.
+    \item \textit{Retrospective meeting}: en esta reunión (4 horas máximo), después de cada \en{Sprint}, se lleva a cabo una retrospectiva del \en{Sprint}, en la cual todos los miembros del equipo dejan sus impresiones sobre el \en{Sprint} recién superado. El propósito de la retrospectiva es realizar una mejora continua del proceso.
+    
 \end{itemize}
 
-En este caso, todas las reuniones requieren de la presencia del tutor y del equipo de desarrollo
-ya que entre ambos, agrupan los roles que se ven implicados en dichas reuniones.
+Todas estas reuniones requieren de la participación del tutor y del alumno ya que entre ambos, agrupan los roles que se ven implicados en dichas reuniones.
 
 \figura{1}{imgs/Scrum_process.png}{Metodología Scrum}{scrumProcess}{}
 \newpage
 
 \section{Product Backlog del proyecto}
-En esta sección, aparece redactado el Product Backlog o lista de objetivos, con la prioridad de cada una de los Product Item.
+En esta sección, listaremos en una tabla las tareas del Product Backlog o lista de objetivos, que hemos definido. Cada uno de los Product Item tendrá una prioridad.
 
-Scrum no define un método o herramienta para llevar el día a día del trabajo realizado, por lo
-que el seguimiento se puede realizar con una simple hoja de cálculo, cuaderno o con herramientas de gestión especializadas.
+Scrum no define un método o herramienta para llevar el seguimiento del trabajo realizado, Scrum solo propone una serie de buenas practicas por lo que el seguimiento se puede realizar con una simple hoja de cálculo, cuaderno o con herramientas de gestión especializadas.
 
-Aunque se estuvo barajando la posibilidad de usar un software para la gestión de Scrum, al final nos decidimos por ir apuntando manualmente en un fichero las diferentes prácticas que realizamos. Al ser este un proyecto con poca gente implicada y relativamente pequeño no vimos necesario complicar más este teniendo que aprender a usar otra herramienta más.
+Aunque se estuvo barajando la posibilidad de usar un software para la gestión de Scrum, al final nos decidimos por ir apuntando manualmente en un fichero las diferentes prácticas que realizamos. Al ser este un proyecto con poca gente implicada y relativamente pequeño no vimos necesario complicar más éste teniendo que aprender a usar otra herramienta más.
 
 %Tabla que contiene el Product Backlog
 \tabla{Product Backlog}{c p{8.5cm} p{2cm} c}{4}{productBacklog}{
@@ -190,12 +189,12 @@ Aunque se estuvo barajando la posibilidad de usar un software para la gestión de
 \newpage
 
 \section{Planificación por Sprint}
-En esta sección aparece el listado de los diversos Sprints del proyecto. La información de cada uno está dividida del siguiente modo:
+En esta sección describiremos lo las tareas que hemos realizado en cada uno de los \en{Sprits} realizados durante el proyecto. La información de cada uno está dividida del siguiente modo:
 \begin{itemize}
- \item \textit{Planning meeting}: acta de la reunión inicial de cada Sprint en la que se detallan los objetivos a cumplir durante el transcurso del mismo.
- \item \textit{Sprint planning}: se numeran las tareas extraídas del Product Backlog para desarrollar durante el \sprint{}.
- \item \textit{Burndown chart}: gráfico que muestra la evolución a lo largo del Sprint en comparación a la línea óptima.
- \item \textit{Retrospective meeting}: acta de la reunión retrospectiva realizada al final del Sprint y donde se analizan los problemas detectados durante su ejecución y las desviaciones (en caso de haberlas).
+ \item \textit{Planning meeting}: se detallan los objetivos a cumplir durante el \en{Sprint}.
+ \item \textit{Sprint planning}: tareas extraídas del Product Backlog para desarrollar durante el \en{Sprint} y subdivididas en tareas mas pequeñas.
+ %\item \textit{Burndown chart}: gráfico que muestra la evolución a lo largo del Sprint en comparación a la línea óptima.
+ \item \textit{Retrospective meeting}: retrospectiva realizada al final del \en{Sprint}, donde se analizan qué ha ido mal y qué ha ido bien.
 \end{itemize}
 
 %SPRINT1
@@ -232,10 +231,10 @@ El primer Sprint comienza el 17/11/2013 y finalizará el 30/11/2013. El tiempo es
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 1.
-\figuraConPosicion{1}{imgs/sprint1.png}{Burndown Chart del Sprint 1}{burndownChartSprint1}{}{H}
+%\figuraConPosicion{1}{imgs/sprint1.png}{Burndown Chart del Sprint 1}{burndownChartSprint1}{}{H}
 
 \subsubsection*{Retrospective meeting}
 ¿Qué ha ido bien?
@@ -293,7 +292,7 @@ El Sprint comienza el 01/12/2013 y finalizará el 07/12/2013. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 2.
 %\figura{1}{imgs/sprint2.png}{Burndown Chart del Sprint 2}{burndownChartSprint2}{}{H}
@@ -350,7 +349,7 @@ El Sprint comienza el 08/12/2013 y finalizará el 14/12/2013. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 3.
 %\figura{1}{imgs/sprint3.png}{Burndown Chart del Sprint 3}{burndownChartSprint3}{}{H}
@@ -412,7 +411,7 @@ El Sprint comienza el 02/02/2014 y finalizará el 09/02/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 4.
 %\figura{1}{imgs/sprint4.png}{Burndown Chart del Sprint 4}{burndownChartSprint4}{}{H}
@@ -478,7 +477,7 @@ El Sprint comienza el 23/02/2014 y finalizará el 02/03/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 5.
 %\figura{1}{imgs/sprint5.png}{Burndown Chart del Sprint 5}{burndownChartSprint5}{}{H}
@@ -544,7 +543,7 @@ El Sprint comienza el 09/03/2014 y finalizará el 15/03/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 6.
 %\figura{1}{imgs/sprint6.png}{Burndown Chart del Sprint 6}{burndownChartSprint6}{}{H}
@@ -608,7 +607,7 @@ El Sprint comienza el 09/03/2014 y finalizará el 15/03/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 7.
 %\figura{1}{imgs/sprint7.png}{Burndown Chart del Sprint 7}{burndownChartSprint7}{}{H}
@@ -675,7 +674,7 @@ El Sprint comienza el 23/03/2014 y finalizará el 29/03/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 8.
 %\figura{1}{imgs/sprint8.png}{Burndown Chart del Sprint 8}{burndownChartSprint8}{}{H}
@@ -740,7 +739,7 @@ El Sprint comienza el 30/03/2014 y finalizará el 05/04/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 9.
 %\figura{1}{imgs/sprint9.png}{Burndown Chart del Sprint 9}{burndownChartSprint9}{}{H}
@@ -801,7 +800,7 @@ El Sprint comienza el 06/03/2014 y finalizará el 12/04/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 10.
 %\figura{1}{imgs/sprint10.png}{Burndown Chart del Sprint 10}{burndownChartSprint10}{}{H}
@@ -862,7 +861,7 @@ El Sprint comienza el 20/03/2014 y finalizará el 26/04/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 11.
 %\figura{1}{imgs/sprint11.png}{Burndown Chart del Sprint 11}{burndownChartSprint11}{}{H}
@@ -928,7 +927,7 @@ El Sprint comienza el 27/04/2014 y finalizará el 03/05/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 12.
 %\figura{1}{imgs/sprint12.png}{Burndown Chart del Sprint 12}{burndownChartSprint12}{}{H}
@@ -985,7 +984,7 @@ El Sprint comienza el 04/05/2014 y finalizará el 10/05/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 13.
 %\figura{1}{imgs/sprint13.png}{Burndown Chart del Sprint 13}{burndownChartSprint13}{}{H}
@@ -1036,7 +1035,7 @@ El Sprint comienza el 11/05/2014 y finalizará el 17/05/2014. El tiempo estimado 
   \begin{itemize}
    \item TK076: Mostrar bien los nodos y su información.
    \item TK077: Añadir nuevos métodos necesarios para obtener los pasos de la solución en el servidor.
-   \item TK078: Reducir el numero de llamadas al servidor.
+   \item TK078: Reducir el número de llamadas al servidor.
   \end{itemize}
  \item T08: Documentar el proyecto de final de carrera.
   \begin{itemize}
@@ -1049,7 +1048,7 @@ El Sprint comienza el 11/05/2014 y finalizará el 17/05/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 14.
 %\figura{1}{imgs/sprint14.png}{Burndown Chart del Sprint 14}{burndownChartSprint14}{}{H}
@@ -1057,7 +1056,7 @@ El Sprint comienza el 11/05/2014 y finalizará el 17/05/2014. El tiempo estimado 
 \subsubsection*{Retrospective meeting}
 ¿Qué ha ido bien?
 \begin{itemize}
- \item Se han reducido el numero de peticiones al servidor.
+ \item Se han reducido el número de peticiones al servidor.
  \item Los nodos ya se muestran bien.
  \item Ya tenemos una tabla que muestra los pasos tomados en el algoritmo.
 \end{itemize}
@@ -1111,7 +1110,7 @@ El Sprint comienza el 18/05/2014 y finalizará el 24/05/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 15.
 %\figura{1}{imgs/sprint15.png}{Burndown Chart del Sprint 15}{burndownChartSprint15}{}{H}
@@ -1174,7 +1173,7 @@ El Sprint comienza el 25/05/2014 y finalizará el 31/05/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 16.
 %\figura{1}{imgs/sprint16.png}{Burndown Chart del Sprint 16}{burndownChartSprint16}{}{H}
@@ -1235,7 +1234,7 @@ El Sprint comienza el 01/06/2014 y finalizará el 07/05/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 17.
 %\figura{1}{imgs/sprint17.png}{Burndown Chart del Sprint 17}{burndownChartSprint17}{}{H}
@@ -1271,7 +1270,7 @@ El Sprint comienza el 01/06/2014 y finalizará el 07/05/2014. El tiempo estimado 
 En este Sprint se pretenden conseguir los objetivos:
 \begin{enumerate}
  \item Hacer diferentes pruebas con la aplicación.
- \item Crear script para automatizar la instalación y el arranque de la aplicación
+ \item Crear \en{script} para automatizar la instalación y el arranque de la aplicación
 \end{enumerate}
 
 \subsubsection*{Fechas de desarrollo y tiempo estimado}
@@ -1281,7 +1280,7 @@ El Sprint comienza el 08/06/2014 y finalizará el 14/05/2014. El tiempo estimado 
 \begin{itemize}
  \item T09 Aprender y decidir las herramientas que se usarán en el proyecto
  \begin{itemize}
-   \item TK096: Crear script para instalar la aplicación.
+   \item TK096: Crear \en{script} para instalar la aplicación.
   \end{itemize}
  \item T08: Documentar el proyecto de final de carrera.
   \begin{itemize}
@@ -1294,7 +1293,7 @@ El Sprint comienza el 08/06/2014 y finalizará el 14/05/2014. El tiempo estimado 
   \end{itemize}
 \end{itemize}
 
-\subsubsection*{Burndown chart}
+%\subsubsection*{Burndown chart}
 
 %Burndown chart del Sprint 18.
 %\figura{1}{imgs/sprint18.png}{Burndown Chart del Sprint 18}{burndownChartSprint18}{}{H}
@@ -1319,7 +1318,7 @@ El Sprint comienza el 08/06/2014 y finalizará el 14/05/2014. El tiempo estimado 
 
 
 \subsection{Resumen}
-Debido a que a lo largo del proyecto la forma de documentar ha sido ir apuntando en documentos de Google Drive y enviando emails con el contenido de lo hablado en las reuniones, aunque se pretendía llegar a la convocatoria de Junio no va ha ser posible ya que hay que pasar toda la documentación al Latex.
+Debido a que a lo largo del proyecto la forma de documentar ha sido ir apuntando en documentos de Google Drive y enviando emails con el contenido de lo hablado en las reuniones, aunque se pretendía llegar a la convocatoria de Junio no va ha ser posible ya que hay que pasar toda la documentación al \LaTeX{}.
 
 \newpage
 
@@ -1364,7 +1363,7 @@ También se explica la licencia que va a usar el software desarrollado, además de
 La licencia que hemos elegido es la licencia más simple y permisiva que hemos encontrado para el desarrollo software, la licencia MIT \citeotras{mit}. Básicamente se puede hacer cualquier cosa que se desee con el proyecto, siempre y cuando se incluya la licencia y el copyright original.
 
 % Licencia MIT
-\tabla{Licencia MIT}{p{4cm} p{4cm} p{4cm}}{3}{tablaLicenciaMIT}{
+\tabla{Licencia MIT}{p{4.5cm} p{5.5cm} p{3cm}}{3}{tablaLicenciaMIT}{
   \multicolumn{1}{c}{Se puede} & \multicolumn{1}{c}{No se puede} & \multicolumn{1}{c}{Es obligatorio} \\
  }
  {
@@ -1376,17 +1375,17 @@ La licencia que hemos elegido es la licencia más simple y permisiva que hemos en
  }
 
 \begin{itemize}
-\item \textbf{Ruby}: Usa la Licencia Ruby\citeotras{ruby_licencia} (en inglés, Ruby License) es la licencia de código abierto aplicada al lenguaje de programación Ruby y también en otros proyectos. Es una licencia de software libre, utilizable junto con otras licencias y compatible con GPL.
+\item \textbf{Ruby}: Usa la Licencia Ruby \citeotras{ruby_licencia} (en inglés, Ruby License) es la licencia de código abierto aplicada al lenguaje de programación Ruby y también en otros proyectos. Es una licencia de software libre, utilizable junto con otras licencias y compatible con GPL.
 
-\item \textbf{MongoDB}: Usa una licencia GNU AGPL v3.0\citeotras{mongo_licencia} (drivers:licencia Apache), es una licencia copyleft derivada de la Licencia Pública General de GNU diseñada específicamente para asegurar la cooperación con la comunidad en el caso de software que corra en servidores de red.
+\item \textbf{MongoDB}: Usa una licencia GNU AGPL v3.0 \citeotras{mongo_licencia} (drivers:licencia Apache), es una licencia copyleft derivada de la Licencia Pública General de GNU diseñada específicamente para asegurar la cooperación con la comunidad en el caso de software que corra en servidores de red.
 
 La Affero GPL es íntegramente una GNU GPL con una cláusula nueva que añade la obligación de distribuir el software si éste se ejecuta para ofrecer servicios a través de una red de ordenadores.
  
-\item \textbf{Sinatra}: Este framework también usa la licencia MIT\citeotras{mit}. 
+\item \textbf{Sinatra}: Este framework también usa la licencia MIT \citeotras{mit}. 
 
-\item \textbf{Bootstrap}: Bootstrap se publica bajo la licencia "Apache 2 License"\citeotras{bootstrap_licencia} que permite descargar y usar gratuitamente Bootstrap entero o alguna de sus partes, tanto para uso personal, empresarial y/o comercial y utilizar e incluir Bootstrap en cualquier paquete o distribución de software que crees.
+\item \textbf{Bootstrap}: Bootstrap se publica bajo la licencia <<Apache 2 License>> \citeotras{bootstrap_licencia} que permite descargar y usar gratuitamente Bootstrap entero o alguna de sus partes, tanto para uso personal, empresarial y/o comercial y utilizar e incluir Bootstrap en cualquier paquete o distribución de software que crees.
 
-\item \textbf{GraphViz}: Usa la licencia Eclipse Public License\citeotras{graph_licencia}, tiene la peculiaridad de que obliga a liberar el código de cualquier modificación que hagas en el proyecto base.
+\item \textbf{GraphViz}: Usa la licencia Eclipse Public License \citeotras{graph_licencia}, tiene la peculiaridad de que obliga a liberar el código de cualquier modificación que hagas en el proyecto base.
 
 \end{itemize}
 
@@ -1426,7 +1425,7 @@ En total el coste de personal será de \textbf{6652,8 \euro}.
 En la tabla siguiente se detalla el software empleado junto con las licencias correspondientes.
 
 %Coste software
-\tabla{Coste Software}{p{4cm} p{2.5cm} p{2.5cm} c}{4}{costeSoftware}{
+\tabla{Coste Software}{p{3.5cm} c c c}{4}{costeSoftware}{
   \multicolumn{1}{c}{Software} & \multicolumn{1}{c}{Nº Licencias} & \multicolumn{1}{c}{\euro /licencia} & \multicolumn{1}{c}{Total} \\
  }
  {
@@ -1450,7 +1449,7 @@ El coste total del software sería de \textbf{0 \euro.}
 
 
 \subsubsection*{Coste oficina}
-También necesitaremos un lugar para trabaja, en Burgos existe un espacio de coworking\footnote{Un espacio de coworkin es una oficina en la que se comparten gastos entre varios profesionales, que no tienen porque ser del mismo sector. También incentiva la colaboración entre los participantes} llamado: La Colmena\footnote{Pagina web de la Colmena \url{http://www.lacolmenacoworking.com/haztemiembro}}. Por 79 \euro mas IVA al mes podemos disponer de un lugar en el que trabajar que incluye:
+También necesitaremos un lugar para trabaja, en Burgos existe un espacio de \en{coworking}\footnote{Un espacio de \en{coworkin} es una oficina en la que se comparten gastos entre varios profesionales, que no tienen porque ser del mismo sector. También incentiva la colaboración entre los participantes} llamado: La Colmena\footnote{Pagina web de la Colmena \url{http://www.lacolmenacoworking.com/haztemiembro}}. Por 79 \euro mas IVA al mes podemos disponer de un lugar en el que trabajar que incluye:
 
 \begin{itemize}
    \item Mesa en la sala polivalente
@@ -1465,26 +1464,27 @@ También necesitaremos un lugar para trabaja, en Burgos existe un espacio de cowo
    \item zona de cafetería
 \end{itemize}
 
-En total seria 95,59 \euro /mes el proyecto tiene una duración de 4 meses. El total  de los costes de oficina asciende a \textbf{382,36 \euro.}
+En total sería 95,59 \euro /mes el proyecto tiene una duración de 4 meses. El total  de los costes de oficina asciende a \textbf{382,36 \euro.}
 
 \subsubsection*{Coste de Hardware}
-Para el desarrollo del proyecto es necesario un portátil. Se utilizara un modelo MacBook Pro de mediados del 2010  con un precio en el mercado de 240 ? (este precio ha sido obtenido de una web que calcula el precio de tu ordenador: mac2sell\footnote{\url{http://www.mac2sell.net/permalink/?id=5b6db4bd60a21ca9282d1767ea74474e}}). Teniendo en cuenta que la vida útil del equipo es de otros dos a cuatro años, los cálculos están realizados teniendo en cuenta la vida media del inmovilizado en 3 años.
+Para el desarrollo del proyecto es necesario un portátil. Se utilizará un modelo MacBook Pro de mediados del 2010  con un precio en el mercado de 240 \euro (este precio ha sido obtenido de una web que calcula el precio de tu ordenador: mac2sell\footnote{\url{http://www.mac2sell.net/permalink/?id=5b6db4bd60a21ca9282d1767ea74474e}}). Teniendo en cuenta que la vida útil del equipo es de otros dos a cuatro años, los cálculos están realizados teniendo en cuenta la vida media del inmovilizado en 3 años.
 					
 Hay que calcular la amortización teniendo en cuenta el periodo de utilización. 
 
+\begin{quote}
 hardware = 240 \euro / 36 meses x 4 meses = \textbf{26,66 \euro}
-
+\end{quote}
 
 \subsubsection*{Costes totales}
 
 %Coste totales
-\tabla{Coste Totales}{p{4cm} p{2.5cm}}{2}{costeTotales}{
+\tabla{Costes Totales}{p{4cm} r}{2}{costeTotales}{
   \multicolumn{1}{c}{Costes} & \multicolumn{1}{c}{Importe} \\
  }
  {
-  Software & 0 \euro  \\
+  Software & 0,00 \euro  \\
   Hardware & 26,66 \euro  \\
-  Personal & 6652,8 \euro  \\
+  Personal & 6652,80 \euro  \\
   Espacio de Trabajo & 382,36 \euro \\
   \hline \hline
   Total & 7061,82 \euro \\
@@ -1495,10 +1495,9 @@ Tras sumar todos los costes necesarios detallados anteriormente, se obtiene un t
 \subsection{Análisis de beneficios}
 
 \subsubsection*{Beneficios no económicos}
-Dado que se trata de una aplicación con objetivos docentes, la comunidad universitaria se beneficiara de una herramienta pensada para aprender el funcionamiento de los algoritmos de búsqueda en espacio de estados. Teniendo en cuenta que apenas existen herramientas de este estilo el desarrollo ayudara a muchos docentes. La Universidad de Burgos podrá beneficiarse de la publicidad.
+Dado que se trata de una aplicación con objetivos docentes, la comunidad universitaria se beneficiará de una herramienta pensada para aprender el funcionamiento de los algoritmos de búsqueda en espacio de estados. Teniendo en cuenta que hay pocas herramientas de este estilo el desarrollo ayudará a muchos docentes. La Universidad de Burgos podrá beneficiarse de la publicidad.
 
-Como todo proyecto de final de carrera supondrá una formación adicional al estudiante que aprenderá una serie de nuevas técnicas y herramientas.
-Por ultimo la realización de este proyecto permitirá al alumno terminar el Máster en Ingeniería Informática que esta cursando. 
+Como todo proyecto de final de carrera supondrá una formación adicional al estudiante que aprenderá una serie de nuevas técnicas y herramientas.Por último la realización de este proyecto permitirá al alumno terminar el Máster en Ingeniería Informática que esta cursando. 
 
 \subsubsection*{Beneficios económicos}
 Dado que al proyecto es de código abierto, no hay previsto ningún beneficio económico derivado de la realización de este proyecto.

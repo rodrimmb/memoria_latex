@@ -7,18 +7,16 @@ Un servidor web \citeotras{servidor_web} o servidor HTTP es un programa que proc
 Una base de datos \citeotras{base_datos} o banco de datos (en ocasiones abreviada con la sigla BD) es un conjunto de datos pertenecientes a un mismo contexto y almacenados sistemáticamente para su posterior uso. En este sentido, una biblioteca puede considerarse una base de datos compuesta en su mayoría por documentos y textos impresos en papel e indexados para su consulta. En la actualidad, y debido al desarrollo tecnológico de campos como la informática y la electrónica, la mayoría de las bases de datos están en formato digital (electrónico), que ofrece un amplio rango de soluciones al problema de almacenar datos.
 
 \section{Búsqueda en espacio de estados}
-Búsqueda en el espacio de estados \citeotras{busqueda_espacio} es un proceso usado en el campo de la informática, incluyendo la inteligencia artificial (AI), en el cual se consideran sucesivos estados de una instancia, con la meta de encontrar un "estado final" con las características deseadas.
-
-Los problemas se modelan a menudo como un espacio de estados, un conjunto de estados que un contienen el problema. El conjunto de estados forma un grafo donde dos estados están conectados si hay una operación que pueda se pueda llevar a cabo para transformar el primer estado en el segundo.
+Búsqueda en el espacio de estados \citeotras{busqueda_espacio} es un proceso usado en el campo de la informática, incluyendo la inteligencia artificial (AI), en el cual se consideran sucesivos estados de una instancia, con la meta de encontrar un <<estado final>> con las características deseadas.
 
 La búsqueda en espacio de estados es una técnica general de solución de problemas utilizada cuando se desconoce otra forma mejor, más directa, o específica para resolver un problema. Consiste en modelar cada configuración por la que puede pasar el problema como un estado (representado como un nodo de un grafo dirigido, el espacio de estados), las operaciones de transformación del problema se representan como arcos que parte del nodo que representa la configuración del problema de la que se parte y llegan al nodo que representa la configuración del problema resultado de aplicar la operación. Si existe un procedimiento algorítmico para determinar cuando un estado se corresponde con una solución del problema, la solución de un problema se reduce a una búsqueda en un grafo \cite{enfoque_moderno}.
 
-También hay que tener en cuenta que a los arcos del espacio de estados, una arco relaciona dos nodos entre si, se les asocia un coste, relacionado con el coste de aplicación de un operación al problema que se quiere resolver.
+También hay que tener en cuenta que a los arcos del espacio de estados que se les asocia un coste, relacionado con el coste de aplicación de un operación al problema que se quiere resolver.
 
 \subsection{Búsqueda heurística}
 Consiste en emplear información adicional para guiar la búsqueda por los caminos que parecen mejores. Se le asigna a cada nodo un valor que trata de aproximar su distancia al nodo meta. Se sacrifica la completitud para incrementar la eficiencia.
 
 \subsection{Algoritmo de búsqueda A estrella}
-Es un algoritmo de búsqueda informada, lo que tratan este tipos de algoritmos de búsqueda es de reducir la complejidad algorítmica de las búsquedas no informadas. Para ello usa información de la estructura del espacio de estados en el que está realizando la búsqueda. Es decir, emplea conocimiento específico del dominio.
+Es un algoritmo de búsqueda informada, lo que tratan este tipo de algoritmos de búsqueda es reducir la complejidad algorítmica de las búsquedas no informadas. Para ello usa información de la estructura del espacio de estados en el que está realizando la búsqueda. Es decir, emplea conocimiento específico del dominio.
 
-Lo que trata de hacer este algoritmo es influir en el proceso de búsqueda para forzar la marcha la vuelta atrás en la exploración de otros caminos más prometedores. Es decir evita que una heurística excesivamente optimista nos conduzca a caminos poco prometedores. Para ello A estrella incluye un factor de profundidad además de la heurística del valor del nodo.
+Lo que trata de hacer este algoritmo es influir en el proceso de búsqueda para forzar la marcha atrás en la exploración de otros caminos más prometedores. Es decir evita que una heurística excesivamente optimista nos conduzca a caminos poco prometedores. Para ello A estrella incluye un factor de profundidad además de la heurística del valor del nodo.
