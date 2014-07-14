@@ -8,19 +8,19 @@ El diseño se divide en varias fases:
 \begin{itemize}
 \item Diseño de la estructura de de datos, decidir como se va a guardar la información es muy importante para luego poder trabajar con ella.
 
-\item Diseño del algoritmo, se debe crear una interfaz común que defina un esqueleto o plantilla para hacer transparente el algoritmo utilizado de cara al exterior y que en proximas versiones se pueda seguir usando esta interfaz para el desarrollo de más algoritmos.
+\item Diseño del algoritmo, se debe crear una interfaz común que defina un esqueleto o plantilla para hacer transparente el algoritmo utilizado de cara al exterior y que en próximas versiones se pueda seguir usando esta interfaz para el desarrollo de más algoritmos.
 
 \item Diseño de la conexión a la base de datos, es importante que la conexión a la base de datos solo crea las conexiones necesarias para no tener miles de conexiones abiertas sin usar o que solo se usan una vez.
 
 \item Diseño de la API REST, se debe decidir el espacio de nombres de las URL que llamaran a los diferentes servicios de la API. Estas URLs en ocasiones deben contener cierta información para que el servicio pueda funcionar.
 
-\item Diseño de la interfaz de usuario, se disen?ara?n las distintas pantallas y sus componentes de forma que la interfaz gráfica para interactuar con la aplicación sea sencilla, intuitiva y bonita. 
+\item Diseño de la interfaz de usuario, se diseñan las distintas pantallas y sus componentes de forma que la interfaz gráfica para interactuar con la aplicación sea sencilla, intuitiva y bonita. 
 \end{itemize}
 					
 El diseño es fundamental para el correcto desarrollo de un proyecto software. Facilita la estructuración modular y coherente para tener una aplicación robusta y estable a la vez que extensible.
 
-En este apartado se mostrara la estructura de paquetes de la aplicación con sus relaciones. Además los paquetes mas importantes serán desglosados en diagramas de clases, obteniendo así un mayor nivel de detalle y facilitando la comprensión del diseño. Algunos de estos diagramas no contendrán todos atributos sino que, por facilitar su comprensión, se centraran en las clases, métodos y atributos más importantes y representativos para el funcionamiento, ocultando información superflua.
-
+En este apartado se mostrara la estructura de paquetes de la aplicación con sus relaciones. Además los paquetes más importantes serán desglosados en diagramas de clases, obteniendo así un mayor nivel de detalle y facilitando la comprensión del diseño. Algunos de estos diagramas no contendrán todos atributos sino que, por facilitar su comprensión, se centraran en las clases, métodos y atributos más importantes y representativos para el funcionamiento, ocultando información superflua.
+\newpage
 
 
 
@@ -39,16 +39,14 @@ En este apartado se mostrara la estructura de paquetes de la aplicación con sus 
 \section{Ámbito software}
 El objetivo del sistema es que podamos generar nuestros propios árboles de búsqueda en espacio de estados y realizar una búsqueda en estos usando el algoritmo A estrella. La información resultante de la realización de la  búsqueda se mostrará en un entorno web.
 
-Para poder soportar diversos algoritmos de los que en un futuro podría constar la aplicación, se ha empleado el patrón de diseño \en{Template Method} (Me?todo plantilla) que establecer una especie de plantilla fija en la superclase haciendo que la implementación concreta de cada método sea responsabilidad subclases que lo implementa. En la superclase se definen las estructuras de datos común a todas las clases que implementen su interfaz, definiendo métodos que todas las subclases deberán implementar. Además, la superclase puede contener métodos que serán útiles para los algoritmos concretos, evitando así la duplicidad de código.
+Para poder soportar diversos algoritmos de los que en un futuro podría constar la aplicación, se ha empleado el patrón de diseño \en{Template Method} (Método plantilla) que establecer una especie de plantilla fija en la superclase haciendo que la implementación concreta de cada método sea responsabilidad subclases que lo implementa. En la superclase se definen las estructuras de datos común a todas las clases que implementen su interfaz, definiendo métodos que todas las subclases deberán implementar. Además, la superclase puede contener métodos que serán útiles para los algoritmos concretos, evitando así la duplicidad de código.
 
 Para gestionar la conexión a la base de datos y que no se generen conexiones indiscriminadas a esta se a usado el patrón de diseño Singleton (Instancia única), pensado para restringir la creación de objetos pertenecientes a una clase, en este caso a la clase que conecta con la base de datos. Su intención consiste en garantizar que una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella.
 
 Para poder conseguir una mejor reutilización de código y separar conceptos y así dejar bien definidas sus diferentes partes, se usó el patrón de diseño MVC (\en{Model, view, controller}), MVC es un patrón que separa los datos y la lógica de negocio de una aplicación de la interfaz de usuario y el módulo encargado de gestionar los eventos y las comunicaciones. Es un patrón ampliamente utilizado en el diseño de aplicaciones con interfaz gráfica de usuario y por lo tanto está muy extendido en el diseño de aplicaciones web.
 					
-En el diseño de la interfaz de usuario a influido la idea de que deberá ser lo mas intuitiva y directa posible para facilitar el flujo de trabajo, disponer de las características que se definieron en la fase de análisis previa y la estética ademas de ser funcional debe ser bonita.
-
-
-
+En el diseño de la interfaz de usuario a influido la idea de que deberá ser lo más intuitiva y directa posible para facilitar el flujo de trabajo, disponer de las características que se definieron en la fase de análisis previa y la estética además de ser funcional debe ser bonita.
+\newpage
 
 
 
@@ -67,15 +65,17 @@ El objetivo de este capítulo explican y se muestran en gráficos las representaci
 En esta sección se detalla la estructura del núcleo de la aplicación. Aunque la aplicación esta dividida en tres partes: modelo, vista y controlador; en ella se distinguen dos partes principales: que son el modelo y el controlador.
 
 \subsubsection*{Modelo}
-En el modelo se define la lógica del negocio y la representación de la información (estructura de datos) con la cual el sistema opera. En esta parte tendremos el algoritmo que resuelve la búsqueda, los componentes que usa este algoritmo como nodos y estados de los nodos, ademas de la conexión a la base de datos y una serie de servicios para obtener la información almacenada en la base de datos directamente como un objeto.
+En el modelo se define la lógica del negocio y la representación de la información (estructura de datos) con la cual el sistema opera. En esta parte tendremos el algoritmo que resuelve la búsqueda, los componentes que usa este algoritmo como nodos y estados de los nodos, además de la conexión a la base de datos y una serie de servicios para obtener la información almacenada en la base de datos directamente como un objeto.
 
 Tenemos dos clases abstractas que definen dos interfaces. Una interfaz es SearchAlgorithm que especifica un método que deben tener todos las clases que hereden de ella y la otra es SearchEstate en ella definimos un atributo y varios métodos que deben tener todos los estados de búsqueda que hereden de ella.
 
 \figuraConPosicion{1}{imgs/clases_model.png}{Diagrama de clases del modelo}{modeloClases}{}{H}
+\newpage
 
 Para la persistencia tenemos una clase que crea la conexión con la base de datos y dos servicios que nos devuelven la información de la base de datos ya como objetos con los que se puede trabajar.
 
 \figuraConPosicion{0.8}{imgs/clases_persistence.png}{Diagrama de clases del modelo, parte de persistencia}{persistenciaClases}{}{H}
+\newpage
 
 \subsubsection*{Controlador}
 El controlador es el encargado de responder a eventos e invoca que se hacen al modelo cuando se hace alguna solicitud sobre la vista. También puede enviar comandos a su vista asociada si se solicita un cambio en la forma en que se presenta de modelo, por tanto se podría decir que el controlador hace de intermediario entre la vista y el modelo. En nuestro caso la vista seria la pagina web, cuando interactuamos con esta se informa al controlador que se encarga de que el modelo se ponga a trabajar para darnos una respuesta que la vista nos mostrará.
@@ -83,7 +83,7 @@ El controlador es el encargado de responder a eventos e invoca que se hacen al m
 \figuraConPosicion{1}{imgs/clases_controller.png}{Diagrama de clases del controlador}{controladorClases}{}{H}
 
 Como vemos \ver{controladorClases} todos los controladores extienden de ApplicationController.
-
+\newpage
 
 
 
@@ -98,9 +98,9 @@ Como vemos \ver{controladorClases} todos los controladores extienden de Applicat
 
 
 \section{Diseño arquitectónico}
-El objetivo el diseño arquitectónico es definir la estructura de la aplicación. Una estructura modular nos permite hacer que los módulos sean sustituibles y fácilmente testeables. Tambien nos permite representar las relaciones entre lo paquetes que componen la aplicación.
+El objetivo el diseño arquitectónico es definir la estructura de la aplicación. Una estructura modular nos permite hacer que los módulos sean sustituibles y fácilmente testeables. También nos permite representar las relaciones entre lo paquetes que componen la aplicación.
 
-En esta etapa del diseño, como ya he dicho, se ha intentado mantener la ma?xima modularidad que garantiza la independencia entre el núcleo de la aplicación y la parte visual que muestra los datos por pantalla. Uno de los patrones arquitectónicos que nos asegura esta independencia es el patrón arquitectónico Modelo-Vista-Controlador. Este nos permite separar la representación de los datos de su funcionamiento. De este modo, se puede modificar la interfaz o el núcleo de la aplicación sin tener que depender unas partes de otras. 
+En esta etapa del diseño, como ya he dicho, se ha intentado mantener la máxima modularidad que garantiza la independencia entre el núcleo de la aplicación y la parte visual que muestra los datos por pantalla. Uno de los patrones arquitectónicos que nos asegura esta independencia es el patrón arquitectónico Modelo-Vista-Controlador. Este nos permite separar la representación de los datos de su funcionamiento. De este modo, se puede modificar la interfaz o el núcleo de la aplicación sin tener que depender unas partes de otras. 
 
 \figuraConPosicion{1}{imgs/diagrama_paquetes.png}{Diagrama de paquetes}{diagramaPaquetes}{}{H}
 
@@ -115,7 +115,7 @@ El contenido de los paquetes es el siguiente:
 
 \item \en{controller}: contiene las clases que establecen la comunicación entre el modelo y la vista.
 \end{itemize}
-
+\newpage
 
 
 
@@ -129,7 +129,7 @@ El contenido de los paquetes es el siguiente:
 
 
 \section{Diseño de la interfaz}
-En esta sección se establecerá la estructura de la interfaz hombre-ma?quina implementada  a partir de los prototipos ideados en la fase de análisis.
+En esta sección se establecerá la estructura de la interfaz hombre-máquina implementada  a partir de los prototipos ideados en la fase de análisis.
 
 \subsection{Interfaz gráfica de usuario}
 Al ser este un proyecto web la interfaz gráfica se compone de tres tipos de ficheros:

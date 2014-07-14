@@ -1,0 +1,257 @@
+\section{Introducción}
+En este parte de la memoria, se explicara las partes más importantes de la implementación del proyecto. Toda la implementación estará basada en los diseños que ya hemos realizado previamente en el anexo anterior.
+					
+El desarrollo se ha realizado en la versión 2.0.0 de Ruby. Para la implementación de la aplicación se ha utilizado Atom como editor de código. Para el desarrollo de las interfaces de usuario se ha empleado también se ha usado Atom junto con la herramienta de depuración de paginas web de Google Chrome y para el control de versiones se ha empleado Git junto al repositorio \en{on-line} github.
+					
+El motivo de escoger Atom fue por coherencia con el resto del proyecto, ya que todo el software que se a usado para el proyecto es open source. La sencillez de esta herramienta y su integración con Ruby facilita las tareas del programador. Otra de las ventajas que ofrece, es la cantidad de \en{plugins} disponibles, y al ser \en{open source} incluso nosotros podemos desarrollar nuestros propios \en{plugins} para ayudarnos al desarrollo.
+
+Se decidió optar por un editor de código en vez de un entorno integrado de desarrollo o IDE, porque para Ruby no existe ninguna herramienta IDE que nos convenciera, así que ya que las ventajas que aportaba un IDE eran prácticamente nulas, respecto un simple editor de código se opto por esta ultima opción al ser el editor de código mucho más liviano y ágil que un IDE completo.
+					
+En cualquier proyecto software, es necesario disponer de un control de versiones potente y versa?til para poder tener bajo control los fuentes desarrollados y poder hacer un seguimiento de los \en{commits} que hemos realizado. Antes de decidirnos por uno en concreto se barajaron diversos programas: Subversion, CVS (Concurrent Versions System) y Git. Se escogió Git por su simplicidad, haber sido utilizado en anteriores ocasiones, ya se conocían sus ventajas, porque su uso es gratuito y por disponer de repositorios \en{on-line} gratuitos.
+
+Para la realización de las pruebas unitarias se ha optado por RSpec.
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Estructura del directorio raíz}
+Para entender bien la aplicación en esta parte empezaremos explicando la estructura de carpetas del CD, antes de empezar a analizar el código fuente y las herramientas empleadas.
+
+En el disco de la documentación, se encuentran los siguientes directorios: 
+
+\subsection*{Carpeta AStar}
+Este directorio contiene el código de la aplicación desarrollada, todos los fuentes del proyecto y las pruebas.
+
+\begin{itemize}
+\item autotest: contiene un fichero de configuración para automatizar las pruebas.
+\item features: contiene los test de Cucumber.
+\item lib: código fuente de la aplicación.
+\item spec: contiene los test unitarios.
+\end{itemize}
+
+\subsection*{Carpeta Documentation}
+Contiene toda la documentación del proyecto y los fuentes de la misma, ya que la memoria a sido desarrollada en \LaTeX{}.
+
+\begin{itemize}
+\item src: contiene los fuentes \LaTeX{} con la documentación. 
+\item pdf: contiene los archivos pdf de la memoria.
+\end{itemize}
+
+\subsection*{Carpeta Util}
+Este directorio contiene los \en{scripts} para la instalación, desinstalación y ejecución del proyecto de manera automática. Se ha decidido incluir estos \en{scripts} para facilitar la puesta en marcha de la aplicación sin necesidad de haya que ir instalando manualmente todo el software y bibliotecas necesarios, dado que este proceso puede ser complejo.
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+\section{Código fuente}
+El código fuente de la aplicación se encuentra en la carpeta AStar/lib. En esta carpeta se encuentra exclusivamente el código de producción ya que los test están en otro directorio. A continuación se explica su estructura:
+
+\begin{itemize}
+\item \en{controller}: contiene los controladores de la aplicación que relacionan al modelo con la vista.
+
+\item \en{model}: contiene toda la lógica de negocio.
+	\begin{itemize}
+		\item \en{pesistence}: contiene el código que conecta con la base de datos y las clases que extraen y guardan información en la base de datos.
+	\end{itemize}
+	
+\item \en{public}: contiene ficheros a los que accede la vista para su funcionamiento.
+	\begin{itemize}
+		\item \en{css}: contiene las hojas de estilo.
+		\item \en{js}: contiene los ficheros JavaScript.
+	\end{itemize}
+
+\item \en{view}: contiene los ficheros HTML que estructuran la información de las vistas.
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section{Guía de estilo}
+Al no existir una guía de estilo oficial para Ruby se ha tratado de adaptar el estilo de programación a una serie de normas comunes que suelen aparecer en diferentes documentos \footnote{Guia de estilo de Bozhidar Batsov \url{https://github.com/bbatsov/ruby-style-guide}} de desarrolladores de Ruby y que son ampliamente aceptadas por la comunidad Ruby como una guía de estilo.
+
+En este apartado resumiré las normas o guías que me han parecido mas importantes de Ruby.
+
+Métodos: Hay que tratar de mantener los métodos cortos (que se puedan visualizar en una sola pantalla) y tratar de cumplir el principio DRY\footnote{Siglas en ingles de no te repitas a ti mimo, \en{Don't repit yourself}} dentro de lo razonable. En general, la funcionalidad común debe ser extraída en métodos auxiliares (que puedes hacer "privados"), pero en algunos casos, en particular cuando se trabaja con código del núcleo, a veces tratar de hacer las cosas en un estilo DRY puede ser sólo un obstáculo, por ejemplo si se tiene que maniobrar entre de diferentes condiciones de error.
+
+Los nombres de método: deben ser claros, expresivos y significativos. Se debe evitar el uso de guiones bajos para <<proteger>> el método \texttt{\_\_send\_\_} con algunas excepciones.
+
+Los nombres de método estilo Smalltalk están bien, lo que significa que podría haber un método \texttt{SomeClass.make\_from} cuando está destinado a ser invocado como \texttt{SomeClass.make\_from file} o \texttt{SomeClass.make\_from :file => name}. En estos casos el nombre del parámetro completa el nombre del método y contribuye a una lectura más natural.
+
+Los nombres de variables: que sean claros y significativos (con algunas conocidas excepciones como la utilización de <<i>> como un contador.) Trate de evitar enmascarar los nombres de métodos, por ejemplo dentro de \texttt{Array} utilice <<idx>> en vez de <<index>> porque el último es también un nombre de método.
+
+Post-condiciones: use post-condiciones sólo si su expresión es de una sola línea y no tiene muchas condiciones.
+
+Bloques: Utilice \texttt{do ... end o \{...\}}, con espacios entre los delimitadores y el código (\texttt{foo \{ |arg| código \}}). Separe expresiones largas o complejas en varias líneas, de esta forma:
+
+\begin{lstlisting}[language=Ruby]
+mapped = foo.map do |elem|
+  do_something_with elem
+end
+\end{lstlisting}
+
+Definiciones de Módulos/Clases con scope:
+
+\begin{lstlisting}[language=Ruby]
+module Rubinius::Profiler
+  class Sampler
+  end
+end
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Manual del programador}
+A continuación listaremos todas las herramientas que se han usado para la realización del el proyecto tales como editores, bases de datos, librerías de pruebas, etc:
+
+\begin{itemize}
+	\item RVM (\en{Ruby version manager}): aplicación de línea de comandos que nos permite gestionar, dentro de un mismo ordenador, varios entornos de intérpretes de Ruby y conjuntos de gemas. De esta forma vamos a conseguir instalar la nueva versión de Ruby sin eliminar la del sistema, así en cada momento podemos trabajar con la version que nos interese. Incluso podemos definir para cada proyecto un conjunto diferente de gemas, de forma que cada vez que trabajemos en un proyecto el conjunto de dependencias sea consistente con ese proyecto.
+	
+	\item MongoDB: es una base de datos orientada a documentos. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es necesario seguir un esquema.
+	
+	\item GraphViz: es una aplicación de visualización de gráficos de código abierto que incluye un gran número de programas de trazado de gráfico; además cuenta con interfaces interactivas y vía web, así como herramientas auxiliares y bibliotecas de funciones.
+	
+	\item Atom: es un editor de texto orientado al desarrollo de aplicaciones, una herramienta desarrollada por Github.
+	
+	\item Sinatra: framework para la creación simple de aplicaciones web.
+	
+	\item MathML: librería para mostrar notación científica en la web.
+	
+	\item Bootstrap: es el framework de Twitter que permite crear interfaces web con CSS y Javascript que automáticamente se adapta a los diferentes tamaños de pantalla. 
+	
+	\item Git: es uno de los sistemas de control de versiones más populares gracias a su potencia y versatilidad.
+	
+	\item Rspec: framework que define un Domain Specific Language (DSL), que hace que los casos de prueba queden muy sencillos de leer y nos da las herramientas necesarias para comprobar que un elemento debería de comportarse como nosotros queremos.
+	
+	\item Cucumber: es una herramienta, escrita originalmente en Ruby, que ejecuta descripciones funcionales en texto plano como test automáticos, aprovechando las ventajas del BDD.
+	
+\end{itemize}
+
+Se han buscado las herramientas que mejor se adaptaran a las necesidades teniendo en cuenta el carácter de proyecto de software libre que teníamos. Por ello todas las herramientas utilizadas, son gratuitas y de código abierto.
+
+
+\section{Configuración de la construcción}
+En esta sección se explicara como instalar todos los componentes, arrancar la aplicación y como se pueden desinstalar todos sus componentes.
+
+Para facilitar estos procesos y que no tengamos que hacer manualmente engorrosas instalaciones, se han creado tres \en{scripts} que se ocuparan de forma automática de la instalación de los componentes necesarios, la puesta en marcha de la base de datos y el servidor web y por ultimo la desinstalación de los componentes que hemos tenido que instalar.
+
+Todos estos \en{scripts} se pueden encontrar en el disco de la documentación en la carpeta \en{Util}, recomendamos que siempre estén juntos en el mismo directorio del ordenador donde se vaya a proceder a la instalación.
+
+Antes de nada hay que dar a los \en{scripts} permiso de ejecución. Podemos hacerlo con el siguiente comando si estamos en la carpeta donde se encuentran los \en{scripts}:
+
+\begin{quote}
+	\texttt{\$ sudo chmod 774 *.sh}
+\end{quote}
+
+\subsection{Instalar}
+Abrimos un terminal de linux y accedemos al directorio donde hayamos puesto los \en{scripts}, ejecutamos el \en{script} <<install.sh>> con el siguiente comando:
+\begin{quote}
+	\texttt{\$ ./install.sh}
+\end{quote}
+
+Cuando lo ejecutemos el \en{script} procederá a instalar:
+
+\begin{itemize}
+	\item Curl.
+	\item RVM.
+	\item Ruby 2.0.0
+	\item MongoDB.
+	\item GraphViz.
+	\item Git.
+	\item Descargara el código fuente del repositorio.
+	\item instalara las gemas necesarias del proyecto.
+\end{itemize}
+
+Al descargar el código fuente del proyecto lo colocara en la carpeta \en{home} del usuario que ejecuta el \en{script} y MongoDB lo descargara y lo dejara en la misma carpeta en la que están los  \en{scripts}.
+
+\subsection{Ejecutar}
+Una vez instalado todo podemos arrancar la aplicación ejecutando el \en{script} de arranque con el siguiente comando (hay que tener en cuenta que hay que estar en la carpeta de los \en{scripts}):
+
+\begin{quote}
+	\texttt{\$ ./start\_app.sh}
+\end{quote}
+
+Con este \en{script} arrancaremos la base de datos y el servidor, una vez arrancados si accedemos a la url \url{http://localhost:9292/} podremos empezar a trabajar con la aplicación.
+
+Para parar la ejecución del servidor y la base de datos pulsamos crtl + C en el terminal que tiene arrancado el \en{script}
+
+\subsection{Desinstalar}
+Para desinstalar los componentes que hemos instalado tenemos el \en{script} uninstall.sh, como puede que no queramos desinstalar todos los componentes que hemos instalado previamente nos preguntara si deseamos desinstalar o no los componentes que se listan a continuación:
+
+\begin{itemize}
+	\item Curl.
+	\item GraphViz.
+	\item Git.
+\end{itemize}
+
+Los siguientes componentes los eliminara sin preguntar:
+
+\begin{itemize}
+	\item MongoDB: borrara la carpeta <<data>> del directorio raíz (esta carpeta es de mongo y no afecta a otros programas) y la descarga que se ha realizado de MongoDB.
+	\item Eliminara el código fuente descargado del repositorio que se encuentra en la carpeta \en{home}.
+\end{itemize}
+
+Para llevar a cabo la desinstalación hay que poner en la consola:
+
+\begin{quote}
+	\texttt{\$ ./uninstall.sh}
+\end{quote}
+\newpage
+
+
+\section{Pruebas}
+En esta parte se explicara como se pueden ejecutar las pruebas que se han realizado en este proyecto. Para ello una vez que hayamos ejecutado el \en{script} install.sh podremos ir a la carpeta del código fuente que se encontrara en la carpeta \en{home} del usuario con el nombre <<a\_star>>. Debemos acceder a este directorio desde la consola.
+
+\begin{quote}
+	\texttt{\$ cd ~/a\_star}
+\end{quote}
+
+Una vez que estemos en este directorio ejecutando el comando \texttt{autotest} podremos ejecutar de manera automática los test. Hay que tener en cuenta que puede que algunos test prueban características que necesitan de la base de datos y de una base de datos de prueba, así que puede que algunos test fallen al no tener instalada la base de datos de prueba o tener la base de datos arrancada.
+
+Aun así, en las pruebas realizadas, vemos como todos los test pasan las pruebas.
+
+
+
+
+
+
+
+
+
+
