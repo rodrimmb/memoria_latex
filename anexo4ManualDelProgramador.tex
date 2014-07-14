@@ -3,11 +3,11 @@ En este parte de la memoria, se explicara las partes más importantes de la imple
 					
 El desarrollo se ha realizado en la versión 2.0.0 de Ruby. Para la implementación de la aplicación se ha utilizado Atom como editor de código. Para el desarrollo de las interfaces de usuario se ha empleado también se ha usado Atom junto con la herramienta de depuración de paginas web de Google Chrome y para el control de versiones se ha empleado Git junto al repositorio \en{on-line} github.
 					
-El motivo de escoger Atom fue por coherencia con el resto del proyecto, ya que todo el software que se a usado para el proyecto es open source. La sencillez de esta herramienta y su integración con Ruby facilita las tareas del programador. Otra de las ventajas que ofrece, es la cantidad de \en{plugins} disponibles, y al ser \en{open source} incluso nosotros podemos desarrollar nuestros propios \en{plugins} para ayudarnos al desarrollo.
+El motivo de escoger Atom fue por coherencia con el resto del proyecto, ya que todo el software que se a usado para el proyecto es \en{open source}. La sencillez de esta herramienta y su integración con Ruby facilita las tareas del programador. Otra de las ventajas que ofrece, es la cantidad de \en{plugins} disponibles, y al ser \en{open source} incluso nosotros podemos desarrollar nuestros propios \en{plugins} para ayudarnos al desarrollo.
 
 Se decidió optar por un editor de código en vez de un entorno integrado de desarrollo o IDE, porque para Ruby no existe ninguna herramienta IDE que nos convenciera, así que ya que las ventajas que aportaba un IDE eran prácticamente nulas, respecto un simple editor de código se opto por esta ultima opción al ser el editor de código mucho más liviano y ágil que un IDE completo.
 					
-En cualquier proyecto software, es necesario disponer de un control de versiones potente y versa?til para poder tener bajo control los fuentes desarrollados y poder hacer un seguimiento de los \en{commits} que hemos realizado. Antes de decidirnos por uno en concreto se barajaron diversos programas: Subversion, CVS (Concurrent Versions System) y Git. Se escogió Git por su simplicidad, haber sido utilizado en anteriores ocasiones, ya se conocían sus ventajas, porque su uso es gratuito y por disponer de repositorios \en{on-line} gratuitos.
+En cualquier proyecto software, es necesario disponer de un control de versiones potente y versátil para poder tener bajo control los fuentes desarrollados y poder hacer un seguimiento de los \en{commits} que hemos realizado. Antes de decidirnos por uno en concreto se barajaron diversos programas: Subversion, CVS (\en{Concurrent Versions System}) y Git. Se escogió Git por su simplicidad, haber sido utilizado en anteriores ocasiones, ya se conocían sus ventajas, porque su uso es gratuito y por disponer de repositorios \en{on-line} gratuitos.
 
 Para la realización de las pruebas unitarias se ha optado por RSpec.
 \newpage
@@ -26,7 +26,7 @@ Para la realización de las pruebas unitarias se ha optado por RSpec.
 
 
 \section{Estructura del directorio raíz}
-Para entender bien la aplicación en esta parte empezaremos explicando la estructura de carpetas del CD, antes de empezar a analizar el código fuente y las herramientas empleadas.
+Para entender bien la aplicación en esta parte empezaremos explicando la estructura de carpetas del disco, antes de empezar a analizar el código fuente y las herramientas empleadas.
 
 En el disco de la documentación, se encuentran los siguientes directorios: 
 
@@ -101,7 +101,7 @@ Métodos: Hay que tratar de mantener los métodos cortos (que se puedan visualizar
 
 Los nombres de método: deben ser claros, expresivos y significativos. Se debe evitar el uso de guiones bajos para <<proteger>> el método \texttt{\_\_send\_\_} con algunas excepciones.
 
-Los nombres de método estilo Smalltalk están bien, lo que significa que podría haber un método \texttt{SomeClass.make\_from} cuando está destinado a ser invocado como \texttt{SomeClass.make\_from file} o \texttt{SomeClass.make\_from :file => name}. En estos casos el nombre del parámetro completa el nombre del método y contribuye a una lectura más natural.
+Los nombres de método estilo \en{Smalltalk} están bien, lo que significa que podría haber un método \texttt{SomeClass.make\_from} cuando está destinado a ser invocado como \texttt{SomeClass.make\_from file} o \texttt{SomeClass.make\_from :file => name}. En estos casos el nombre del parámetro completa el nombre del método y contribuye a una lectura más natural.
 
 Los nombres de variables: que sean claros y significativos (con algunas conocidas excepciones como la utilización de <<i>> como un contador.) Trate de evitar enmascarar los nombres de métodos, por ejemplo dentro de \texttt{Array} utilice <<idx>> en vez de <<index>> porque el último es también un nombre de método.
 
