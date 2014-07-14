@@ -6,27 +6,73 @@ Una vez que siguiendo los pasos del anexo anterior tenemos la aplicación instala
 \subsection{Pagina principal}
 Como se puede ver la pagina principal se divide en dos partes, en la parte superior podemos ver un dialogo con una pequeña explicación del objetivo de la web y justo debajo esta la tabla que contiene las búsquedas que se han creado previamente. Si anteriormente no se hubiera creado ninguna búsqueda o se hubieran eliminado todas esta tabla estaría vacía y solo de vería el encabezado de la tabla.
 
-% Incluir imagen principal
+\figuraConPosicion{1}{imgs/final_inicio.png}{Pagina principal}{paginaPrincipal}{}{H}
 
 Justo encima de la tabla hay dos botones uno para recargar la tabla y otro para añadir nuevas búsquedas a la tabla. Cuando pulsemos el botón para añadir una búsqueda nos aparecerá una ventana modal que nos pedirá que le demos un nombre a la búsqueda. Una vez introducido el nombre podemos pulsar añadir y veremos como la búsqueda se ha añadido a la tabla.
 
 % Imagen modal busquedas
+\figuraConPosicion{1}{imgs/m_modalBusquedas.png}{Ventana modal para añadir búsquedas}{busqAdd}{}{H}
 
 Desde la pagina principal también podremos eliminar las búsquedas que no nos interesen. como se puede ver al final de cada fila de la tabla de búsquedas se puede ver un botón con una papelera, al pulsar este nos pedirá confirmación para eliminar la búsqueda.
 
-% Imagen boton eliminar
 % Imagen confirmacion eliminacion
+\figuraConPosicion{1}{imgs/m_confirmacion.png}{Eliminación de búsquedas con confirmación}{eliminacion}{}{H}
 
 Podemos pulsar encima de una de las búsquedas y acceder a la zona de trabajo.
 
 \subsection{Zona de trabajo}
 Una vez pulsemos encima de una de las búsquedas para acceder a la zona de trabajo, vemos que en la pagina web hay dos zonas diferenciadas la de la izquierda y la de la derecha. En la parte izquierda tendremos la información en tablas y en la derecha ira el grafo.
 
-% Imagen work space
+\figuraConPosicion{1}{imgs/final_nodos.png}{Zona de trabajo}{paginaDeTrabajo}{}{H}
 
 En la parte superior izquierda vemos tres pestañas. La primera pestaña con el icono de una casa nos devolverá a la pagina inicial, la segunda pestaña <<\en{Nodes Input}>>, que es la de por defecto, nos da información y opciones sobre los nodos y la ultima pestaña <<\en{Solution}>> muestra información sobre como se resuelve el algoritmo y opciones propias para resolver la búsqueda.
 
 % Imagen detalle pestañas
+\figuraConPosicion{0.6}{imgs/m_detallePestanas.png}{Detalle de las pestañas}{pestañas}{}{H}
+
+\subsection*{Pestaña <<\en{Nodes Input}>>}
+Cuando estamos en esta pestaña podemos ver los botones para añadir nodos <<\en{Add new node}>> y el botón para recargar la tabla de nodos <<\en{Refresh}>>.
+
+% Imagen detalle botones
+\figuraConPosicion{0.7}{imgs/m_botonesNode.png}{Detalle de los botones}{detalleBotones}{}{H}
+
+Cuando pulsamos en el botón de añadir nodos aparecerá una ventana modal en la que podremos añadir los datos de los nodos.
+
+\figuraConPosicion{1}{imgs/final_add_nodo.png}{Ventana modal para añadir nodos}{añadirNodos}{}{H}
+
+En esta ventana modal podremos dar un nombre al nodo, darle un coste, introducir el o los nombres de los padres separados por comas añadir los hijos y el coste del camino hasta ellos y si el nodo es meta o no.
+
+Los hijos se añaden de uno en uno y se verán en la parte superior con su coste de ruta.
+
+% detalle hijos
+\figuraConPosicion{1}{imgs/m_hijos.png}{Añadir hijos a un nodo}{nodoHijos}{}{H}
+
+\subsection*{Pestaña <<\en{Solution}>>}
+En esta pestaña tenemos tres botones, el primero <<\en{Clear All}>> borra la tabla con la solución, el segundo <<\en{Solve}>> muestra la tabla con los pasos y la ruta en el diagrama y en el recuadro verde de solución, el ultimo boton <<\en{Next Step}>> va resolviendo paso a paso la tabla y muestra en el diagrama de forma visual los nodos afectados en cada paso.
+
+\figuraConPosicion{1}{imgs/final_solucion.png}{Pestaña <<\en{Solution}>> con ejercicio resuelto}{solucionNormal}{}{H}
+
+\figuraConPosicion{1}{imgs/final_solucion_paso.png}{Solución paso a paso}{pasoApaso}{}{H}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

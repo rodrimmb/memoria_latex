@@ -25,4 +25,23 @@
 \contentsline {figure}{\numberline {\relax III.4}{\ignorespaces Diagrama de paquetes}}{82}{figure.249}
 \contentsline {figure}{\numberline {\relax III.5}{\ignorespaces Diagrama de la interfaz web}}{83}{figure.253}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax IV.1}{\ignorespaces Test clase AStar}}{93}{figure.282}
+\contentsline {figure}{\numberline {\relax IV.2}{\ignorespaces Test clase GenerateGraph}}{93}{figure.284}
+\contentsline {figure}{\numberline {\relax IV.3}{\ignorespaces Test clase Node}}{94}{figure.286}
+\contentsline {figure}{\numberline {\relax IV.4}{\ignorespaces Test clase NodeHandler}}{94}{figure.288}
+\contentsline {figure}{\numberline {\relax IV.5}{\ignorespaces Test clase NodesService}}{94}{figure.290}
+\contentsline {figure}{\numberline {\relax IV.6}{\ignorespaces Test clase PriorityQueue}}{95}{figure.292}
+\contentsline {figure}{\numberline {\relax IV.7}{\ignorespaces Test clase SearchService}}{95}{figure.294}
+\contentsline {figure}{\numberline {\relax IV.8}{\ignorespaces Test clase SingletonDbConnection}}{95}{figure.296}
+\contentsline {figure}{\numberline {\relax IV.9}{\ignorespaces Test clase StandarState}}{95}{figure.298}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax V.1}{\ignorespaces Pagina principal}}{99}{figure.304}
+\contentsline {figure}{\numberline {\relax V.2}{\ignorespaces Ventana modal para a\~nadir b\'usquedas}}{100}{figure.306}
+\contentsline {figure}{\numberline {\relax V.3}{\ignorespaces Eliminaci\'on de b\'usquedas con confirmaci\'on}}{100}{figure.308}
+\contentsline {figure}{\numberline {\relax V.4}{\ignorespaces Zona de trabajo}}{101}{figure.311}
+\contentsline {figure}{\numberline {\relax V.5}{\ignorespaces Detalle de las pesta\~nas}}{101}{figure.313}
+\contentsline {figure}{\numberline {\relax V.6}{\ignorespaces Detalle de los botones}}{102}{figure.315}
+\contentsline {figure}{\numberline {\relax V.7}{\ignorespaces Ventana modal para a\~nadir nodos}}{102}{figure.317}
+\contentsline {figure}{\numberline {\relax V.8}{\ignorespaces A\~nadir hijos a un nodo}}{103}{figure.319}
+\contentsline {figure}{\numberline {\relax V.9}{\ignorespaces Pesta\~na <<\emph {Solution}>> con ejercicio resuelto}}{103}{figure.321}
+\contentsline {figure}{\numberline {\relax V.10}{\ignorespaces Soluci\'on paso a paso}}{104}{figure.323}
