@@ -161,7 +161,7 @@
     
     {\noindent\sffamily\Large\bf Escuela Politécnica Superior}\vspace{.5cm}%
     
-    {\noindent\sffamily\Huge\bf Ingeniería Informática}\vspace{.5cm}%
+    {\noindent\sffamily\Huge\bf Máster Universitario en Ingeniería Informática}\vspace{.5cm}%
     
     {\noindent\sffamily\Large\bf Área de Lenguajes y Sistemas Informáticos}\vspace{.5cm}%
 \end{center}%
@@ -193,7 +193,7 @@
     
     {\noindent\sffamily\Large\bf Escuela Politécnica Superior}\vspace{.5cm}%
     
-    {\noindent\sffamily\Huge\bf Ingeniería Informática}\vspace{.5cm}%
+    {\noindent\sffamily\Huge\bf Máster Universitario en Ingeniería Informática}\vspace{.5cm}%
     
     {\noindent\sffamily\Large\bf Área de Lenguajes y Sistemas Informáticos}\vspace{.5cm}%
  \end{center}%
