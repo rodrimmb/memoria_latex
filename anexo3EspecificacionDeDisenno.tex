@@ -12,14 +12,14 @@ El diseño se divide en varias fases:
 
 \item Diseño de la conexión a la base de datos, es importante que la conexión a la base de datos solo crea las conexiones necesarias para no tener miles de conexiones abiertas sin usar o que solo se usan una vez.
 
-\item Diseño de la API REST, se debe decidir el espacio de nombres de las URL que llamaran a los diferentes servicios de la API. Estas URLs en ocasiones deben contener cierta información para que el servicio pueda funcionar.
+\item Diseño de la API REST, se debe decidir el espacio de nombres de las URL que llamarán a los diferentes servicios de la API. Estas URLs en ocasiones deben contener cierta información para que el servicio pueda funcionar.
 
-\item Diseño de la interfaz de usuario, se diseñan las distintas pantallas y sus componentes de forma que la interfaz gráfica para interactuar con la aplicación sea sencilla, intuitiva y bonita. 
+\item Diseño de la interfaz de usuario, se diseñarán las distintas pantallas y sus componentes de forma que la interfaz gráfica para interactuar con la aplicación sea sencilla, intuitiva y bonita. 
 \end{itemize}
 					
 El diseño es fundamental para el correcto desarrollo de un proyecto software. Facilita la estructuración modular y coherente para tener una aplicación robusta y estable a la vez que extensible.
 
-En este apartado se mostrara la estructura de paquetes de la aplicación con sus relaciones. Además los paquetes más importantes serán desglosados en diagramas de clases, obteniendo así un mayor nivel de detalle y facilitando la comprensión del diseño. Algunos de estos diagramas no contendrán todos atributos sino que, por facilitar su comprensión, se centraran en las clases, métodos y atributos más importantes y representativos para el funcionamiento, ocultando información superflua.
+En este apartado se mostrará la estructura de paquetes de la aplicación con sus relaciones. Además, los paquetes más importantes serán desglosados en diagramas de clases, obteniendo así un mayor nivel de detalle y facilitando la comprensión del diseño. Algunos de estos diagramas no contendrán todos atributos sino que, por facilitar su comprensión, se centrarán en las clases, métodos y atributos más importantes y representativos para el funcionamiento, ocultando información superflua.
 \newpage
 
 
@@ -37,15 +37,15 @@ En este apartado se mostrara la estructura de paquetes de la aplicación con sus 
 
 
 \section{Ámbito software}
-El objetivo del sistema es que podamos generar nuestros propios árboles de búsqueda en espacio de estados y realizar una búsqueda en estos usando el algoritmo A estrella. La información resultante de la realización de la  búsqueda se mostrará en un entorno web.
+El objetivo del sistema es que podamos generar nuestros propios árboles de búsqueda en espacio de estados y realizar una búsqueda en éstos usando el algoritmo A estrella. La información resultante de la realización de la  búsqueda se mostrará en un entorno web.
 
-Para poder soportar diversos algoritmos de los que en un futuro podría constar la aplicación, se ha empleado el patrón de diseño \en{Template Method} (Método plantilla) que establecer una especie de plantilla fija en la superclase haciendo que la implementación concreta de cada método sea responsabilidad subclases que lo implementa. En la superclase se definen las estructuras de datos común a todas las clases que implementen su interfaz, definiendo métodos que todas las subclases deberán implementar. Además, la superclase puede contener métodos que serán útiles para los algoritmos concretos, evitando así la duplicidad de código.
+Para poder soportar diversos algoritmos de los que en un futuro podría constar la aplicación, se ha empleado el patrón de diseño \en{Template Method} (Método plantilla) que establece una especie de plantilla fija en la superclase haciendo que la implementación concreta de cada método sea responsabilidad subclases que lo implementa. En la superclase se definen las estructuras de datos comunes a todas las clases que implementen su interfaz, definiendo métodos que todas las subclases deberán implementar. Además, la superclase puede contener métodos que serán útiles para los algoritmos concretos, evitando así la duplicidad de código.
 
-Para gestionar la conexión a la base de datos y que no se generen conexiones indiscriminadas a esta se a usado el patrón de diseño Singleton (Instancia única), pensado para restringir la creación de objetos pertenecientes a una clase, en este caso a la clase que conecta con la base de datos. Su intención consiste en garantizar que una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella.
+Para gestionar la conexión a la base de datos y que no se generen conexiones indiscriminadas a ésta se ha usado el patrón de diseño \en{Singleton} (Instancia única), pensado para restringir la creación de objetos pertenecientes a una clase, en este caso a la clase que conecta con la base de datos. Su intención consiste en garantizar que una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella.
 
-Para poder conseguir una mejor reutilización de código y separar conceptos y así dejar bien definidas sus diferentes partes, se usó el patrón de diseño MVC (\en{Model, view, controller}), MVC es un patrón que separa los datos y la lógica de negocio de una aplicación de la interfaz de usuario y el módulo encargado de gestionar los eventos y las comunicaciones. Es un patrón ampliamente utilizado en el diseño de aplicaciones con interfaz gráfica de usuario y por lo tanto está muy extendido en el diseño de aplicaciones web.
+Para poder conseguir una mejor reutilización de código y separar conceptos y así dejar bien definidas sus diferentes partes, se usó el patrón de diseño Modelo-Vista-Controlador (MVC \en{Model, view, controller}), MVC es un patrón que separa los datos y la lógica de negocio de una aplicación de la interfaz de usuario y el módulo encargado de gestionar los eventos y las comunicaciones. Es un patrón ampliamente utilizado en el diseño de aplicaciones con interfaz gráfica de usuario y por lo tanto está muy extendido en el diseño de aplicaciones web.
 					
-En el diseño de la interfaz de usuario a influido la idea de que deberá ser lo más intuitiva y directa posible para facilitar el flujo de trabajo, disponer de las características que se definieron en la fase de análisis previa y la estética además de ser funcional debe ser bonita.
+En el diseño de la interfaz de usuario ha influido la idea de que deberá ser lo más intuitiva y directa posible para facilitar el flujo de trabajo, disponer de las características que se definieron en la fase de análisis previa y la estética además de ser funcional debe ser bonita.
 \newpage
 
 
@@ -59,15 +59,15 @@ En el diseño de la interfaz de usuario a influido la idea de que deberá ser lo m
 
 
 \section{Diseño de datos}
-El objetivo de este capítulo explican y se muestran en gráficos las representaciones lógicas de los datos (estructuras de datos) que se han extraído a partir de la fase de análisis.
+El objetivo de esta sección es explicar y mostrar en gráficos las representaciones lógicas de los datos (estructuras de datos) que se han extraído a partir de la fase de análisis.
 
 \subsection{Núcleo de la aplicación}
-En esta sección se detalla la estructura del núcleo de la aplicación. Aunque la aplicación esta dividida en tres partes: modelo, vista y controlador; en ella se distinguen dos partes principales: que son el modelo y el controlador.
+En esta sección se detalla la estructura del núcleo de la aplicación. Aunque la aplicación está dividida en tres partes: modelo, vista y controlador; en ella se distinguen dos partes principales: que son el modelo y el controlador.
 
 \subsubsection*{Modelo}
-En el modelo se define la lógica del negocio y la representación de la información (estructura de datos) con la cual el sistema opera. En esta parte tendremos el algoritmo que resuelve la búsqueda, los componentes que usa este algoritmo como nodos y estados de los nodos, además de la conexión a la base de datos y una serie de servicios para obtener la información almacenada en la base de datos directamente como un objeto.
+En el modelo se define la lógica del negocio y la representación de la información (estructura de datos) con la cual el sistema opera. En esta parte tendremos el algoritmo, que resuelve la búsqueda, los componentes que usa este algoritmo como nodos y estados de los nodos, además de la conexión a la base de datos y una serie de servicios para obtener la información almacenada en la base de datos directamente como un objeto.
 
-Tenemos dos clases abstractas que definen dos interfaces. Una interfaz es SearchAlgorithm que especifica un método que deben tener todos las clases que hereden de ella y la otra es SearchEstate en ella definimos un atributo y varios métodos que deben tener todos los estados de búsqueda que hereden de ella.
+Tenemos dos clases abstractas que definen dos interfaces. Una interfaz es \en{SearchAlgorithm} que especifica un método que deben tener todos las clases que hereden de ella y la otra es \en{SearchEstate} en ella definimos un atributo y varios métodos que deben tener todos los estados de búsqueda que hereden de ella.
 
 \figuraConPosicion{1}{imgs/clases_model.png}{Diagrama de clases del modelo}{modeloClases}{}{H}
 \newpage
@@ -78,11 +78,11 @@ Para la persistencia tenemos una clase que crea la conexión con la base de datos
 \newpage
 
 \subsubsection*{Controlador}
-El controlador es el encargado de responder a eventos e invoca que se hacen al modelo cuando se hace alguna solicitud sobre la vista. También puede enviar comandos a su vista asociada si se solicita un cambio en la forma en que se presenta de modelo, por tanto se podría decir que el controlador hace de intermediario entre la vista y el modelo. En nuestro caso la vista seria la pagina web, cuando interactuamos con esta se informa al controlador que se encarga de que el modelo se ponga a trabajar para darnos una respuesta que la vista nos mostrará.
+El controlador es el encargado de responder a eventos e invoca que se hace en el modelo cuando llega alguna solicitud sobre la vista. También puede enviar comandos a su vista asociada si se solicita un cambio en la forma en que se presenta el modelo, por tanto se podría decir que el controlador hace de intermediario entre la vista y el modelo. En nuestro caso la vista sería la página web, cuando interactuamos con ésta se informa al controlador que se encarga de que el modelo se ponga a trabajar para darnos una respuesta que la vista nos mostrará.
 
 \figuraConPosicion{1}{imgs/clases_controller.png}{Diagrama de clases del controlador}{controladorClases}{}{H}
 
-Como vemos \ver{controladorClases} todos los controladores extienden de ApplicationController.
+Como vemos \ver{controladorClases} todos los controladores extienden de \en{ApplicationController}.
 \newpage
 
 
@@ -98,7 +98,7 @@ Como vemos \ver{controladorClases} todos los controladores extienden de Applicat
 
 
 \section{Diseño arquitectónico}
-El objetivo el diseño arquitectónico es definir la estructura de la aplicación. Una estructura modular nos permite hacer que los módulos sean sustituibles y fácilmente testeables. También nos permite representar las relaciones entre lo paquetes que componen la aplicación.
+El objetivo el diseño arquitectónico es definir la estructura de la aplicación. Una estructura modular nos permite hacer que los módulos sean sustituibles y fácilmente testeables. También nos permite representar las relaciones entre los paquetes que componen la aplicación.
 
 En esta etapa del diseño, como ya he dicho, se ha intentado mantener la máxima modularidad que garantiza la independencia entre el núcleo de la aplicación y la parte visual que muestra los datos por pantalla. Uno de los patrones arquitectónicos que nos asegura esta independencia es el patrón arquitectónico Modelo-Vista-Controlador. Este nos permite separar la representación de los datos de su funcionamiento. De este modo, se puede modificar la interfaz o el núcleo de la aplicación sin tener que depender unas partes de otras. 
 
@@ -109,9 +109,9 @@ En el diagrama de paquetes se puede ver la separación. El modelo queda aislado d
 El contenido de los paquetes es el siguiente:
 
 \begin{itemize}
-\item \en{model}: contiene la implementación del algoritmo y de las diferentes clases que hace uso el algoritmo para funcionar. También hay un apartado de persistencia en el que se gestiona la conexión a la base de datos y la forma en la que se obtiene la información de esta. 
+\item \en{model}: contiene la implementación del algoritmo y de las diferentes clases de las que hace uso el algoritmo para funcionar. También hay un apartado de persistencia en el que se gestiona la conexión a la base de datos y la forma en la que se obtiene la información de ésta. 
 
-\item \en{view}: contiene la definición de la estructura de la información en los documentos HTML, los estilos con los que se va a mostrar la información en los documentos CSS y la interacción con el controlador y las acciones dinámicas de las vistas se especifican en los ficheros JavaScript 
+\item \en{view}: contiene la definición de la estructura de la información en los documentos HTML, los estilos con los que se va a mostrar la información en los documentos CSS y la interacción con el controlador y las acciones dinámicas de las vistas se especifican en los ficheros JavaScript.
 
 \item \en{controller}: contiene las clases que establecen la comunicación entre el modelo y la vista.
 \end{itemize}
@@ -132,7 +132,7 @@ El contenido de los paquetes es el siguiente:
 En esta sección se establecerá la estructura de la interfaz hombre-máquina implementada  a partir de los prototipos ideados en la fase de análisis.
 
 \subsection{Interfaz gráfica de usuario}
-Al ser este un proyecto web la interfaz gráfica se compone de tres tipos de ficheros:
+Al ser este un proyecto web, la interfaz gráfica se compone de tres tipos de ficheros:
 
 \begin{itemize}
 \item HTML para definir la estructura de la información.
@@ -146,27 +146,29 @@ Al ser este un proyecto web la interfaz gráfica se compone de tres tipos de fich
 
 Dentro de la carpeta \en{view} tenemos:
 
+\newcommand{\ruta}[1]{\texttt{#1}}
+
 \begin{itemize}
-\item layout.html: es una plantilla que contiene las llamadas a los \en{scripts} y estilos comunes al resto de páginas.
+\item \ruta{layout.html}: es una plantilla que contiene las llamadas a los \en{scripts} y estilos comunes al resto de páginas.
 
-\item index.html: contiene la página de inicio con una tabla que muestra las búsquedas que el usuario a creado.
+\item \ruta{index.html}: contiene la página de inicio con una tabla que muestra las búsquedas que el usuario ha creado.
 
-\item work\_space.html: se divide en dos secciones, una sección con dos pestañas en las que se encuentran la tabla con la información de los nodos y otra tabla con la información de los pasos que va dando el algoritmo para resolver el problema y en la otra parte se muestra un gráfico con el árbol de búsqueda.
+\item \ruta{work\_space.html}: se divide en dos secciones, una sección con dos pestañas en las que se encuentran la tabla con la información de los nodos y otra tabla con la información de los pasos que va dando el algoritmo para resolver el problema y en la otra parte se muestra un gráfico con el árbol de búsqueda.
 
 \end{itemize}
 
-Dentro de la carpeta public nos encontramos con una hoja de estilos CSS y varios ficheros JavaScript que le dan dinamismo a la web.
+Dentro de la carpeta \ruta{public} nos encontramos con una hoja de estilos CSS y varios ficheros JavaScript que le dan dinamismo a la web.
 
 \begin{itemize}
-\item css/style.css: define ciertos aspectos de como se deben mostrar ciertos componentes de la web. Para casi todos los estilos se ha usado BootsTrap, por lo que este fichero no es muy extenso.
+\item \ruta{css/style.css}: define ciertos aspectos de como se deben mostrar ciertos componentes de la web. Para casi todos los estilos se ha usado \en{BootsTrap}, por lo que este fichero no es muy extenso.
 
-\item js/index.js: realiza la carga de datos de la página principal y dota de dinamismo a la tabla que se muestra en esta página, pudiendo añadir, borrar o recargar las búsquedas del usuario en tiempo real sin necesidad de recargar la página.
+\item \ruta{js/index.js}: realiza la carga de datos de la página principal y dota de dinamismo a la tabla que se muestra en esta página, pudiendo añadir, borrar o recargar las búsquedas del usuario en tiempo real sin necesidad de recargar la página.
 
-\item js/tables.js: se ocupa del dinamismo de las tablas de la página de trabajo. Nos permite añadir, borrar o recarga los nodos en la parte de la tabla que se encarga de mostrar la información de los nodos. También se ocupa de mostrar los resultados paso a paso de la tabla con la solución del algoritmo.
+\item \ruta{js/tables.js}: se ocupa del dinamismo de las tablas de la página de trabajo. Nos permite añadir, borrar o recargar los nodos en la parte de la tabla que se encarga de mostrar la información de los nodos. También se ocupa de mostrar los resultados paso a paso en la tabla con la solución del algoritmo.
 
-\item js/draw.js: se encarga de dibujar el gráfico de forma dinámica y aplicar diferentes estilos para mostrar la información de la búsqueda de una forma visual.
+\item \ruta{js/draw.js}: se encarga de dibujar el gráfico de forma dinámica y aplicar diferentes estilos para mostrar la información de la búsqueda de una forma visual.
 
-\item js/addNodeModal.js: es el encargado de mostrar una ventana modal en la que el usuario añadirá la los diferentes datos que necesitan los nodos.
+\item \ruta{js/addNodeModal.js}: es el encargado de mostrar una ventana modal en la que el usuario añadirá la los diferentes datos que necesitan los nodos.
 
 \end{itemize}
 \newpage
@@ -261,9 +263,9 @@ Una vez que se finaliza el diseño expuesto en este anexo, hay que establecer que
 \begin{enumerate}
 \item Generar el prototipo de la interfaz: es el primer paso, antes de nada debemos saber como debería ser la web, para luego dotarla de sus funcionalidades.
 
-\item Pensar que métodos deberá tener la API REST: hay que pensar que necesitaremos para dotar de funcionalidad a la web, esta funcionalidad nos la proporcionaran los métodos de la API.
+\item Pensar que métodos deberá tener la API REST: hay que pensar que necesitaremos para dotar de funcionalidad a la web, esta funcionalidad nos la proporcionarán los métodos de la API.
 
-\item Conexión a la base de datos: para almacenar los datos que generemos y poder acceder a ellos posteriormente hay que decidir como guardaremos estos datos y donde.
+\item Conexión a la base de datos: para almacenar los datos que generemos y poder acceder a ellos posteriormente hay que decidir cómo guardaremos estos datos y dónde.
 
 \item Pruebas: hay que hacer pruebas para comprobar que todo funciona como se espera.
 \end{enumerate}

@@ -93,7 +93,7 @@
 %\newcommand{\autores}[4]{\def\@autorUno{#1}\def\@autorDos{#3}\def\@DNIUno{#2}\def\@DNIDos{#4}}
 \newcommand{\autores}[2]{\def\@autorUno{#1}\def\@autorDos{#2}}
 \newcommand{\titulacion}[1]{\def\@titulacion{#1}}
-\newcommand{\director}[1]{\def\@director{Director: #1}}
+\newcommand{\director}[1]{\def\@director{Directores: #1}}
 \newcommand{\directora}[1]{\def\@director{Directora: #1}}
 \newcommand{\resumen}[1]{\def\@resumen{#1}}
 \newcommand{\descriptores}[1]{\def\@descriptores{#1}}
