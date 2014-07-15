@@ -83,6 +83,35 @@ El código fuente de la aplicación se encuentra en la carpeta AStar/lib. En esta 
 
 \end{itemize}
 
+\subsection{Repositorio \en{on line} GitHub}
+Al haber usado Git como control de versiones decidimos buscar algún repositorio \en{on line} para poder alojar nuestro código y que el tutor pudiera acceder a ver los fuentes de una forma sencilla.
+
+En principio se barajaron dos repositorios, Bitbucket\footnote{\url{https://bitbucket.org/}} y GitHub\footnote{\url{https://github.com/}}, ambos son gratuitos y permiten integración con Git y Bitbucket incluso con otros controles de version. Pero debido a la enorme popularidad de GitHub nos decantamos por este. 
+
+Todo el código de este proyecto puede ser encontrado en GitHub, tanto los fuentes del proyecto como los de la memoria.
+
+\begin{itemize}
+	\item Código fuente del proyecto: \url{https://github.com/rodrimmbdev/a_star.git}
+	\item Código fuente de la memoria: \url{https://github.com/rodrimmbdev/memoria_latex.git}
+\end{itemize}
+
+Podemos entrar directamente a la web y ver todo el código, los commits y muchas otras opciones que nos da la web de GitHub o directamente clonar el repositorio a nuestro propio ordenador. Para poder clonar estos repositorios se debe tener instalado Git y ejecutar el siguiente comando:
+
+\begin{quote}
+	\texttt{\$ git clone [url del repositorio deseado]}
+\end{quote}
+\newpage
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -233,6 +262,78 @@ Para llevar a cabo la desinstalación hay que poner en la consola:
 	\texttt{\$ ./uninstall.sh}
 \end{quote}
 \newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{API REST}
+REST, \en{REpresentational State Transfer}, es un tipo de arquitectura de desarrollo web que se basa totalmente en el estándar HTTP.
+
+REST da la opción de crear servicios y aplicaciones a las que puede acceder cualquier dispositivo o cliente que pueda interpretar el protocolo HTTP, como moviles, tabletas y ordenadores, esto hace que sea mucho más simple y convencional que otras alternativas más complejas que podemos usar como son SOAP y XML-RPC. Podríamos considerar REST como un framework para construir aplicaciones web respetando HTTP.
+
+Todas estas características convierten a REST en el tipo de arquitectura más ideal para crear APIs para servicios orientados a Internet. Otra de sus ventajas es que al no tener que guardar nunca el estado en el servidor, toda la información que se requiere para trabajar debe estar en la consulta de la parte del cliente. Como no guardar el estado, REST nos permite escalar mejor sin tener que estar pendiente del engorroso tema del almacenamiento de variables de sesión.
+
+Las URLs nos dan acceso a cada uno de los recursos. Los recursos son la información con la que podemos trabajar para acceder a ella, modificarla o borrarla.
+
+Las URL, \en{Uniform Resource Locator}, son un tipo de URI, \en{Uniform Resource Identifier}, que además de permitir identificar de forma única el recurso, nos permite localizarlo para poder acceder a él. A continuación podemos ver su estructura:
+
+\begin{quote}
+	\texttt{{protocolo}://{dominio o hostname}[:puerto (opcional)]/{ruta del recurso}?{consulta de filtrado}}
+\end{quote}
+
+Para poder trabajar con los recursos, HTTP nos proporciona los siguientes métodos con los cuales debemos operar:
+
+\begin{itemize}
+	\item GET: Para consultar y leer recursos
+	\item POST: Para crear recursos
+	\item PUT: Para editar recursos
+	\item DELETE: Para eliminar recursos.
+	\item PATCH: Para editar partes concretas de un recurso.
+\end{itemize}
+
+A continuación aparecen listadas en la tabla \vertabla{apiRest} los recursos de la aplicación. Donde pone \en{server} se refiera a la dirección que tenga el servidor, en nuestro caso como el servidor esta en local seria \url{http://localhost:9292/}.
+
+%Tabla con la api
+\tabla{API REST}{c p{7cm} p{7cm}}{3}{apiRest}{
+  \multicolumn{1}{c}{Método} & \multicolumn{1}{c}{URL} & \multicolumn{1}{c}{Descripcion} \\
+ }
+ {
+  get    & server/search/all\_searches                     & Devuelve todas las búsquedas guardadas  \\
+  post   & server/search/add\_search/[nombre búsqueda]     & Añade una nueva búsqueda \\
+  delete & server/search/[nombre búsqueda]                 & Elimina una búsqueda  \\
+  get    & server/node/all\_nodes/[nombre búsqueda]        & Devuelve todos los nodos de una búsqueda  \\
+  post   & server/node/add\_node/[nombre búsqueda]         & Añade una nodo a una búsqueda \\
+  get    & server/solution/[nombre búsqueda]               & Devuelve la solución de una búsqueda  \\
+  get    & server/solution/path/[nombre búsqueda]          & Devuelve todos los pasos de una búsqueda  \\
+  get    & server/solution/graph/[nombre búsqueda]         & Devuelve el grafo de la solución de una búsqueda en SVG  \\
+ }
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Pruebas}

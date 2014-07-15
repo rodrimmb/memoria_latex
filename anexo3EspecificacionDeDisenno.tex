@@ -169,6 +169,78 @@ Dentro de la carpeta public nos encontramos con una hoja de estilos CSS y varios
 \item js/addNodeModal.js: es el encargado de mostrar una ventana modal en la que el usuario añadirá la los diferentes datos que necesitan los nodos.
 
 \end{itemize}
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Pruebas con RSpec}
+Como ya hemos indicado anteriormente para la realización de los test unitarios usaremos la gema de Ruby para la realizacion de test unitarios RSpec. En esta sección se explicara el funcionamiento de este tipo test. 
+
+El principal objetivo de RSpec es describir lo que hacen tus clases a partir de las expectativas, para una mejor compresión diremos que las expectativas son como los \en{asserts} de XUnit, una vez que tengamos <<descrito>> lo que esperamos que haga nuestro objeto viene otras de las ventajas de RSpec. Con esta librería no tenemos métodos que ejecutan \en{asserts} para comprobar que lo que nos devuelve el método de un objeto es un valor valido, nostros tendremos descripciones que cumplen unas expectativas. Las descripciones son como los métodos que ejecutan los \en{asserts} pero en vez de ser una funcion son una cadena de texto, esto hace que al leer las descripciones entendamos fácilmente que estamos probando. Veamos un pequeño ejemplo:
+
+\begin{lstlisting}[language=Ruby]
+describe NodesService do
+
+	before(:all) do
+		collection = SingletonDbConnection.get_instance('mydb','spec')
+		@nodes_service = NodesService.new(collection)
+	end
+
+	it 'can get all nodes' do
+		expect(@nodes_service.get_all_nodes('example').size).to eq 13
+	end
+
+	it 'can get one node' do
+		node = @nodes_service.get_node("A",'example')
+
+		expect(node["name"]).to eq "A"
+		expect(node["cost"]).to eq 4
+		expect(node["goal"]).to be_false
+		expect(node["children"]).to eq [{"name"=>"B","path_cost"=>1.0},{"name"=>"C","path_cost"=>1.0}]
+	end	
+
+	it 'can get the first node' do
+		node = @nodes_service.get_first_node('example')
+
+		expect(node["name"]).to eq "A"
+		expect(node["cost"]).to eq 4
+		expect(node["goal"]).to be_false
+		expect(node["children"]).to eq [{"name"=>"B","path_cost"=>1.0},{"name"=>"C","path_cost"=>1.0}]
+	end
+end
+\end{lstlisting}
+
+Este tipo de test nos da además de una base de pruebas unitarias, una excelente documentación para entender como funciona nuestra aplicación sin tener que adivina que se quería decir con el nombre del método de cierto test porque aquí no hay métodos hay descripciones.
+
+Para conseguir todo esto RSpec se basa en el método \texttt{to} y de los \en{matchers}. Gracias a la <<política>> de clases abiertas de Ruby, RSpec ha podido introducir este método en todo objeto del sistema.
+
+Simplemente le pasamos un \en{matcher} (aunque también puede recibir ciertas expresiones de Ruby), el cual es un objeto que usaremos para hacer comparaciones contra un valor que nosotros esperamos conseguir.
+
+En este enlace podremos ver una serie de buenas practicas que podemos llevar acabo cuando realicemos test con RSpec \url{http://betterspecs.org/es/}
+
+
+
+
+
+
+
+
 
 
 
