@@ -192,9 +192,9 @@ Dentro de la carpeta \ruta{public} nos encontramos con una hoja de estilos CSS y
 
 
 \section{Pruebas con RSpec}
-Como ya hemos indicado anteriormente para la realización de los test unitarios usaremos la gema de Ruby para la realizacion de test unitarios RSpec. En esta sección se explicara el funcionamiento de este tipo test. 
+Como ya hemos indicado anteriormente, para la realización de los test unitarios usaremos RSpec, la gema de Ruby para la realización de test unitarios. En esta sección se explicará el funcionamiento de este tipo test. 
 
-El principal objetivo de RSpec es describir lo que hacen tus clases a partir de las expectativas, para una mejor compresión diremos que las expectativas son como los \en{asserts} de XUnit, una vez que tengamos <<descrito>> lo que esperamos que haga nuestro objeto viene otras de las ventajas de RSpec. Con esta librería no tenemos métodos que ejecutan \en{asserts} para comprobar que lo que nos devuelve el método de un objeto es un valor valido, nostros tendremos descripciones que cumplen unas expectativas. Las descripciones son como los métodos que ejecutan los \en{asserts} pero en vez de ser una funcion son una cadena de texto, esto hace que al leer las descripciones entendamos fácilmente que estamos probando. Veamos un pequeño ejemplo:
+El principal objetivo de RSpec es describir lo que hacen tus clases a partir de las expectativas. Para una mejor compresión diremos que las expectativas son como los \en{asserts} de XUnit, una vez que tengamos <<descrito>> lo que esperamos que haga nuestro objeto, viene otras de las ventajas de RSpec, y es que los \en{test} se convierten en la documentación. Con esta librería no tenemos métodos que ejecutan \en{asserts} para comprobar que lo que nos devuelve el método de un objeto es un valor válido, nosotros tendremos descripciones que cumplen unas expectativas. Las descripciones son como los métodos que ejecutan los \en{asserts}, pero en vez de ser una función son una cadena de texto, esto hace que al leer las descripciones entendamos fácilmente que estamos probando y que hacen los \en{test}. Veamos un pequeño ejemplo:
 
 \begin{lstlisting}[language=Ruby]
 describe NodesService do
@@ -228,13 +228,11 @@ describe NodesService do
 end
 \end{lstlisting}
 
-Este tipo de test nos da además de una base de pruebas unitarias, una excelente documentación para entender como funciona nuestra aplicación sin tener que adivina que se quería decir con el nombre del método de cierto test porque aquí no hay métodos hay descripciones.
+Este tipo de test nos da además de una base de pruebas unitarias, una excelente documentación para entender como funciona nuestra aplicación sin tener que adivinar que se quería decir con el nombre del método de cierto \en{test}, porque aquí no hay métodos, hay descripciones.
 
-Para conseguir todo esto RSpec se basa en el método \texttt{to} y de los \en{matchers}. Gracias a la <<política>> de clases abiertas de Ruby, RSpec ha podido introducir este método en todo objeto del sistema.
+Para conseguir todo esto RSpec se basa en el método \texttt{to} y los \en{matchers}, los \en{matchers} son un objetos que usaremos para hacer comparaciones contra un valor que nosotros esperamos conseguir. Gracias a la <<política>> de clases abiertas de Ruby, RSpec ha podido introducir este método \texttt{to} en todo objeto del sistema. Simplemente le pasamos un \en{matcher} (aunque también puede recibir ciertas expresiones de Ruby) y podemos hacer la comparación.
 
-Simplemente le pasamos un \en{matcher} (aunque también puede recibir ciertas expresiones de Ruby), el cual es un objeto que usaremos para hacer comparaciones contra un valor que nosotros esperamos conseguir.
-
-En este enlace podremos ver una serie de buenas practicas que podemos llevar acabo cuando realicemos test con RSpec \url{http://betterspecs.org/es/}
+En este enlace podremos ver una serie de buenas prácticas que podemos llevar acabo cuando realicemos test con RSpec \url{http://betterspecs.org/es/}
 
 
 

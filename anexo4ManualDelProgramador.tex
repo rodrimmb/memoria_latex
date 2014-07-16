@@ -84,9 +84,9 @@ El código fuente de la aplicación se encuentra en la carpeta AStar/lib. En esta 
 \end{itemize}
 
 \subsection{Repositorio \en{on line} GitHub}
-Al haber usado Git como control de versiones decidimos buscar algún repositorio \en{on line} para poder alojar nuestro código y que el tutor pudiera acceder a ver los fuentes de una forma sencilla.
+Al haber usado Git como control de versiones, decidimos buscar algún repositorio \en{on line} para poder alojar nuestro código y que el tutor pudiera acceder a ver los fuentes de una forma sencilla.
 
-En principio se barajaron dos repositorios, Bitbucket\footnote{\url{https://bitbucket.org/}} y GitHub\footnote{\url{https://github.com/}}, ambos son gratuitos y permiten integración con Git y Bitbucket incluso con otros controles de version. Pero debido a la enorme popularidad de GitHub nos decantamos por este. 
+En principio se barajaron dos repositorios, Bitbucket\footnote{\url{https://bitbucket.org/}} y GitHub\footnote{\url{https://github.com/}}, ambos son gratuitos y permiten integración con Git, y Bitbucket incluso con otros controles de versión. Pero debido a la enorme popularidad de GitHub, nos decantamos por éste. 
 
 Todo el código de este proyecto puede ser encontrado en GitHub, tanto los fuentes del proyecto como los de la memoria.
 
@@ -95,7 +95,7 @@ Todo el código de este proyecto puede ser encontrado en GitHub, tanto los fuente
 	\item Código fuente de la memoria: \url{https://github.com/rodrimmbdev/memoria_latex.git}
 \end{itemize}
 
-Podemos entrar directamente a la web y ver todo el código, los commits y muchas otras opciones que nos da la web de GitHub o directamente clonar el repositorio a nuestro propio ordenador. Para poder clonar estos repositorios se debe tener instalado Git y ejecutar el siguiente comando:
+Podemos entrar directamente a la web y ver todo el código, los \en{commits} y muchas otras opciones que nos da la web de GitHub, o directamente clonar el repositorio a nuestro propio ordenador. Para poder clonar estos repositorios se debe tener instalado Git y ejecutar el siguiente comando:
 
 \begin{quote}
 	\texttt{\$ git clone [url del repositorio deseado]}
@@ -122,21 +122,24 @@ Podemos entrar directamente a la web y ver todo el código, los commits y muchas 
 
 
 \section{Guía de estilo}
-Al no existir una guía de estilo oficial para Ruby se ha tratado de adaptar el estilo de programación a una serie de normas comunes que suelen aparecer en diferentes documentos \footnote{Guia de estilo de Bozhidar Batsov \url{https://github.com/bbatsov/ruby-style-guide}} de desarrolladores de Ruby y que son ampliamente aceptadas por la comunidad Ruby como una guía de estilo.
+Al no existir una guía de estilo oficial para Ruby se ha tratado de adaptar el estilo de programación a una serie de normas comunes que suelen aparecer en diferentes documentos\footnote{Guia de estilo de Bozhidar Batsov \url{https://github.com/bbatsov/ruby-style-guide}} de desarrolladores de Ruby y que son ampliamente aceptadas por la comunidad Ruby como una guía de estilo.
 
-En este apartado resumiré las normas o guías que me han parecido mas importantes de Ruby.
+En este apartado se resume las normas o guías que me han parecido más importantes de Ruby. Este resumen se ha sacado de la web \url{http://rubini.us/}, para hacer el documento autocontenido lo que sigue es la copia literal de lo que aparece en esta web sobre el estilo de programación en Ruby \citeotras{estiloRuby}, que es la guía de estilo seguida en la codificación de este proyecto
 
-Métodos: Hay que tratar de mantener los métodos cortos (que se puedan visualizar en una sola pantalla) y tratar de cumplir el principio DRY\footnote{Siglas en ingles de no te repitas a ti mimo, \en{Don't repit yourself}} dentro de lo razonable. En general, la funcionalidad común debe ser extraída en métodos auxiliares (que puedes hacer "privados"), pero en algunos casos, en particular cuando se trabaja con código del núcleo, a veces tratar de hacer las cosas en un estilo DRY puede ser sólo un obstáculo, por ejemplo si se tiene que maniobrar entre de diferentes condiciones de error.
+\begin{figure}
+\begin{itemize}
 
-Los nombres de método: deben ser claros, expresivos y significativos. Se debe evitar el uso de guiones bajos para <<proteger>> el método \texttt{\_\_send\_\_} con algunas excepciones.
+\item Métodos: Hay que tratar de mantener los métodos cortos (que se puedan visualizar en una sola pantalla) y tratar de cumplir el principio DRY\footnote{Siglas en ingles de no te repitas a ti mimo, \en{Don't repit yourself}} dentro de lo razonable. En general, la funcionalidad común debe ser extraída en métodos auxiliares (que puedes hacer <<privados>>), pero en algunos casos, en particular cuando se trabaja con código del núcleo, a veces tratar de hacer las cosas en un estilo DRY puede ser sólo un obstáculo, por ejemplo, si se tiene que maniobrar entre de diferentes condiciones de error.
+
+\item Los nombres de método: deben ser claros, expresivos y significativos. Se debe evitar el uso de guiones bajos para <<proteger>> el método \texttt{\_\_send\_\_} con algunas excepciones.
 
 Los nombres de método estilo \en{Smalltalk} están bien, lo que significa que podría haber un método \texttt{SomeClass.make\_from} cuando está destinado a ser invocado como \texttt{SomeClass.make\_from file} o \texttt{SomeClass.make\_from :file => name}. En estos casos el nombre del parámetro completa el nombre del método y contribuye a una lectura más natural.
 
-Los nombres de variables: que sean claros y significativos (con algunas conocidas excepciones como la utilización de <<i>> como un contador.) Trate de evitar enmascarar los nombres de métodos, por ejemplo dentro de \texttt{Array} utilice <<idx>> en vez de <<index>> porque el último es también un nombre de método.
+\item Los nombres de variables: que sean claros y significativos (con algunas conocidas excepciones como la utilización de <<i>> como un contador). Trate de evitar enmascarar los nombres de métodos, por ejemplo dentro de \texttt{Array} utilice <<idx>> en vez de <<index>> porque el último es también un nombre de método.
 
-Post-condiciones: use post-condiciones sólo si su expresión es de una sola línea y no tiene muchas condiciones.
+\item Post-condiciones: use post-condiciones sólo si su expresión es de una sola línea y no tiene muchas condiciones.
 
-Bloques: Utilice \texttt{do ... end o \{...\}}, con espacios entre los delimitadores y el código (\texttt{foo \{ |arg| código \}}). Separe expresiones largas o complejas en varias líneas, de esta forma:
+\item Bloques: Utilice \texttt{do ... end o \{...\}}, con espacios entre los delimitadores y el código (\texttt{foo \{ |arg| código \}}). Separe expresiones largas o complejas en varias líneas, de esta forma:
 
 \begin{lstlisting}[language=Ruby]
 mapped = foo.map do |elem|
@@ -144,7 +147,7 @@ mapped = foo.map do |elem|
 end
 \end{lstlisting}
 
-Definiciones de Módulos/Clases con scope:
+\item Definiciones de Módulos/Clases con scope:
 
 \begin{lstlisting}[language=Ruby]
 module Rubinius::Profiler
@@ -152,7 +155,10 @@ module Rubinius::Profiler
   end
 end
 \end{lstlisting}
+\end{itemize}
 
+\end{figure}
+\newpage
 
 
 
@@ -172,23 +178,23 @@ A continuación listaremos todas las herramientas que se han usado para la realiz
 \begin{itemize}
 	\item RVM (\en{Ruby version manager}): aplicación de línea de comandos que nos permite gestionar, dentro de un mismo ordenador, varios entornos de intérpretes de Ruby y conjuntos de gemas. De esta forma vamos a conseguir instalar la nueva versión de Ruby sin eliminar la del sistema, así en cada momento podemos trabajar con la version que nos interese. Incluso podemos definir para cada proyecto un conjunto diferente de gemas, de forma que cada vez que trabajemos en un proyecto el conjunto de dependencias sea consistente con ese proyecto.
 	
-	\item MongoDB: es una base de datos orientada a documentos. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON. Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es necesario seguir un esquema.
+	\item MongoDB
 	
-	\item GraphViz: es una aplicación de visualización de gráficos de código abierto que incluye un gran número de programas de trazado de gráfico; además cuenta con interfaces interactivas y vía web, así como herramientas auxiliares y bibliotecas de funciones.
+	\item GraphViz
 	
-	\item Atom: es un editor de texto orientado al desarrollo de aplicaciones, una herramienta desarrollada por Github.
+	\item Atom
 	
-	\item Sinatra: framework para la creación simple de aplicaciones web.
+	\item Sinatra
 	
-	\item MathML: librería para mostrar notación científica en la web.
+	\item MathML
 	
-	\item Bootstrap: es el framework de Twitter que permite crear interfaces web con CSS y Javascript que automáticamente se adapta a los diferentes tamaños de pantalla. 
+	\item Bootstrap
 	
-	\item Git: es uno de los sistemas de control de versiones más populares gracias a su potencia y versatilidad.
+	\item Git
 	
-	\item Rspec: framework que define un Domain Specific Language (DSL), que hace que los casos de prueba queden muy sencillos de leer y nos da las herramientas necesarias para comprobar que un elemento debería de comportarse como nosotros queremos.
+	\item Rspec
 	
-	\item Cucumber: es una herramienta, escrita originalmente en Ruby, que ejecuta descripciones funcionales en texto plano como test automáticos, aprovechando las ventajas del BDD.
+	\item Cucumber
 	
 \end{itemize}
 
@@ -223,11 +229,11 @@ Cuando lo ejecutemos el \en{script} procederá a instalar:
 	\item MongoDB.
 	\item GraphViz.
 	\item Git.
-	\item Descargara el código fuente del repositorio.
-	\item instalara las gemas necesarias del proyecto.
+	\item Descargará el código fuente del repositorio.
+	\item instalará las gemas o paquetes necesarias del proyecto.
 \end{itemize}
 
-Al descargar el código fuente del proyecto lo colocara en la carpeta \en{home} del usuario que ejecuta el \en{script} y MongoDB lo descargara y lo dejara en la misma carpeta en la que están los  \en{scripts}.
+Al descargar el código fuente del proyecto lo colocará en la carpeta \en{home} del usuario que ejecuta el \en{script} y MongoDB lo descargará y lo dejará en la misma carpeta en la que están los  \en{scripts}.
 
 \subsection{Ejecutar}
 Una vez instalado todo podemos arrancar la aplicación ejecutando el \en{script} de arranque con el siguiente comando (hay que tener en cuenta que hay que estar en la carpeta de los \en{scripts}):
@@ -241,7 +247,7 @@ Con este \en{script} arrancaremos la base de datos y el servidor, una vez arranc
 Para parar la ejecución del servidor y la base de datos pulsamos crtl + C en el terminal que tiene arrancado el \en{script}
 
 \subsection{Desinstalar}
-Para desinstalar los componentes que hemos instalado tenemos el \en{script} uninstall.sh, como puede que no queramos desinstalar todos los componentes que hemos instalado previamente nos preguntara si deseamos desinstalar o no los componentes que se listan a continuación:
+Para desinstalar los componentes que hemos instalado tenemos el \en{script} <<uninstall.sh>>, como puede que no queramos desinstalar todos los componentes que hemos instalado previamente nos preguntará si deseamos desinstalar o no los componentes que se listan a continuación:
 
 \begin{itemize}
 	\item Curl.
@@ -249,11 +255,11 @@ Para desinstalar los componentes que hemos instalado tenemos el \en{script} unin
 	\item Git.
 \end{itemize}
 
-Los siguientes componentes los eliminara sin preguntar:
+Los siguientes componentes los eliminará sin preguntar:
 
 \begin{itemize}
 	\item MongoDB: borrara la carpeta <<data>> del directorio raíz (esta carpeta es de mongo y no afecta a otros programas) y la descarga que se ha realizado de MongoDB.
-	\item Eliminara el código fuente descargado del repositorio que se encuentra en la carpeta \en{home}.
+	\item Eliminará el código fuente descargado del repositorio que se encuentra en la carpeta \en{home}.
 \end{itemize}
 
 Para llevar a cabo la desinstalación hay que poner en la consola:
@@ -278,7 +284,7 @@ Para llevar a cabo la desinstalación hay que poner en la consola:
 \section{API REST}
 REST, \en{REpresentational State Transfer}, es un tipo de arquitectura de desarrollo web que se basa totalmente en el estándar HTTP.
 
-REST da la opción de crear servicios y aplicaciones a las que puede acceder cualquier dispositivo o cliente que pueda interpretar el protocolo HTTP, como moviles, tabletas y ordenadores, esto hace que sea mucho más simple y convencional que otras alternativas más complejas que podemos usar como son SOAP y XML-RPC. Podríamos considerar REST como un framework para construir aplicaciones web respetando HTTP.
+REST da la opción de crear servicios y aplicaciones a las que puede acceder cualquier dispositivo o cliente que pueda interpretar el protocolo HTTP, como móviles, tabletas y ordenadores, esto hace que sea mucho más simple y convencional que otras alternativas más complejas que podemos usar como son SOAP y XML-RPC. Podríamos considerar REST como un framework para construir aplicaciones web respetando HTTP.
 
 Todas estas características convierten a REST en el tipo de arquitectura más ideal para crear APIs para servicios orientados a Internet. Otra de sus ventajas es que al no tener que guardar nunca el estado en el servidor, toda la información que se requiere para trabajar debe estar en la consulta de la parte del cliente. Como no guardar el estado, REST nos permite escalar mejor sin tener que estar pendiente del engorroso tema del almacenamiento de variables de sesión.
 
