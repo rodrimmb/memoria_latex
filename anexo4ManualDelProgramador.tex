@@ -10,7 +10,7 @@ Se decidió optar por un editor de código en vez de un entorno integrado de desar
 En cualquier proyecto software, es necesario disponer de un control de versiones potente y versátil para poder tener bajo control los fuentes desarrollados y poder hacer un seguimiento de los \en{commits} que hemos realizado. Antes de decidirnos por uno en concreto se barajaron diversos programas: Subversion, CVS (\en{Concurrent Versions System}) y Git. Se escogió Git por su simplicidad, haber sido utilizado en anteriores ocasiones, ya se conocían sus ventajas, porque su uso es gratuito y por disponer de repositorios \en{on-line} gratuitos.
 
 Para la realización de las pruebas unitarias se ha optado por RSpec.
-\newpage
+
 
 
 
@@ -50,7 +50,6 @@ Contiene toda la documentación del proyecto y los fuentes de la misma, ya que la
 
 \subsection*{Carpeta Util}
 Este directorio contiene los \en{scripts} para la instalación, desinstalación y ejecución del proyecto de manera automática. Se ha decidido incluir estos \en{scripts} para facilitar la puesta en marcha de la aplicación sin necesidad de haya que ir instalando manualmente todo el software y bibliotecas necesarios, dado que este proceso puede ser complejo.
-\newpage
 
 
 
@@ -100,7 +99,6 @@ Podemos entrar directamente a la web y ver todo el código, los \en{commits} y mu
 \begin{quote}
 	\texttt{\$ git clone [url del repositorio deseado]}
 \end{quote}
-\newpage
 
 
 
@@ -124,10 +122,17 @@ Podemos entrar directamente a la web y ver todo el código, los \en{commits} y mu
 \section{Guía de estilo}
 Al no existir una guía de estilo oficial para Ruby se ha tratado de adaptar el estilo de programación a una serie de normas comunes que suelen aparecer en diferentes documentos\footnote{Guia de estilo de Bozhidar Batsov \url{https://github.com/bbatsov/ruby-style-guide}} de desarrolladores de Ruby y que son ampliamente aceptadas por la comunidad Ruby como una guía de estilo.
 
-En este apartado se resume las normas o guías que me han parecido más importantes de Ruby. Este resumen se ha sacado de la web \url{http://rubini.us/}, para hacer el documento autocontenido lo que sigue es la copia literal de lo que aparece en esta web sobre el estilo de programación en Ruby \citeotras{estiloRuby}, que es la guía de estilo seguida en la codificación de este proyecto
+La figura~\ref{fig:styleGuide} resume las normas o guías que han parecido más importantes de Ruby. Este resumen se ha sacado de la web \url{http://rubini.us/}, para hacer el documento autocontenido se ha copiado literalmente lo que aparece en esta web sobre el estilo de programación en Ruby \citeotras{estiloRuby}, que es la guía de estilo seguida en la codificación de este proyecto
 
-\begin{figure}
-\begin{itemize}
+{ % BEGIN
+  \setlength{\anchoFloat}{\textwidth}%
+  \addtolength{\anchoFloat}{-4\fboxsep}%
+  \setlength{\anchoFigura}{\anchoFloat}%
+  \begin{figure}[!h]
+    \begin{center}%
+      \Ovalbox{%
+        \begin{minipage}{\anchoFloat}%
+        \begin{itemize}
 
 \item Métodos: Hay que tratar de mantener los métodos cortos (que se puedan visualizar en una sola pantalla) y tratar de cumplir el principio DRY\footnote{Siglas en ingles de no te repitas a ti mimo, \en{Don't repit yourself}} dentro de lo razonable. En general, la funcionalidad común debe ser extraída en métodos auxiliares (que puedes hacer <<privados>>), pero en algunos casos, en particular cuando se trabaja con código del núcleo, a veces tratar de hacer las cosas en un estilo DRY puede ser sólo un obstáculo, por ejemplo, si se tiene que maniobrar entre de diferentes condiciones de error.
 
@@ -156,9 +161,13 @@ module Rubinius::Profiler
 end
 \end{lstlisting}
 \end{itemize}
-
-\end{figure}
-\newpage
+            \caption{Guía de estilo Ruby (tal como aparce en \url{http://rubini.us/})}%
+            \label{fig:styleGuide}%
+        \end{minipage}
+      }%
+    \end{center}%
+  \end{figure}%
+} % END
 
 
 
@@ -173,7 +182,7 @@ end
 
 
 \section{Manual del programador}
-A continuación listaremos todas las herramientas que se han usado para la realización del el proyecto tales como editores, bases de datos, librerías de pruebas, etc:
+A continuación listaremos todas las herramientas que se han usado para la realización del el proyecto tales como editores, bases de datos, librerías de pruebas, etc. Los detalles de estas herramientas pueden verse en la sección~\ref{sec:herramientas}:
 
 \begin{itemize}
 	\item RVM (\en{Ruby version manager}): aplicación de línea de comandos que nos permite gestionar, dentro de un mismo ordenador, varios entornos de intérpretes de Ruby y conjuntos de gemas. De esta forma vamos a conseguir instalar la nueva versión de Ruby sin eliminar la del sistema, así en cada momento podemos trabajar con la version que nos interese. Incluso podemos definir para cada proyecto un conjunto diferente de gemas, de forma que cada vez que trabajemos en un proyecto el conjunto de dependencias sea consistente con ese proyecto.
@@ -267,7 +276,7 @@ Para llevar a cabo la desinstalación hay que poner en la consola:
 \begin{quote}
 	\texttt{\$ ./uninstall.sh}
 \end{quote}
-\newpage
+
 
 
 
@@ -322,7 +331,7 @@ A continuación aparecen listadas en la tabla \vertabla{apiRest} los recursos de 
   get    & server/solution/path/[nombre búsqueda]          & Devuelve todos los pasos de una búsqueda  \\
   get    & server/solution/graph/[nombre búsqueda]         & Devuelve el grafo de la solución de una búsqueda en SVG  \\
  }
-\newpage
+
 
 
 

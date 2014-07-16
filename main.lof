@@ -7,41 +7,42 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax I.1}{\ignorespaces Metodolog\IeC {\'\i }a Scrum}}{33}{figure.107}
+\contentsline {figure}{\numberline {\relax I.1}{\ignorespaces Metodolog\IeC {\'\i }a Scrum}}{32}{figure.107}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax II.1}{\ignorespaces Casos de uso de la p\'agina inicial}}{67}{figure.214}
-\contentsline {figure}{\numberline {\relax II.2}{\ignorespaces Casos de uso de la p\'agina de trabajo}}{68}{figure.216}
-\contentsline {figure}{\numberline {\relax II.3}{\ignorespaces Prototipo de la interfaz de la pantalla de inicio}}{70}{figure.223}
-\contentsline {figure}{\numberline {\relax II.4}{\ignorespaces Prototipo de la interfaz de la pantalla de trabajo}}{71}{figure.225}
-\contentsline {figure}{\numberline {\relax II.5}{\ignorespaces P\'agina de inicio}}{72}{figure.227}
-\contentsline {figure}{\numberline {\relax II.6}{\ignorespaces P\'agina de trabajo, pesta\~na de nodos}}{73}{figure.229}
-\contentsline {figure}{\numberline {\relax II.7}{\ignorespaces Ventana modal para a\~nadir nodos}}{73}{figure.231}
-\contentsline {figure}{\numberline {\relax II.8}{\ignorespaces P\'agina de trabajo, pesta\~na de soluci\'on}}{74}{figure.233}
-\contentsline {figure}{\numberline {\relax II.9}{\ignorespaces P\'agina de trabajo, pesta\~na de soluci\'on paso a paso}}{74}{figure.235}
+\contentsline {figure}{\numberline {\relax II.1}{\ignorespaces Casos de uso de la p\'agina inicial}}{64}{figure.214}
+\contentsline {figure}{\numberline {\relax II.2}{\ignorespaces Casos de uso de la p\'agina de trabajo}}{65}{figure.216}
+\contentsline {figure}{\numberline {\relax II.3}{\ignorespaces Prototipo de la interfaz de la pantalla de inicio}}{67}{figure.223}
+\contentsline {figure}{\numberline {\relax II.4}{\ignorespaces Prototipo de la interfaz de la pantalla de trabajo}}{68}{figure.225}
+\contentsline {figure}{\numberline {\relax II.5}{\ignorespaces P\'agina de inicio}}{69}{figure.227}
+\contentsline {figure}{\numberline {\relax II.6}{\ignorespaces P\'agina de trabajo, pesta\~na de nodos}}{70}{figure.229}
+\contentsline {figure}{\numberline {\relax II.7}{\ignorespaces Ventana modal para a\~nadir nodos}}{70}{figure.231}
+\contentsline {figure}{\numberline {\relax II.8}{\ignorespaces P\'agina de trabajo, pesta\~na de soluci\'on}}{71}{figure.233}
+\contentsline {figure}{\numberline {\relax II.9}{\ignorespaces P\'agina de trabajo, pesta\~na de soluci\'on paso a paso}}{71}{figure.235}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax III.1}{\ignorespaces Diagrama de clases del modelo}}{79}{figure.242}
-\contentsline {figure}{\numberline {\relax III.2}{\ignorespaces Diagrama de clases del modelo, parte de persistencia}}{80}{figure.244}
-\contentsline {figure}{\numberline {\relax III.3}{\ignorespaces Diagrama de clases del controlador}}{81}{figure.246}
-\contentsline {figure}{\numberline {\relax III.4}{\ignorespaces Diagrama de paquetes}}{82}{figure.249}
-\contentsline {figure}{\numberline {\relax III.5}{\ignorespaces Diagrama de la interfaz web}}{83}{figure.253}
+\contentsline {figure}{\numberline {\relax III.1}{\ignorespaces Diagrama de clases del modelo}}{77}{figure.242}
+\contentsline {figure}{\numberline {\relax III.2}{\ignorespaces Diagrama de clases del modelo, parte de persistencia}}{78}{figure.244}
+\contentsline {figure}{\numberline {\relax III.3}{\ignorespaces Diagrama de clases del controlador}}{79}{figure.246}
+\contentsline {figure}{\numberline {\relax III.4}{\ignorespaces Diagrama de paquetes}}{80}{figure.249}
+\contentsline {figure}{\numberline {\relax III.5}{\ignorespaces Diagrama de la interfaz web}}{81}{figure.253}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax IV.1}{\ignorespaces Test clase AStar}}{99}{figure.318}
-\contentsline {figure}{\numberline {\relax IV.2}{\ignorespaces Test clase GenerateGraph}}{99}{figure.320}
-\contentsline {figure}{\numberline {\relax IV.3}{\ignorespaces Test clase Node}}{100}{figure.322}
-\contentsline {figure}{\numberline {\relax IV.4}{\ignorespaces Test clase NodeHandler}}{100}{figure.324}
-\contentsline {figure}{\numberline {\relax IV.5}{\ignorespaces Test clase NodesService}}{100}{figure.326}
-\contentsline {figure}{\numberline {\relax IV.6}{\ignorespaces Test clase PriorityQueue}}{101}{figure.328}
-\contentsline {figure}{\numberline {\relax IV.7}{\ignorespaces Test clase SearchService}}{101}{figure.330}
-\contentsline {figure}{\numberline {\relax IV.8}{\ignorespaces Test clase SingletonDbConnection}}{101}{figure.332}
-\contentsline {figure}{\numberline {\relax IV.9}{\ignorespaces Test clase StandarState}}{101}{figure.334}
+\contentsline {figure}{\numberline {\relax IV.1}{\ignorespaces Gu\IeC {\'\i }a de estilo Ruby (tal como aparce en \url {http://rubini.us/})}}{90}{figure.310}
+\contentsline {figure}{\numberline {\relax IV.2}{\ignorespaces Test clase AStar}}{94}{figure.320}
+\contentsline {figure}{\numberline {\relax IV.3}{\ignorespaces Test clase GenerateGraph}}{95}{figure.322}
+\contentsline {figure}{\numberline {\relax IV.4}{\ignorespaces Test clase Node}}{95}{figure.324}
+\contentsline {figure}{\numberline {\relax IV.5}{\ignorespaces Test clase NodeHandler}}{95}{figure.326}
+\contentsline {figure}{\numberline {\relax IV.6}{\ignorespaces Test clase NodesService}}{96}{figure.328}
+\contentsline {figure}{\numberline {\relax IV.7}{\ignorespaces Test clase PriorityQueue}}{96}{figure.330}
+\contentsline {figure}{\numberline {\relax IV.8}{\ignorespaces Test clase SearchService}}{96}{figure.332}
+\contentsline {figure}{\numberline {\relax IV.9}{\ignorespaces Test clase SingletonDbConnection}}{96}{figure.334}
+\contentsline {figure}{\numberline {\relax IV.10}{\ignorespaces Test clase StandarState}}{96}{figure.336}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax V.1}{\ignorespaces Pagina principal}}{105}{figure.340}
-\contentsline {figure}{\numberline {\relax V.2}{\ignorespaces Ventana modal para a\~nadir b\'usquedas}}{106}{figure.342}
-\contentsline {figure}{\numberline {\relax V.3}{\ignorespaces Eliminaci\'on de b\'usquedas con confirmaci\'on}}{106}{figure.344}
-\contentsline {figure}{\numberline {\relax V.4}{\ignorespaces Zona de trabajo}}{107}{figure.347}
-\contentsline {figure}{\numberline {\relax V.5}{\ignorespaces Detalle de las pesta\~nas}}{107}{figure.349}
-\contentsline {figure}{\numberline {\relax V.6}{\ignorespaces Detalle de los botones}}{108}{figure.351}
-\contentsline {figure}{\numberline {\relax V.7}{\ignorespaces Ventana modal para a\~nadir nodos}}{108}{figure.353}
-\contentsline {figure}{\numberline {\relax V.8}{\ignorespaces A\~nadir hijos a un nodo}}{109}{figure.355}
-\contentsline {figure}{\numberline {\relax V.9}{\ignorespaces Pesta\~na <<\emph {Solution}>> con ejercicio resuelto}}{109}{figure.357}
-\contentsline {figure}{\numberline {\relax V.10}{\ignorespaces Soluci\'on paso a paso}}{110}{figure.359}
+\contentsline {figure}{\numberline {\relax V.1}{\ignorespaces Pagina principal}}{99}{figure.342}
+\contentsline {figure}{\numberline {\relax V.2}{\ignorespaces Ventana modal para a\~nadir b\'usquedas}}{100}{figure.344}
+\contentsline {figure}{\numberline {\relax V.3}{\ignorespaces Eliminaci\'on de b\'usquedas con confirmaci\'on}}{100}{figure.346}
+\contentsline {figure}{\numberline {\relax V.4}{\ignorespaces Zona de trabajo}}{101}{figure.349}
+\contentsline {figure}{\numberline {\relax V.5}{\ignorespaces Detalle de las pesta\~nas}}{101}{figure.351}
+\contentsline {figure}{\numberline {\relax V.6}{\ignorespaces Detalle de los botones}}{102}{figure.353}
+\contentsline {figure}{\numberline {\relax V.7}{\ignorespaces Ventana modal para a\~nadir nodos}}{102}{figure.355}
+\contentsline {figure}{\numberline {\relax V.8}{\ignorespaces A\~nadir hijos a un nodo}}{103}{figure.357}
+\contentsline {figure}{\numberline {\relax V.9}{\ignorespaces Pesta\~na <<\emph {Solution}>> con ejercicio resuelto}}{103}{figure.359}
+\contentsline {figure}{\numberline {\relax V.10}{\ignorespaces Soluci\'on paso a paso}}{104}{figure.361}

@@ -20,7 +20,6 @@ El diseño se divide en varias fases:
 El diseño es fundamental para el correcto desarrollo de un proyecto software. Facilita la estructuración modular y coherente para tener una aplicación robusta y estable a la vez que extensible.
 
 En este apartado se mostrará la estructura de paquetes de la aplicación con sus relaciones. Además, los paquetes más importantes serán desglosados en diagramas de clases, obteniendo así un mayor nivel de detalle y facilitando la comprensión del diseño. Algunos de estos diagramas no contendrán todos atributos sino que, por facilitar su comprensión, se centrarán en las clases, métodos y atributos más importantes y representativos para el funcionamiento, ocultando información superflua.
-\newpage
 
 
 
@@ -46,7 +45,6 @@ Para gestionar la conexión a la base de datos y que no se generen conexiones ind
 Para poder conseguir una mejor reutilización de código y separar conceptos y así dejar bien definidas sus diferentes partes, se usó el patrón de diseño Modelo-Vista-Controlador (MVC \en{Model, view, controller}), MVC es un patrón que separa los datos y la lógica de negocio de una aplicación de la interfaz de usuario y el módulo encargado de gestionar los eventos y las comunicaciones. Es un patrón ampliamente utilizado en el diseño de aplicaciones con interfaz gráfica de usuario y por lo tanto está muy extendido en el diseño de aplicaciones web.
 					
 En el diseño de la interfaz de usuario ha influido la idea de que deberá ser lo más intuitiva y directa posible para facilitar el flujo de trabajo, disponer de las características que se definieron en la fase de análisis previa y la estética además de ser funcional debe ser bonita.
-\newpage
 
 
 
@@ -83,7 +81,6 @@ El controlador es el encargado de responder a eventos e invoca que se hace en el
 \figuraConPosicion{1}{imgs/clases_controller.png}{Diagrama de clases del controlador}{controladorClases}{}{H}
 
 Como vemos \ver{controladorClases} todos los controladores extienden de \en{ApplicationController}.
-\newpage
 
 
 
@@ -115,7 +112,6 @@ El contenido de los paquetes es el siguiente:
 
 \item \en{controller}: contiene las clases que establecen la comunicación entre el modelo y la vista.
 \end{itemize}
-\newpage
 
 
 
@@ -171,7 +167,7 @@ Dentro de la carpeta \ruta{public} nos encontramos con una hoja de estilos CSS y
 \item \ruta{js/addNodeModal.js}: es el encargado de mostrar una ventana modal en la que el usuario añadirá la los diferentes datos que necesitan los nodos.
 
 \end{itemize}
-\newpage
+
 
 
 
